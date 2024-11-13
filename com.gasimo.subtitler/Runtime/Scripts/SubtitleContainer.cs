@@ -8,6 +8,7 @@ namespace Gasimo.Subtitles
     /// Component representing one subtitle source in the world. 
     /// </summary>
     [RequireComponent(typeof(AudioSource))]
+    [HelpURL(Subtitler.siteURL + "manual/Components/containers.html")]
     public class SubtitleContainer : MonoBehaviour
     {
         /// <summary>

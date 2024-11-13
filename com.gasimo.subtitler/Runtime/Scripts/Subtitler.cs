@@ -12,10 +12,10 @@ using UnityEngine.UIElements.Experimental;
 namespace Gasimo.Subtitles
 {
     [RequireComponent(typeof(UIDocument))]
-    [HelpURL(siteURL + "")]
+    [HelpURL(siteURL + "manual/Components/subtitler.html")]
     public class Subtitler : MonoSingleton<Subtitler>
     {
-        public const string siteURL = "gasimo.dev/Subtitler/";
+        public const string siteURL = "https://gasimo.dev/Subtitler/";
 
         [Header("Appearance")]
         [SerializeField] private Color speakerHighlight = Color.white;

@@ -13,6 +13,7 @@ namespace Gasimo.Subtitles
     /// </summary>
     [CreateAssetMenu(fileName = "ScriptableEvent", menuName = "Gasimo/Subtitler/ScriptableEvent")]
     [Serializable]
+    [HelpURL(Subtitler.siteURL + "manual/event.html")]
     public class ScriptableEvent : ScriptableObject
     {
         
