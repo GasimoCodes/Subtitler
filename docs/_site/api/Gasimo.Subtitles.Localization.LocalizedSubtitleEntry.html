@@ -1,526 +1,548 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class LocalizedSubtitleEntry | Subtitler </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class LocalizedSubtitleEntry | Subtitler ">
-    
-    <meta name="description" content="Localized Subtitle Entry variant">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <meta name="description" content="Localized Subtitle Entry variant">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/logo.svg" alt="Subtitler">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry">
+
+        <article data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry">
 
 
 
-  <h1 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry" class="text-break">Class LocalizedSubtitleEntry</h1>
-  <div class="markdown level0 summary"><p>Localized Subtitle Entry variant</p>
+  <h1 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry" class="text-break">
+Class LocalizedSubtitleEntry  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gasimo.html">Gasimo</a>.<a class="xref" href="Gasimo.Subtitles.html">Subtitles</a>.<a class="xref" href="Gasimo.Subtitles.Localization.html">Localization</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Gasimo.Subtitler.Localization.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Localized Subtitle Entry variant</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">LocalizedSubtitleEntry</span></div>
-  </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Gasimo.Subtitles.ISubtitleEntry.html">ISubtitleEntry</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Gasimo.html">Gasimo</a>.<a class="xref" href="Gasimo.Subtitles.html">Subtitles</a>.<a class="xref" href="Gasimo.Subtitles.Localization.html">Localization</a></h6>
-  <h6><strong>Assembly</strong>: Gasimo.Subtitler.Localization.dll</h6>
-  <h5 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_syntax">Syntax</h5>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
 public class LocalizedSubtitleEntry : ISubtitleEntry</code></pre>
   </div>
-  <h3 id="fields">Fields
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_audio.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.audio%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L30">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_audio" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.audio">audio</h4>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LocalizedSubtitleEntry</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Gasimo.Subtitles.ISubtitleEntry.html">ISubtitleEntry</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_audio" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.audio">
+  audio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Localized AudioClip</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SerializeField]
 public LocalizedAudioClip audio</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">LocalizedAudioClip</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_dialogue.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.dialogue%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L18">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_dialogue" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.dialogue">dialogue</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LocalizedAudioClip</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_dialogue" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.dialogue">
+  dialogue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Localized dialogue</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SerializeField]
 public LocalizedString dialogue</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">LocalizedString</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_displayFor.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.displayFor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L46">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_displayFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.displayFor">displayFor</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LocalizedString</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_displayFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.displayFor">
+  displayFor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>How long will this subtitle be displayed for.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float displayFor</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_speaker.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.speaker%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L24">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_speaker" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.speaker">speaker</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_speaker" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.speaker">
+  speaker
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Localized Speaker</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SerializeField]
 public LocalizedString speaker</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">LocalizedString</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_subtitleEvent.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.subtitleEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L36">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_subtitleEvent" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.subtitleEvent">subtitleEvent</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LocalizedString</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_subtitleEvent" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.subtitleEvent">
+  subtitleEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Programmable event which gets ivoked when this subtitle gets played.
 Useful to trigger mechanics exactly when player hears a certain line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ScriptableEvent subtitleEvent</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Gasimo.Subtitles.ScriptableEvent.html">ScriptableEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_waitFor.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.waitFor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L41">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_waitFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.waitFor">waitFor</h4>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gasimo.Subtitles.ScriptableEvent.html">ScriptableEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_waitFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.waitFor">
+  waitFor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Delay between last Subtitle line and this one. Leave 0 to play at same time as previous line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float waitFor</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getAudio.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getAudio%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L65">View Source</a>
-  </span>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getAudio_" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getAudio*"></a>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getAudio" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getAudio">getAudio()</h4>
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getAudio" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getAudio">
+  getAudio()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>AudioClip of the subtitle</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public AudioClip getAudio()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">AudioClip</span></td>
-        <td><p>AudioClip with sound for this entry</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDialogue.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDialogue%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L78">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AudioClip</span></dt>
+    <dd><p>AudioClip with sound for this entry</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDialogue_" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDialogue*"></a>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDialogue" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDialogue">getDialogue()</h4>
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDialogue" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDialogue">
+  getDialogue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Dialogue string of the subtitle</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string getDialogue()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>Dialogue</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDisplayFor.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDisplayFor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L49">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Dialogue</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDisplayFor_" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDisplayFor*"></a>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDisplayFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDisplayFor">getDisplayFor()</h4>
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getDisplayFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getDisplayFor">
+  getDisplayFor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>How long should the subtitle be visible for?</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float getDisplayFor()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSpeaker.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSpeaker%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L90">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSpeaker_" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSpeaker*"></a>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSpeaker" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSpeaker">getSpeaker()</h4>
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSpeaker" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSpeaker">
+  getSpeaker()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Speaker name for the subtitle, will prefix the dialogue in this format: speaker:dialogue (Optional)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string getSpeaker()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>Speaker Name</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSubtitleEvent.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSubtitleEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L55">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Speaker Name</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSubtitleEvent_" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSubtitleEvent*"></a>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSubtitleEvent" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSubtitleEvent">getSubtitleEvent()</h4>
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getSubtitleEvent" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getSubtitleEvent">
+  getSubtitleEvent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ScriptableEvent getSubtitleEvent()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Gasimo.Subtitles.ScriptableEvent.html">ScriptableEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getWaitFor.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getWaitFor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L60">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gasimo.Subtitles.ScriptableEvent.html">ScriptableEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getWaitFor_" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getWaitFor*"></a>
-  <h4 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getWaitFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getWaitFor">getWaitFor()</h4>
+
+  <h3 id="Gasimo_Subtitles_Localization_LocalizedSubtitleEntry_getWaitFor" data-uid="Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.getWaitFor">
+  getWaitFor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>How long should subtitler pause before playing this line? (If in sequence, relative to last played subtitle)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float getWaitFor()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Gasimo.Subtitles.ISubtitleEntry.html">ISubtitleEntry</a>
-  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler-Dev/new/main/apiSpec/new?filename=Gasimo_Subtitles_Localization_LocalizedSubtitleEntry.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Localization.LocalizedSubtitleEntry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleEntry.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
-        </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

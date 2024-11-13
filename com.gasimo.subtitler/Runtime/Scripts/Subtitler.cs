@@ -5,18 +5,25 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
 using UnityEngine.UIElements.Experimental;
 
 namespace Gasimo.Subtitles
 {
     [RequireComponent(typeof(UIDocument))]
+    [HelpURL(siteURL + "")]
     public class Subtitler : MonoSingleton<Subtitler>
     {
+        public const string siteURL = "gasimo.dev/Subtitler/";
+
         [Header("Appearance")]
         [SerializeField] private Color speakerHighlight = Color.white;
+        [SerializeField] private Color backgroundColor = new Color(0,0,0, 0.3137255f);
         [SerializeField] private bool enableBackgroundPanel = true;
-        [SerializeField] private TextAnchor subtitlerAlign = TextAnchor.MiddleLeft;
+        [Space(5)]
+        [SerializeField] private Font subtitleFont;
+        [SerializeField] private TextAnchor subtitleAlign = TextAnchor.MiddleLeft;
         [SerializeField] private int subtitleSize = 24;
         [SerializeField] private int subtitlePoolSize = 10;
 
@@ -42,7 +49,7 @@ namespace Gasimo.Subtitles
             if (player == null)
             {
                 Debug.LogWarning("Player object not assigned, range-limited subtitles will fail. Attempting to find AudioListener.");
-                player = FindObjectOfType<AudioListener>();
+                player = FindAnyObjectByType<AudioListener>();
                 if (player == null)
                 {
                     Debug.LogError("Failed to find AudioListener. Range-limited subtitles will not work.");
@@ -71,6 +78,7 @@ namespace Gasimo.Subtitles
 
             displayPanel.usageHints = UsageHints.GroupTransform;
             displayPanel.style.visibility = Visibility.Hidden;
+            displayPanel.style.backgroundColor = backgroundColor;
             displayPanel.Clear();
         }
 
@@ -98,8 +106,13 @@ namespace Gasimo.Subtitles
             };
             label.AddToClassList("Label_Hide");
             label.style.fontSize = subtitleSize;
+
+            if (subtitleFont != null)
+                label.style.unityFontDefinition = new(subtitleFont);
+
             label.style.flexWrap = Wrap.Wrap;
-            label.style.unityTextAlign = new StyleEnum<TextAnchor>(subtitlerAlign);
+            label.style.unityTextAlign = new StyleEnum<TextAnchor>(subtitleAlign);
+            
             return label;
         }
 

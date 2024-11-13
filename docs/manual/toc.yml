@@ -1,30 +1,34 @@
+# This is an automatically generated file
 items:
 - name: Getting Started
-  href: gettingstarted.md
+  href: Getting Started/importing.md
   items:
-  - name: Components
-    href: subtitler_components.md
-    items:
-    - name: Setting up Subtitler
-      href: subtitler.md
-    - name: Playing Subtitles using Containers
-      href: containers.md
-    - name: Defining Subtitles
-      href: data.md
-      
-  - name: Custom Events
-    href: event.md
-
-- name: SRT Files Support
+  - name: Importing
+    href: Getting Started/importing.md
+- name: Components
+  href: Components/intro.md
+  items:
+  - name: Overview
+    href: Components/intro.md
+  - name: Data
+    href: Components/data.md
+  - name: Subtitle Containers
+    href: Components/containers.md
+  - name: Subtitler Prefab
+    href: Components/subtitler.md
+- name: Events
+  href: event.md
+- name: SRT Support
   href: srtsupport.md
-
 - name: Timeline Integration
-  href: timeline_intro.md
+  href: Timeline Integration/timeline_use.md
   items:
-  - name: Usage
-    href: timeline_use.md
-
+  - name: Subtitler Track
+    href: Timeline Integration/timeline_use.md
+  - name: Timeline
+    href: Timeline Integration/timeline_intro.md
 - name: Unity Localization
-  href: localization_intro.md
-
-
+  href: Unity Localization/localization_intro.md
+  items:
+  - name: Localization
+    href: Unity Localization/localization_intro.md

@@ -11,6 +11,16 @@
       }
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/Gasimo.Subtitles.Editor.SRTImporter.yml",
       "output": {
@@ -225,6 +235,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Frame 16.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Frame 16.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/Screens/Entry.PNG",
       "output": {
         "resource": {
@@ -335,20 +355,80 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/containers.md",
+      "source_relative_path": "manual/Components/containers.md",
       "output": {
         ".html": {
-          "relative_path": "manual/containers.html"
+          "relative_path": "manual/Components/containers.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/data.md",
+      "source_relative_path": "manual/Components/data.md",
       "output": {
         ".html": {
-          "relative_path": "manual/data.html"
+          "relative_path": "manual/Components/data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Components/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Components/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Components/subtitler.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Components/subtitler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Getting Started/importing.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Getting Started/importing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Timeline Integration/timeline_intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Timeline Integration/timeline_intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Timeline Integration/timeline_use.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Timeline Integration/timeline_use.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Unity Localization/localization_intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Unity Localization/localization_intro.html"
         }
       },
       "version": ""
@@ -365,70 +445,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/gettingstarted.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/gettingstarted.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/localization_intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/localization_intro.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "manual/srtsupport.md",
       "output": {
         ".html": {
           "relative_path": "manual/srtsupport.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/subtitler.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/subtitler.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/subtitler_components.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/subtitler_components.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/timeline_intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/timeline_intro.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/timeline_use.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/timeline_use.html"
         }
       },
       "version": ""

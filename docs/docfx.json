@@ -36,13 +36,16 @@
     ],
     "output": "_site",
     "template": [
-      "default"
+      "default",
+      "modern",
+      "templates/gasimo"
     ],
     "globalMetadata": {
-      "_appName": "Subtitler",
       "_appTitle": "Subtitler",
-      "_appLogoPath": "images/logo.svg",
+      "_appLogoPath": "images/logo.png",
       "_enableSearch": true,
+      "_disableContribution": true,
+      "_disableNextArticle": true,
       "pdf": false
     }
   }

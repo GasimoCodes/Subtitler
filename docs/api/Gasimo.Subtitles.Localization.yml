@@ -16,15 +16,15 @@ items:
   assemblies:
   - Gasimo.Subtitler.Localization
 references:
-- uid: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
-  commentId: T:Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
-  href: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence.html
-  name: LocalizedSubtitleSequence
-  nameWithType: LocalizedSubtitleSequence
-  fullName: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
 - uid: Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
   commentId: T:Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
   href: Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.html
   name: LocalizedSubtitleEntry
   nameWithType: LocalizedSubtitleEntry
   fullName: Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
+- uid: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
+  commentId: T:Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
+  href: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence.html
+  name: LocalizedSubtitleSequence
+  nameWithType: LocalizedSubtitleSequence
+  fullName: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence

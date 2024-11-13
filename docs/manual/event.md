@@ -1,6 +1,3 @@
----
-_layout: landing
----
 # Events
 Subtitler allows subscription to simple C# events within subtitle entries. These events trigger when their corresponding entry appears.
 
