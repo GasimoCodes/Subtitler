@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+
+## [0.6.1] - 04/12/2024
+**Bugfixes**
+- Fixed an issue which prevented specific 3D or recently unmuted audioSources from playing sound when occlussion criteria begins true but changes mid-line (such as player teleporting mid-subtitle). AudioSources now play sound before the occlussion criteria for showing UI are checked.
+
 ## [0.6.0] - 13/11/2024
 - Subtitler font and background color can now be changed from the inspector menu. 
 
