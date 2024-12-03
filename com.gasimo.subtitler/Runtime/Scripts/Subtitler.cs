@@ -217,12 +217,12 @@ namespace Gasimo.Subtitles
 
         private async Task PlaySubtitleEntryAsync(ISubtitleEntry entry, AudioSource audioSource, CancellationToken cancellationToken)
         {
-            if (!ShouldDisplaySubtitle(entry, audioSource)) return;
-
             if (audioSource != null && entry.getAudio() != null)
             {
                 audioSource.PlayOneShot(entry.getAudio());
             }
+
+            if (!ShouldDisplaySubtitle(entry, audioSource)) return;
 
             entry.getSubtitleEvent()?.Raise();
 
