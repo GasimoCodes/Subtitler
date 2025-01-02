@@ -4,7 +4,7 @@
 ### Subtitler
  A simple to use Subtitling/Closed-Captions solution for Unity3D inspired by Source Engine Closed Captions. Currently under active development. 
 
-#### [Docs](https://gasimo.dev/Subtitler/manual/gettingstarted.html?tabs=newer)
+#### [Docs](https://gasimo.dev/Subtitler/)
 
 <br>
 <br>
