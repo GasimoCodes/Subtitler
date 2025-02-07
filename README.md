@@ -4,7 +4,7 @@
 ### Subtitler
  A simple to use Subtitling/Closed-Captions solution for Unity3D inspired by Source Engine Closed Captions. Currently under active development. 
 
-#### [Docs](https://gasimo.dev/Subtitler/manual/gettingstarted.html?tabs=newer)
+#### [Docs](https://gasimo.dev/Subtitler/)
 
 <br>
 <br>
@@ -33,13 +33,13 @@
 - SRT Files support
 
 
-## [Quick Start](https://gasimocodes.github.io/Subtitler/manual/gettingstarted.html?tabs=newer)
+## [Quick Start](https://gasimo.dev/Subtitler/)
 
 1. Import Subtitler `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
   
 2. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
 
-For usage see [Docs](https://gasimo.dev/Subtitler/manual/gettingstarted.html?tabs=newer)
+For usage see [Docs](https://gasimo.dev/Subtitler/)
 
 
 ## Dependencies
