@@ -33,11 +33,15 @@ items:
 
       [Serializable]
 
+      [HelpURL("https://gasimo.dev/Subtitler/manual/Components/data.html#subtitler-sequence")]
+
       public class SubtitleSequenceData : ScriptableObject, ISubtitleSequence
     content.vb: >-
       <CreateAssetMenu(fileName:="SubtitleFile", menuName:="Gasimo/Subtitler/SubtitleFile")>
 
       <Serializable>
+
+      <HelpURL("https://gasimo.dev/Subtitler/manual/Components/data.html#subtitler-sequence")>
 
       Public Class SubtitleSequenceData Inherits ScriptableObject Implements ISubtitleSequence
   inheritance:
@@ -60,6 +64,11 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://gasimo.dev/Subtitler/manual/Components/data.html#subtitler-sequence
 - uid: Gasimo.Subtitles.SubtitleSequenceData.Subtitles
   commentId: F:Gasimo.Subtitles.SubtitleSequenceData.Subtitles
   id: Subtitles
@@ -78,7 +87,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: Subtitles
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -117,7 +126,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: GetSubtitleEntries
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles

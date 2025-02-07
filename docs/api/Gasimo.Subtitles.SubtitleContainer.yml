@@ -33,9 +33,13 @@ items:
     content: >-
       [RequireComponent(typeof(AudioSource))]
 
+      [HelpURL("https://gasimo.dev/Subtitler/manual/Components/containers.html")]
+
       public class SubtitleContainer : MonoBehaviour
     content.vb: >-
       <RequireComponent(GetType(AudioSource))>
+
+      <HelpURL("https://gasimo.dev/Subtitler/manual/Components/containers.html")>
 
       Public Class SubtitleContainer Inherits MonoBehaviour
   inheritance:
@@ -44,6 +48,12 @@ items:
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
+  attributes:
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://gasimo.dev/Subtitler/manual/Components/containers.html
 - uid: Gasimo.Subtitles.SubtitleContainer.autoPlay
   commentId: F:Gasimo.Subtitles.SubtitleContainer.autoPlay
   id: autoPlay
@@ -62,7 +72,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: autoPlay
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -91,7 +101,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: subtitleData
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -120,7 +130,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: Play
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -148,7 +158,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: Stop
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles

@@ -65,6 +65,7 @@
   "Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)": "Gasimo.Subtitles.Subtitler.yml",
   "Gasimo.Subtitles.Subtitler.RemoveOldest": "Gasimo.Subtitles.Subtitler.yml",
   "Gasimo.Subtitles.Subtitler.RemoveSubtitle(System.Int32)": "Gasimo.Subtitles.Subtitler.yml",
+  "Gasimo.Subtitles.Subtitler.siteURL": "Gasimo.Subtitles.Subtitler.yml",
   "Gasimo.Subtitles.Timeline": "Gasimo.Subtitles.Timeline.yml",
   "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset": "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.yml",
   "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)": "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.yml",

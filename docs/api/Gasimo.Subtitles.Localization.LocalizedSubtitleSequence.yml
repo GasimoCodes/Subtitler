@@ -31,9 +31,13 @@ items:
     content: >-
       [CreateAssetMenu(fileName = "Localized Sequence", menuName = "Gasimo/Subtitler/Localized Sequence")]
 
+      [HelpURL("https://gasimo.dev/Subtitler/manual/Unity Localization/localization_intro.html")]
+
       public class LocalizedSubtitleSequence : ScriptableObject, ISubtitleSequence
     content.vb: >-
       <CreateAssetMenu(fileName:="Localized Sequence", menuName:="Gasimo/Subtitler/Localized Sequence")>
+
+      <HelpURL("https://gasimo.dev/Subtitler/manual/Unity Localization/localization_intro.html")>
 
       Public Class LocalizedSubtitleSequence Inherits ScriptableObject Implements ISubtitleSequence
   inheritance:
@@ -53,6 +57,11 @@ items:
     - name: menuName
       type: System.String
       value: Gasimo/Subtitler/Localized Sequence
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://gasimo.dev/Subtitler/manual/Unity Localization/localization_intro.html
 - uid: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence.Sequence
   commentId: F:Gasimo.Subtitles.Localization.LocalizedSubtitleSequence.Sequence
   id: Sequence
@@ -71,7 +80,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: Sequence
     path: ../com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleSequence.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Gasimo.Subtitler.Localization
   namespace: Gasimo.Subtitles.Localization
@@ -108,7 +117,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: GetSubtitleEntries
     path: ../com.gasimo.subtitler/Runtime/Localization/LocalizedSubtitleSequence.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Gasimo.Subtitler.Localization
   namespace: Gasimo.Subtitles.Localization

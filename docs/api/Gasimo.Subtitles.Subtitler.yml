@@ -10,6 +10,7 @@ items:
   - Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)
   - Gasimo.Subtitles.Subtitler.RemoveOldest
   - Gasimo.Subtitles.Subtitler.RemoveSubtitle(System.Int32)
+  - Gasimo.Subtitles.Subtitler.siteURL
   langs:
   - csharp
   - vb
@@ -32,9 +33,13 @@ items:
     content: >-
       [RequireComponent(typeof(UIDocument))]
 
+      [HelpURL("https://gasimo.dev/Subtitler/manual/Components/subtitler.html")]
+
       public class Subtitler : MonoSingleton<Subtitler>
     content.vb: >-
       <RequireComponent(GetType(UIDocument))>
+
+      <HelpURL("https://gasimo.dev/Subtitler/manual/Components/subtitler.html")>
 
       Public Class Subtitler Inherits MonoSingleton(Of Subtitler)
   inheritance:
@@ -46,6 +51,39 @@ items:
   - Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}
   inheritedMembers:
   - Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Instance
+  attributes:
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://gasimo.dev/Subtitler/manual/Components/subtitler.html
+- uid: Gasimo.Subtitles.Subtitler.siteURL
+  commentId: F:Gasimo.Subtitles.Subtitler.siteURL
+  id: siteURL
+  parent: Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: siteURL
+  nameWithType: Subtitler.siteURL
+  fullName: Gasimo.Subtitles.Subtitler.siteURL
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: siteURL
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 17
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  syntax:
+    content: public const string siteURL = "https://gasimo.dev/Subtitler/"
+    return:
+      type: System.String
+    content.vb: Public Const siteURL As String = "https://gasimo.dev/Subtitler/"
 - uid: Gasimo.Subtitles.Subtitler.Awake
   commentId: M:Gasimo.Subtitles.Subtitler.Awake
   id: Awake
@@ -64,7 +102,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: Awake
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -93,7 +131,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: PlaySubtitleSequence
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 142
+    startLine: 145
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -131,7 +169,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: PlaySubtitleEntry
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 158
+    startLine: 161
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -169,7 +207,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: RemoveSubtitle
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 172
+    startLine: 175
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -204,7 +242,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: RemoveOldest
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 185
+    startLine: 188
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -363,6 +401,17 @@ references:
   fullName: Gasimo.Subtitles.MonoSingleton<T>.Instance
   nameWithType.vb: MonoSingleton(Of T).Instance
   fullName.vb: Gasimo.Subtitles.MonoSingleton(Of T).Instance
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Awake
   commentId: M:Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Awake
   parent: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -37,6 +37,8 @@
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
       </script>
 
+
+
   </head>
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
@@ -52,17 +54,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navpanel">
             <div id="navbar">
-              <form class="search" role="search" id="search">
-                <i class="bi bi-search"></i>
-                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
-              </form>
+                <form class="search" role="search" id="search">
+                  <i class="bi bi-search"></i>
+                  <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+                </form>
             </div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container-xxl">
+
+
+        <main class="container-xxl">
       <div class="toc-offcanvas">
         <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
           <div class="offcanvas-header">
@@ -102,6 +106,7 @@ Class Subtitler  <a class="header-action link-secondary" title="View source" hre
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[RequireComponent(typeof(UIDocument))]
+[HelpURL(&quot;https://gasimo.dev/Subtitler/manual/Components/subtitler.html&quot;)]
 public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
   </div>
 
@@ -136,6 +141,40 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gasimo_Subtitles_Subtitler_siteURL" data-uid="Gasimo.Subtitles.Subtitler.siteURL">
+  siteURL
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string siteURL = &quot;https://gasimo.dev/Subtitler/&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -144,7 +183,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_Awake" data-uid="Gasimo.Subtitles.Subtitler.Awake">
   Awake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Use this for initialization.</p>
@@ -171,7 +210,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_Gasimo_Subtitles_ISubtitleEntry_UnityEngine_AudioSource_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry,UnityEngine.AudioSource)">
   PlaySubtitleEntry(ISubtitleEntry, AudioSource)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plays a single line of subtitles on a given AudioSource</p>
@@ -213,7 +252,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_Gasimo_Subtitles_SubtitleSequenceData_UnityEngine_AudioSource_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)">
   PlaySubtitleSequence(SubtitleSequenceData, AudioSource)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plays a sequence of SubtitleEntries on a given AudioSource</p>
@@ -255,7 +294,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_RemoveOldest" data-uid="Gasimo.Subtitles.Subtitler.RemoveOldest">
   RemoveOldest()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes and hides a active Subtitle Session with the oldest id.</p>
@@ -282,7 +321,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_RemoveSubtitle_System_Int32_" data-uid="Gasimo.Subtitles.Subtitler.RemoveSubtitle(System.Int32)">
   RemoveSubtitle(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes and hides a Subtitle session immediately.</p>
@@ -321,14 +360,17 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
       <div class="affix">
         <nav id="affix"></nav>
       </div>
-    </main>
+        </main>
+    
 
     <div class="container-xxl search-results" id="search-results"></div>
+
+
 
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <span>Docs generated with <a href="https://dotnet.github.io/docfx">docfx</a></span>
         </div>
       </div>
     </footer>

@@ -36,11 +36,15 @@ items:
 
       [Serializable]
 
+      [HelpURL("https://gasimo.dev/Subtitler/manual/event.html")]
+
       public class ScriptableEvent : ScriptableObject
     content.vb: >-
       <CreateAssetMenu(fileName:="ScriptableEvent", menuName:="Gasimo/Subtitler/ScriptableEvent")>
 
       <Serializable>
+
+      <HelpURL("https://gasimo.dev/Subtitler/manual/event.html")>
 
       Public Class ScriptableEvent Inherits ScriptableObject
   inheritance:
@@ -61,6 +65,11 @@ items:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
     arguments: []
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://gasimo.dev/Subtitler/manual/event.html
 - uid: Gasimo.Subtitles.ScriptableEvent.onEventRaised
   commentId: F:Gasimo.Subtitles.ScriptableEvent.onEventRaised
   id: onEventRaised
@@ -79,7 +88,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: onEventRaised
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -106,7 +115,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: Raise
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles

@@ -22,6 +22,13 @@ items:
   assemblies:
   - Gasimo.Subtitler
 references:
+- uid: Gasimo.Subtitles.SubtitleDataEntry
+  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleDataEntry.html
+  name: SubtitleDataEntry
+  nameWithType: SubtitleDataEntry
+  fullName: Gasimo.Subtitles.SubtitleDataEntry
 - uid: Gasimo.Subtitles.ScriptableEvent
   commentId: T:Gasimo.Subtitles.ScriptableEvent
   parent: Gasimo.Subtitles
@@ -29,12 +36,26 @@ references:
   name: ScriptableEvent
   nameWithType: ScriptableEvent
   fullName: Gasimo.Subtitles.ScriptableEvent
+- uid: Gasimo.Subtitles.ISubtitleSequence
+  commentId: T:Gasimo.Subtitles.ISubtitleSequence
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitleSequence.html
+  name: ISubtitleSequence
+  nameWithType: ISubtitleSequence
+  fullName: Gasimo.Subtitles.ISubtitleSequence
 - uid: Gasimo.Subtitles.Subtitler
   commentId: T:Gasimo.Subtitles.Subtitler
   href: Gasimo.Subtitles.Subtitler.html
   name: Subtitler
   nameWithType: Subtitler
   fullName: Gasimo.Subtitles.Subtitler
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleSequenceData.html
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
 - uid: Gasimo.Subtitles.SubtitleContainer
   commentId: T:Gasimo.Subtitles.SubtitleContainer
   href: Gasimo.Subtitles.SubtitleContainer.html
@@ -48,27 +69,6 @@ references:
   name: ISubtitleEntry
   nameWithType: ISubtitleEntry
   fullName: Gasimo.Subtitles.ISubtitleEntry
-- uid: Gasimo.Subtitles.SubtitleDataEntry
-  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
-  parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.SubtitleDataEntry.html
-  name: SubtitleDataEntry
-  nameWithType: SubtitleDataEntry
-  fullName: Gasimo.Subtitles.SubtitleDataEntry
-- uid: Gasimo.Subtitles.ISubtitleSequence
-  commentId: T:Gasimo.Subtitles.ISubtitleSequence
-  parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.ISubtitleSequence.html
-  name: ISubtitleSequence
-  nameWithType: ISubtitleSequence
-  fullName: Gasimo.Subtitles.ISubtitleSequence
-- uid: Gasimo.Subtitles.SubtitleSequenceData
-  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
-  parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.SubtitleSequenceData.html
-  name: SubtitleSequenceData
-  nameWithType: SubtitleSequenceData
-  fullName: Gasimo.Subtitles.SubtitleSequenceData
 - uid: Gasimo.Subtitles.MonoSingleton`1
   commentId: T:Gasimo.Subtitles.MonoSingleton`1
   href: Gasimo.Subtitles.MonoSingleton-1.html
