@@ -17,13 +17,13 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 7563dd5fb01cde942b0ea594485f2ac5
   m_SerializeEntries:
-  - m_GUID: e013e6c848ee3bd4f8f448fec4486b19
-    m_Address: Assets/Locale/AudioSample Shared Data.asset
+  - m_GUID: ab16e5eadb2564b418d7b93a3638967d
+    m_Address: Assets/Locale/StringsSample Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ab16e5eadb2564b418d7b93a3638967d
-    m_Address: Assets/Locale/StringsSample Shared Data.asset
+  - m_GUID: e013e6c848ee3bd4f8f448fec4486b19
+    m_Address: Assets/Locale/AudioSample Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

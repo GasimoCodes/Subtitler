@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Subtitler/0.2.0/Sample Subtitled Scene/SampleScene.unity
     guid: e6fdb73de9b05824884d70b0920a21d9
+  - enabled: 1
+    path: Packages/com.gasimo.subtitler/Samples/Timeline/Subtitle Timeline.unity
+    guid: 892f0ebc0660f1c41ba5628ddeb0cfaf
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: beee5d738105d5e4fb678e3ad6dc84cf,
       type: 2}
