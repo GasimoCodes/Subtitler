@@ -43,6 +43,7 @@
     "globalMetadata": {
       "_appTitle": "Subtitler",
       "_appLogoPath": "images/logo.png",
+      "_appFaviconPath": "images/logo.svg",
       "_enableSearch": true,
       "_disableContribution": true,
       "_disableNextArticle": true,
