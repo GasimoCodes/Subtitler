@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.7.0] - 26/03/2025
+- Added new system for handling and customizing label transitions using **Subtitler Transition Assets** to eliminate the need to touch UITK. 
+- Added a Typewriter effect which types subtitle entries letter by letter while respecting rich text and layouts.
+- Improved transition timing accuracy by recording entry animation times and subtracting them from the display times. This will play the exit transitions more accurately.
+- Updated offline documentation files
 
 ## [0.6.1] - 04/12/2024
 **Bugfixes**

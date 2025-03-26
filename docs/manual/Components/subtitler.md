@@ -7,10 +7,13 @@ To use Subtitler, drag the Subtitler Prefab from the package into your scene. Al
 ## Changing Visuals
 Subtitler exposes some commonly changed properties like font, font-size, text alignment (centered/left-aligned), background color and speaker highlight color.
 
-### Common Questions
+## Transition Animations
 
-#### Subtitler does not render on top of my UI when I dont want it to and vice-versa
-Change Subtitler's UIDocument Sort Order
+### Transition ScriptableObject Assets
+You can control text transitions by changing the `Transition Data`'s asset field. Several built-in transitions are available such as fade-in/out or a typewriter effect.
+Full list of effects and their documentations are available [here](../Transition%20Assets/Intro.md).
 
-#### Advanced: I wish to change the UI in depth / integrate Subtitler into my own UIToolkit document
-For deep UI changes or integration into your UIToolkit document, copy the Subtitler VisualTreeAsset and USS styling sheets. Retain the same classes and overridden values for proper layout. Be aware that Subtitler VisualElement Labels are dynamically instantiated, not copied.
+### Using UIToolkit
+Subtitler allows you to customize appearance using the UIToolkit document. You can modify transition animations by editing the Animations field of the `.Label_Hide` class or the `Label` objects.
+
+

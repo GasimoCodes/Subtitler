@@ -66,9 +66,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speakerHighlight: {r: 1, g: 0.79510856, b: 0, a: 1}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 0.29803923}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0.5019608}
   enableBackgroundPanel: 1
-  subtitlerAlign: 3
+  subtitleFont: {fileID: 0}
+  subtitleAlign: 3
   subtitleSize: 24
+  transitionData: {fileID: 0}
   subtitlePoolSize: 10
   player: {fileID: 0}

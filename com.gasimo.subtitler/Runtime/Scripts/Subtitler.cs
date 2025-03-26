@@ -25,6 +25,8 @@ namespace Gasimo.Subtitles
         [SerializeField] private Font subtitleFont;
         [SerializeField] private TextAnchor subtitleAlign = TextAnchor.MiddleLeft;
         [SerializeField] private int subtitleSize = 24;
+        [SerializeField] private SubtitlerTransitionBase transitionData;
+
         [SerializeField] private int subtitlePoolSize = 10;
 
         [Header("References")]
@@ -37,6 +39,8 @@ namespace Gasimo.Subtitles
         private int activeSubtitleCount = 0;
         private int nextSubtitleId = 0;
         private bool isInitialized = false;
+        private ISubtitlerTransition transition;
+
 
         protected override void Awake()
         {
@@ -64,6 +68,7 @@ namespace Gasimo.Subtitles
             uiDocument = GetComponent<UIDocument>();
             InitializeDisplayPanel();
             InitializeSubtitlePool();
+            InitializeTransitions();
             isInitialized = true;
         }
 
@@ -95,6 +100,19 @@ namespace Gasimo.Subtitles
             );
         }
 
+        private void InitializeTransitions()
+        {
+            if (transitionData != null)
+            {
+                transition = transitionData;
+            }
+            else
+            {
+                Debug.LogWarning("No transition ScriptableObject set for Subtitler. Using default transition.");
+                transition = ScriptableObject.CreateInstance<SubtitlerFadeTransition>();
+            }
+        }
+
         #region PoolFunctions
 
         private Label CreateSubtitleLabel()
@@ -104,7 +122,9 @@ namespace Gasimo.Subtitles
                 enableRichText = true,
                 usageHints = UsageHints.DynamicTransform
             };
-            label.AddToClassList("Label_Hide");
+
+            transition.OnLabelCreated(label);
+
             label.style.fontSize = subtitleSize;
 
             if (subtitleFont != null)
@@ -228,11 +248,11 @@ namespace Gasimo.Subtitles
 
             if (!string.IsNullOrEmpty(entry.getDialogue()))
             {
-                await DisplaySubtitleAsync(entry.getDialogue(), entry.getSpeaker(), entry.getDisplayFor(), cancellationToken);
+                await DisplaySubtitleAsync(entry, cancellationToken);
             }
         }
 
-        private async Task DisplaySubtitleAsync(string message, string speaker, float displayDuration, CancellationToken cancellationToken)
+        private async Task DisplaySubtitleAsync(ISubtitleEntry entry, CancellationToken cancellationToken)
         {
             var subtitle = subtitlePool.Get();
             activeSubtitleCount++;
@@ -240,13 +260,29 @@ namespace Gasimo.Subtitles
 
             try
             {
-                SetSubtitleText(subtitle, speaker, message);
-                await AnimateSubtitleEntrance(subtitle, cancellationToken);
-                await Task.Delay(TimeSpan.FromSeconds(displayDuration), cancellationToken);
+                SetSubtitleText(subtitle, entry.getSpeaker(), entry.getDialogue());
+
+                // Measure the time taken by the entrance animation
+                var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+                await transition.AnimateSubtitleEntrance(subtitle, entry, cancellationToken);
+                stopwatch.Stop();
+
+                // Calculate remaining display time and delay
+                var remainingDisplayTime = TimeSpan.FromSeconds(entry.getDisplayFor()) - stopwatch.Elapsed;
+
+                if (remainingDisplayTime > TimeSpan.Zero)
+                {
+                    await Task.Delay(remainingDisplayTime, cancellationToken);
+                }
+
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Error displaying subtitle: {e.Message}");
             }
             finally
             {
-                await AnimateSubtitleExit(subtitle, CancellationToken.None);
+                await transition.AnimateSubtitleExit(subtitle, entry, CancellationToken.None);
 
                 activeSubtitleCount--;
                 subtitlePool.Release(subtitle);
@@ -262,29 +298,6 @@ namespace Gasimo.Subtitles
         }
 
         #region animations
-
-        private async Task AnimateSubtitleEntrance(Label subtitle, CancellationToken cancellationToken)
-        {
-            subtitle.style.maxHeight = 0;
-            subtitle.experimental.animation
-                .Start(0, 999, 100, (element, value) => element.style.maxHeight = value)
-                .Ease(Easing.InSine);
-
-            await Task.Delay(50, cancellationToken);
-            subtitle.RemoveFromClassList("Label_Hide");
-            await Task.Delay(50, cancellationToken);
-        }
-
-        private async Task AnimateSubtitleExit(Label subtitle, CancellationToken cancellationToken)
-        {
-            subtitle.AddToClassList("Label_Hide");
-
-            subtitle.experimental.animation
-                .Start(1000, 0, 100, (element, value) => element.style.maxHeight = value)
-                .Ease(Easing.Linear);
-
-            await Task.Delay(100, cancellationToken);
-        }
 
         private void UpdateSubtitlePanelVisibility()
         {

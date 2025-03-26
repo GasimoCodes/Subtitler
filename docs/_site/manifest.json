@@ -245,6 +245,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Frame 3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Frame 3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/Screens/Entry.PNG",
       "output": {
         "resource": {
@@ -319,6 +329,26 @@
       "output": {
         "resource": {
           "relative_path": "images/Screens/srt.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Subt Epic.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Subt Epic.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Subtitler Hero Asset Store.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Subtitler Hero Asset Store.png"
         }
       },
       "version": ""
@@ -425,6 +455,46 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/Transition Assets/Custom Transitions.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Transition Assets/Custom Transitions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Transition Assets/Fade Transition.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Transition Assets/Fade Transition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Transition Assets/Typewriter Transition.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Transition Assets/Typewriter Transition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Transition Assets/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Transition Assets/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/Unity Localization/localization_intro.md",
       "output": {
         ".html": {
@@ -462,6 +532,16 @@
         },
         ".json": {
           "relative_path": "manual/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/troubleshooting.html"
         }
       },
       "version": ""

@@ -16,10 +16,17 @@ items:
     href: Components/containers.md
   - name: Subtitler Prefab
     href: Components/subtitler.md
-- name: Events
-  href: event.md
-- name: SRT Support
-  href: srtsupport.md
+- name: Transition Assets
+  href: Transition Assets/index.md
+  items:
+  - name: Transition Assets
+    href: Transition Assets/index.md
+  - name: Custom Transition Logic
+    href: Transition Assets/Custom Transitions.md
+  - name: Fade Transition
+    href: Transition Assets/Fade Transition.md
+  - name: Typewriter Transition
+    href: Transition Assets/Typewriter Transition.md
 - name: Timeline Integration
   href: Timeline Integration/timeline_use.md
   items:
@@ -32,3 +39,9 @@ items:
   items:
   - name: Localization
     href: Unity Localization/localization_intro.md
+- name: Events
+  href: event.md
+- name: SRT Support
+  href: srtsupport.md
+- name: Troubleshooting
+  href: troubleshooting.md

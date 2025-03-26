@@ -104,11 +104,12 @@
 <p><img src="../../images/Screens/Prefab.PNG" alt="Prefab"></p>
 <h2 id="changing-visuals">Changing Visuals</h2>
 <p>Subtitler exposes some commonly changed properties like font, font-size, text alignment (centered/left-aligned), background color and speaker highlight color.</p>
-<h3 id="common-questions">Common Questions</h3>
-<h4 id="subtitler-does-not-render-on-top-of-my-ui-when-i-dont-want-it-to-and-vice-versa">Subtitler does not render on top of my UI when I dont want it to and vice-versa</h4>
-<p>Change Subtitler's UIDocument Sort Order</p>
-<h4 id="advanced-i-wish-to-change-the-ui-in-depth--integrate-subtitler-into-my-own-uitoolkit-document">Advanced: I wish to change the UI in depth / integrate Subtitler into my own UIToolkit document</h4>
-<p>For deep UI changes or integration into your UIToolkit document, copy the Subtitler VisualTreeAsset and USS styling sheets. Retain the same classes and overridden values for proper layout. Be aware that Subtitler VisualElement Labels are dynamically instantiated, not copied.</p>
+<h2 id="transition-animations">Transition Animations</h2>
+<h3 id="transition-scriptableobject-assets">Transition ScriptableObject Assets</h3>
+<p>You can control text transitions by changing the <code>Transition Data</code>'s asset field. Several built-in transitions are available such as fade-in/out or a typewriter effect.
+Full list of effects and their documentations are available <a href="../Transition%20Assets/Intro.md">here</a>.</p>
+<h3 id="using-uitoolkit">Using UIToolkit</h3>
+<p>Subtitler allows you to customize appearance using the UIToolkit document. You can modify transition animations by editing the Animations field of the <code>.Label_Hide</code> class or the <code>Label</code> objects.</p>
 
 </article>
 
