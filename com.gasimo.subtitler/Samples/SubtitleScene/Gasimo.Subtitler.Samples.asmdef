@@ -1,0 +1,17 @@
+{
+    "name": "Gasimo.Subtitler.Samples",
+    "rootNamespace": "Gasimo.Subtitles.Samples",
+    "references": [
+        "Unity.ResourceManager",
+        "Gasimo.Subtitler"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

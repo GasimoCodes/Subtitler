@@ -21,7 +21,7 @@ namespace Gasimo.Subtitles
 
             await Task.Delay(50, cancellationToken);
             subtitle.RemoveFromClassList("Label_Hide");
-            await Task.Delay(50, cancellationToken);
+            await Subtitler.WaitForGameTime(50f / 1000f, cancellationToken);
         }
         
         public virtual async Task AnimateSubtitleExit(Label subtitle, ISubtitleEntry entry, CancellationToken cancellationToken)

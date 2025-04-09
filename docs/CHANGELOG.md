@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.7.1] - 09/04/2025
+- Subtitler now dynamically respects Unity TimeScale. Pausing game pauses Subtitler, running half speed makes subtitles appear for twice as long etc.
+- Added TimeScale to Typewriter effect
+
 ## [0.7.0] - 26/03/2025
 - Added new system for handling and customizing label transitions using **Subtitler Transition Assets** to eliminate the need to touch UITK. 
 - Added a Typewriter effect which types subtitle entries letter by letter while respecting rich text and layouts.

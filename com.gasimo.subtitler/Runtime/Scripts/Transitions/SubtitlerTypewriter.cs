@@ -66,7 +66,7 @@ namespace Gasimo.Subtitles
 
                         subtitle.text = constructedText;
 
-                        await Task.Delay((int)(typeDelay * 1000), cancellationToken);
+                        await Subtitler.WaitForGameTime(typeDelay, cancellationToken);
 
                     }
                 }

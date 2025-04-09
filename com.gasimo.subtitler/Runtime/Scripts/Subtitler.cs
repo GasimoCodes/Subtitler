@@ -221,7 +221,7 @@ namespace Gasimo.Subtitles
             {
                 foreach (var entry in sequenceData.Subtitles)
                 {
-                    await Task.Delay(TimeSpan.FromSeconds(entry.waitFor), cancellationToken);
+                    await WaitForGameTime(entry.waitFor, cancellationToken);
                     _ = PlaySubtitleEntryAsync(entry, audioSource, cancellationToken);
                 }
             }
@@ -272,7 +272,7 @@ namespace Gasimo.Subtitles
 
                 if (remainingDisplayTime > TimeSpan.Zero)
                 {
-                    await Task.Delay(remainingDisplayTime, cancellationToken);
+                    await WaitForGameTime(remainingDisplayTime.Seconds, cancellationToken);
                 }
 
             }
@@ -335,6 +335,26 @@ namespace Gasimo.Subtitles
         private bool IsWithinAudioRange(AudioSource audioSource)
         {
             return Vector3.Distance(player.transform.position, audioSource.transform.position) <= audioSource.maxDistance;
+        }
+
+        /// <summary>
+        /// Waits for a specified amount of game time. Used by Subtitler (and optionally transition modules) to wait for a specific amount of time.
+        /// </summary>
+        /// <param name="seconds"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="OperationCanceledException"></exception>
+        static public async Task WaitForGameTime(float seconds, CancellationToken cancellationToken)
+        {
+            float startTime = Time.time;
+            float targetTime = startTime + seconds;
+
+            while (Time.time < targetTime)
+            {
+                await Task.Yield();
+                if (cancellationToken.IsCancellationRequested)
+                    throw new OperationCanceledException();
+            }
         }
 
         #endregion
