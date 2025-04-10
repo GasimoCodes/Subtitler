@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Samples/Subtitler/0.2.0/Sample Subtitled Scene/SampleScene.unity
     guid: e6fdb73de9b05824884d70b0920a21d9
   - enabled: 1
+    path: Packages/com.gasimo.subtitler/Samples/SubtitleScene/SRT Demo.unity
+    guid: 72b0e6b6bee33dc4594d332566007ee4
+  - enabled: 1
     path: Packages/com.gasimo.subtitler/Samples/Timeline/Subtitle Timeline.unity
     guid: 892f0ebc0660f1c41ba5628ddeb0cfaf
   - enabled: 1
-    path: Packages/com.gasimo.subtitler/Samples/SubtitleScene/SampleScene.unity
+    path: Packages/com.gasimo.subtitler/Samples/SubtitleScene/Sample Demo.unity
     guid: 3c8e98bc410d70b48be3a1ed6759381d
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: beee5d738105d5e4fb678e3ad6dc84cf,

@@ -87,10 +87,22 @@
 <h1 id="changelog">Changelog</h1>
 
 <p>All notable changes to this package will be documented in this file.</p>
-<h2 id="071---09042025">[0.7.1] - 09/04/2025</h2>
+<h2 id="080">[0.8.0]</h2>
+<p><strong>Added</strong></p>
 <ul>
+<li>Audio operations are now abstracted through IAudioPlayer to allow for custom audio backends (such as FMOD). <em>(Current Subtitler AudioSource API remains intact and no changes are needed)</em></li>
 <li>Subtitler now dynamically respects Unity TimeScale. Pausing game pauses Subtitler, running half speed makes subtitles appear for twice as long etc.</li>
 <li>Added TimeScale to Typewriter effect</li>
+<li>TimeScale now affects audio player through Subtitler too</li>
+<li>Sample pause button feature</li>
+</ul>
+<p><strong>Fixed</strong></p>
+<ul>
+<li>Subtitler can now play Audio Clips through the Subtitler Timeline Clips.</li>
+</ul>
+<p><strong>Breaking Changes</strong></p>
+<ul>
+<li>API: ISubtitleEntry.getAudio() now returns 'object' instead of an AudioClip.</li>
 </ul>
 <h2 id="070---26032025">[0.7.0] - 26/03/2025</h2>
 <ul>

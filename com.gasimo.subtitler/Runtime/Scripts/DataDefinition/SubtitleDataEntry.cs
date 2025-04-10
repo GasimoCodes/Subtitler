@@ -47,7 +47,7 @@ namespace Gasimo.Subtitles
         public float displayFor = 5;
 
 
-        public AudioClip getAudio()
+        public object getAudio()
         {
             return audio;
         }

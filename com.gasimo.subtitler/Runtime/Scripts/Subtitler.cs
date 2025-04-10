@@ -21,6 +21,7 @@ namespace Gasimo.Subtitles
         [SerializeField] private Color speakerHighlight = Color.white;
         [SerializeField] private Color backgroundColor = new Color(0,0,0, 0.3137255f);
         [SerializeField] private bool enableBackgroundPanel = true;
+        [SerializeField] private bool lineBreakSpeaker = false;
         [Space(5)]
         [SerializeField] private Font subtitleFont;
         [SerializeField] private TextAnchor subtitleAlign = TextAnchor.MiddleLeft;
@@ -35,12 +36,12 @@ namespace Gasimo.Subtitles
         private UIDocument uiDocument;
         private VisualElement displayPanel;
         private ObjectPool<Label> subtitlePool;
-        private Dictionary<int, CancellationTokenSource> activeSubtitles = new Dictionary<int, CancellationTokenSource>();
+        private Dictionary<int, (CancellationTokenSource, IAudioPlayer)> activeSubtitles = new();
         private int activeSubtitleCount = 0;
         private int nextSubtitleId = 0;
         private bool isInitialized = false;
         private ISubtitlerTransition transition;
-
+        
 
         protected override void Awake()
         {
@@ -113,6 +114,15 @@ namespace Gasimo.Subtitles
             }
         }
 
+        public void Update()
+        {
+            foreach (var entry in activeSubtitles)
+            {
+                if (entry.Value.Item2 == null) continue;
+                entry.Value.Item2.SetTimeScale(UnityEngine.Time.timeScale);
+            }
+        }
+
         #region PoolFunctions
 
         private Label CreateSubtitleLabel()
@@ -167,9 +177,26 @@ namespace Gasimo.Subtitles
         {
             Initialize();
             int id = GetNextSubtitleId();
+            IAudioPlayer audio = new UnityAudioAdapter(audioSource, player);
             var cts = new CancellationTokenSource();
-            activeSubtitles[id] = cts;
-            _ = PlaySubtitleSequenceAsync(sequenceData, audioSource, id, cts.Token);
+            activeSubtitles[id] = (cts, audio);
+            _ = PlaySubtitleSequenceAsync(sequenceData, audio, id, cts.Token);
+            return id;
+        }
+
+        /// <summary>
+        /// Plays a sequence of SubtitleEntries on a given IAudioPlayer
+        /// </summary>
+        /// <param name="sequenceData">Sequence to be played</param>
+        /// <param name="audioPlayer">IAudioPlayer to play through</param>
+        /// <returns>Id of the session instance</returns>
+        public int PlaySubtitleSequence(SubtitleSequenceData sequenceData, IAudioPlayer audioPlayer)
+        {
+            Initialize();
+            int id = GetNextSubtitleId();
+            var cts = new CancellationTokenSource();
+            activeSubtitles[id] = (cts, audioPlayer);
+            _ = PlaySubtitleSequenceAsync(sequenceData, audioPlayer, id, cts.Token);
             return id;
         }
 
@@ -183,11 +210,45 @@ namespace Gasimo.Subtitles
         {
             Initialize();
             int id = GetNextSubtitleId();
+            IAudioPlayer audio = new UnityAudioAdapter(audioSource, player);
             var cts = new CancellationTokenSource();
-            activeSubtitles[id] = cts;
-            _ = PlaySubtitleEntryAsync(entry, audioSource, cts.Token);
+            activeSubtitles[id] = (cts, audio);
+            _ = PlaySubtitleEntryAsync(entry, audio, cts.Token);
             return id;
         }
+
+        /// <summary>
+        /// Plays a single line of subtitles on a given AudioPlayer
+        /// </summary>
+        /// <param name="entry">Entry containing the subtitle data</param>
+        /// <param name="audioPlayer">AudioPlayer to play through</param>
+        /// <returns>Id of the session instance</returns>
+        public int PlaySubtitleEntry(ISubtitleEntry entry, IAudioPlayer audioPlayer)
+        {
+            Initialize();
+            int id = GetNextSubtitleId();
+            var cts = new CancellationTokenSource();
+            activeSubtitles[id] = (cts, audioPlayer);
+            _ = PlaySubtitleEntryAsync(entry, audioPlayer, cts.Token);
+            return id;
+        }
+
+        /// <summary>
+        /// Plays a single line of subtitles
+        /// </summary>
+        /// <param name="entry">Entry containing the subtitle data</param>
+        /// <returns>Id of the session instance</returns>
+        public int PlaySubtitleEntry(ISubtitleEntry entry)
+        {
+            Initialize();
+            int id = GetNextSubtitleId();
+            var cts = new CancellationTokenSource();
+            activeSubtitles[id] = (cts, null);
+            _ = PlaySubtitleEntryAsync(entry, null, cts.Token);
+            return id;
+        }
+
+
 
         /// <summary>
         /// Removes and hides a Subtitle session immediately.
@@ -197,8 +258,8 @@ namespace Gasimo.Subtitles
         {
             if (activeSubtitles.TryGetValue(id, out var cts))
             {
-                cts.Cancel();
-                cts.Dispose();
+                cts.Item1.Cancel();
+                cts.Item1.Dispose();
                 activeSubtitles.Remove(id);
             }
         }
@@ -215,7 +276,7 @@ namespace Gasimo.Subtitles
             }
         }
 
-        private async Task PlaySubtitleSequenceAsync(SubtitleSequenceData sequenceData, AudioSource audioSource, int id, CancellationToken cancellationToken)
+        private async Task PlaySubtitleSequenceAsync(SubtitleSequenceData sequenceData, IAudioPlayer audioSource, int id, CancellationToken cancellationToken)
         {
             try
             {
@@ -235,14 +296,14 @@ namespace Gasimo.Subtitles
             }
         }
 
-        private async Task PlaySubtitleEntryAsync(ISubtitleEntry entry, AudioSource audioSource, CancellationToken cancellationToken)
+        private async Task PlaySubtitleEntryAsync(ISubtitleEntry entry, IAudioPlayer audioSource, CancellationToken cancellationToken)
         {
             if (audioSource != null && entry.getAudio() != null)
             {
                 audioSource.PlayOneShot(entry.getAudio());
             }
 
-            if (!ShouldDisplaySubtitle(entry, audioSource)) return;
+            if (!audioSource.IsHearable()) return;
 
             entry.getSubtitleEvent()?.Raise();
 
@@ -292,9 +353,13 @@ namespace Gasimo.Subtitles
 
         private void SetSubtitleText(Label subtitle, string speaker, string message)
         {
-            subtitle.text = string.IsNullOrEmpty(speaker)
+            string text = "";
+
+            text = string.IsNullOrEmpty(speaker)
                 ? message
-                : $"<color=#{ColorUtility.ToHtmlStringRGB(speakerHighlight)}><b>{speaker}</b></color>: {message}";
+                : $"<color=#{ColorUtility.ToHtmlStringRGB(speakerHighlight)}><b>{speaker}</b></color>:" + (lineBreakSpeaker ? "\n" : " ") + message;
+
+            subtitle.text = text;
         }
 
         #region animations
@@ -323,19 +388,6 @@ namespace Gasimo.Subtitles
         }
 
         #region utils
-
-        private bool ShouldDisplaySubtitle(ISubtitleEntry entry, AudioSource audioSource)
-        {
-            if (audioSource == null) return true;
-            if (audioSource.volume <= 0.05f || !audioSource.enabled) return false;
-            if (audioSource.spatialBlend == 1 && !IsWithinAudioRange(audioSource)) return false;
-            return true;
-        }
-
-        private bool IsWithinAudioRange(AudioSource audioSource)
-        {
-            return Vector3.Distance(player.transform.position, audioSource.transform.position) <= audioSource.maxDistance;
-        }
 
         /// <summary>
         /// Waits for a specified amount of game time. Used by Subtitler (and optionally transition modules) to wait for a specific amount of time.

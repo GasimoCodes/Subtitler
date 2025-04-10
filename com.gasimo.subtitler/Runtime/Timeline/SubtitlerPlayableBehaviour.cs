@@ -15,13 +15,15 @@ namespace Gasimo.Subtitles.Timeline
 
         public ISubtitleEntry entry;
 
+        
 
         public override void OnBehaviourPlay(Playable playable, FrameData info)
         {
             base.OnBehaviourPlay(playable, info);
             if (Application.isPlaying)
-                Subtitler.Instance.PlaySubtitleEntry(entry, null);
-
+            { 
+                Subtitler.Instance.PlaySubtitleEntry(entry, audioSource: (info.output.GetUserData() as AudioSource));
+            }
         }
 
         public override void OnBehaviourPause(Playable playable, FrameData info)

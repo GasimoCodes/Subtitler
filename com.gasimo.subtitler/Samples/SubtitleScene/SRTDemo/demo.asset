@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa7bf2b86c397548b895bf7e2f6b9b6, type: 3}
+  m_Name: demo
+  m_EditorClassIdentifier: 
+  Subtitles:
+  - dialogue: 'This is an automated broadcast
+
+      from the Greenland Maritime
+      Safety Information Service.'
+    speaker: Radio
+    audio: {fileID: 8300000, guid: 61728f6984a6f85439e011988d377228, type: 3}
+    subtitleEvent: {fileID: 0}
+    waitFor: 0
+    displayFor: 5.37
+  - dialogue: 'The following information
+
+      is valid for the next 24 hours.'
+    speaker: Radio
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 5.25
+    displayFor: 4.6000004
+  - dialogue: 'Weather forecast for waters
+
+      off the south west coast of Greenland.'
+    speaker: Radio
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 4.3999996
+    displayFor: 3.58
+  - dialogue: Northeast, force 5 to 6, increasing to force 7 in exposed areas.
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 3.6000004
+    displayFor: 6.08
+  - dialogue: Moderate to rough, becoming very rough in open waters.
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 6.0599995
+    displayFor: 3.8199997
+  - dialogue: Poor, with fog patches, improving to moderate by afternoon.
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 3.7800007
+    displayFor: 4.66
+  - dialogue: Two to four. One.
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 4.7199993
+    displayFor: 2.8999996
+  - dialogue: 'Navigation warning: A strict no-sail zone has been established around
+      Ravnedod due to electromagnetical interference and ongoing research.'
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 2.9800014
+    displayFor: 8.540001
+  - dialogue: 'All vessels are prohibited
+
+      from entering the area bounded by
+      the following coordinates.'
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 8.639999
+    displayFor: 4.459999
+  - dialogue: "63\xB045'N, 051\xB035'W, 63\xB045'N, 051\xB015'W..."
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 4.7599983
+    displayFor: 5.140003
+  - dialogue: '*static*'
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 6.450001
+    displayFor: 1.8199997

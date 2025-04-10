@@ -5,6 +5,7 @@ using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
 using Gasimo.Subtitles.Localization;
+using System;
 
 namespace Gasimo.Subtitles.Timeline
 {
@@ -23,9 +24,14 @@ namespace Gasimo.Subtitles.Timeline
 
             textPlayableasset.entry.displayFor = (float)clip.duration;
 
-           
-            if (textPlayableasset != null && !string.IsNullOrEmpty(textPlayableasset.entry.getDialogue()))
-                clip.displayName = textPlayableasset.entry.getSpeaker() + ": " + textPlayableasset.entry.getDialogue();
+            try {
+                if (textPlayableasset != null && !string.IsNullOrEmpty(textPlayableasset.entry.getDialogue()))
+                    clip.displayName = textPlayableasset.entry.getSpeaker() + ": " + textPlayableasset.entry.getDialogue();
+            } 
+            catch (Exception e)
+            {
+                Debug.LogError("Error in SubtitlerLocalizedPlayableClipEditor: " + e.Message);
+            }
         }
     }
 }

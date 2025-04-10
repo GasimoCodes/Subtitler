@@ -1,6 +1,6 @@
 {
   "name": "com.gasimo.subtitler",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "displayName": "Subtitler",
   "description": "Versatile Unity Closed-Captions System",
   "unity": "2022.1",
@@ -16,19 +16,14 @@
   },
   "samples": [
     {
-      "displayName": "Sample Subtitled Scene",
-      "description": "Contains a sample subtitle file which is automatically played",
+      "displayName": "Sample Subtitle Scenes",
+      "description": "Contains sample scenes featuring Subtitler and its various core features including SRT imports, pausing and more.",
       "path": "Samples/SubtitleScene"
     },
     {
       "displayName": "Timeline Integration Scene",
       "description": "A simple scene with a Timeline Subtitling track leveraging Subtitler",
       "path": "Samples/Timeline"
-    },
-    {
-      "displayName": "SRT Import",
-      "description": "Showcases SRT support for Subtitler",
-      "path": "Samples/SRTDemo"
     }
   ],
   "hideInEditor": false,

@@ -62,7 +62,7 @@ namespace Gasimo.Subtitles.Localization
             return waitFor;
         }
 
-        public AudioClip getAudio()
+        public object getAudio()
         {
             if (audio != null && audio.IsEmpty != true)
             {

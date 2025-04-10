@@ -12,8 +12,8 @@ namespace Gasimo.Subtitles
         /// <summary>
         /// AudioClip of the subtitle
         /// </summary>
-        /// <returns>AudioClip with sound for this entry</returns>
-        public AudioClip getAudio();
+        /// <returns>Object containing the sound for this entry to be played with an IAudioSource</returns>
+        public object getAudio();
 
         /// <summary>
         /// Dialogue string of the subtitle
