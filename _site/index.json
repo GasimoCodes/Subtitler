@@ -1,0 +1,187 @@
+{
+  "CHANGELOG.html": {
+    "href": "CHANGELOG.html",
+    "title": "Changelog | Subtitler",
+    "summary": "Changelog All notable changes to this package will be documented in this file. [0.9.1] - 10/09/2025 Fixed Subtitler DisplaySubtitleAsync now uses TimeSpan.TotalSeconds (double) instead of TimeSpan.Seconds (int) when waiting for game time. [0.9.0] - 10/06/2025 Added Timeline 'Sequence Clip' which allows you to use Subtitler Sequences on the Timeline Subtitler Track now has an Icon Changed Timeline clips have been refactored and now use a shared base class Fixed Cancelling subtitle's thread token (SubtitleContainer.Stop and similar calls) no-longer writes an error to the console. Subtitler .Stop() no longer prints an error Breaking Changes API: Refactored ISubtitleEntry to use C# get/set properties instead of functions. (.getDialogue(); becomes .Dialogue; and so on) [0.8.1] - 20/04/2025 Fixed WebGL Builds now have subtitler appear properly. Issues were caused by a lack of System.Threading.Timers support by the platform. Changed Task.Delay calls to Awaitables where needed, which mildly improves allocation (Applies to Unity 6 only) Fixed a bug which caused Subtitler to prevent clicks on UI behind Subtitler. (Changed UITK PickingMode) [0.8.0] - 7/04/2025 Added Audio operations are now abstracted through IAudioPlayer to allow for custom audio backends (such as FMOD). (Current Subtitler AudioSource API remains intact and no changes are needed) Subtitler now dynamically respects Unity TimeScale. Pausing game pauses Subtitler, running half speed makes subtitles appear for twice as long etc. Added TimeScale to Typewriter effect TimeScale now affects audio player through Subtitler too Sample pause button feature Fixed Subtitler can now play Audio Clips through the Subtitler Timeline Clips. Breaking Changes API: ISubtitleEntry.getAudio() now returns 'object' instead of an AudioClip. [0.7.0] - 26/03/2025 Added new system for handling and customizing label transitions using Subtitler Transition Assets to eliminate the need to touch UITK. Added a Typewriter effect which types subtitle entries letter by letter while respecting rich text and layouts. Improved transition timing accuracy by recording entry animation times and subtracting them from the display times. This will play the exit transitions more accurately. Updated offline documentation files [0.6.1] - 04/12/2024 Bugfixes Fixed an issue which prevented specific 3D or recently unmuted audioSources from playing sound when occlussion criteria begins true but changes mid-line (such as player teleporting mid-subtitle). AudioSources now play sound before the occlussion criteria for showing UI are checked. [0.6.0] - 13/11/2024 Subtitler font and background color can now be changed from the inspector menu. [0.5.0] - 26/09/2024 Asset Store Release Version Improved Localization support. Localized Assets can now coexist with regular ones. [0.4.0] - 23/09/2024 SRT File Support (Unity ScriptedImporter) Remove CySharp UniTask Dependency (All code moved to Native Async) SubtitleEntry() now supports CancellationTokens KillSubtitleById has been replaced with RemoveSubtitle(Id) RemoveSubtitle(Id) hides even ongoing subtitles immediately instead of just cancelling new ones in sequence. Improved Exit timings accuracy Added icon for Subtitler Improved text anchor customization [0.3.0] - 19/02/2024 Unity Localization experimental support Subtitler now accepts ISubtitleEntry instead of a specific class SubtitleEntryData now implements ISubtitleEntry [0.2.1] - 04/02/2024 Layouting performance improvement by marking VisualElements usageHints. (Pending benchmark) [0.2.0] - 31/01/2024 UI Rework, Subtitler is now using UIToolkit instead of Unity.UI for runtime rendering and layouting. Removed dependency on DOTWeen Removed dependency on Addressables Removed dependency on TextMeshPro Fixed invalid layouting issues caused by previous GameObjects based solution. [0.1.4] - 26/01/2024 Added Icon for ScriptableEvent Migrated ScriptableEvent to UnityAction instead of C# Delegates Added null check to ScriptableEvent to prevent exceptions Fixed build errors with Timeline due to Editor scripts not getting excluded [0.1.3] - 25/12/2023 Timeline Support Added optional Timeline support (using #if TIMELINE_PRESENT) Separated subtitle sequences from entries [0.1.2] - 23/12/2023 General Polish and Bugfixes Polished exit animations for the subtitles, which now smoothly push the background panel even on exit Minor cleanup in the code Added gizmos Added custom editor for the subtitle datas [0.1.1] - 12/12/2023 Begin of changelog"
+  },
+  "api/Gasimo.Subtitles.Editor.SRTImporter.html": {
+    "href": "api/Gasimo.Subtitles.Editor.SRTImporter.html",
+    "title": "Subtitler",
+    "summary": "Class SRTImporter Namespace Gasimo.Subtitles.Editor Assembly Gasimo.Subtitler.Editor.dll [ScriptedImporter(1, \"srt\")] public class SRTImporter : ScriptedImporter Inheritance object Object AssetImporter ScriptedImporter SRTImporter Methods ImportSRT(string) public static SubtitleSequenceData ImportSRT(string filePath) Parameters filePath string Returns SubtitleSequenceData OnImportAsset(AssetImportContext) This method must by overriden by the derived class and is called by the Asset pipeline to import files. public override void OnImportAsset(AssetImportContext ctx) Parameters ctx AssetImportContext This argument contains all the contextual information needed to process the import event and is also used by the custom importer to store the resulting Unity Asset."
+  },
+  "api/Gasimo.Subtitles.Editor.SRTImporterEditor.html": {
+    "href": "api/Gasimo.Subtitles.Editor.SRTImporterEditor.html",
+    "title": "Subtitler",
+    "summary": "Class SRTImporterEditor Namespace Gasimo.Subtitles.Editor Assembly Gasimo.Subtitler.Editor.dll [CustomEditor(typeof(SRTImporter))] public class SRTImporterEditor : ScriptedImporterEditor Inheritance object Object ScriptableObject Editor AssetImporterEditor ScriptedImporterEditor SRTImporterEditor Methods OnInspectorGUI() Override this method to create your own Inpsector GUI for a ScriptedImporter. public override void OnInspectorGUI()"
+  },
+  "api/Gasimo.Subtitles.Editor.html": {
+    "href": "api/Gasimo.Subtitles.Editor.html",
+    "title": "Subtitler",
+    "summary": "Namespace Gasimo.Subtitles.Editor Classes SRTImporter SRTImporterEditor"
+  },
+  "api/Gasimo.Subtitles.ISubtitleEntry.html": {
+    "href": "api/Gasimo.Subtitles.ISubtitleEntry.html",
+    "title": "Subtitler",
+    "summary": "Interface ISubtitleEntry Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll Interface for describing subtitles usable in Subtitler public interface ISubtitleEntry Methods getAudio() AudioClip of the subtitle AudioClip getAudio() Returns AudioClip AudioClip with sound for this entry getDialogue() Dialogue string of the subtitle string getDialogue() Returns string Dialogue getDisplayFor() How long should the subtitle be visible for? float getDisplayFor() Returns float getSpeaker() Speaker name for the subtitle, will prefix the dialogue in this format: speaker:dialogue (Optional) string getSpeaker() Returns string Speaker Name getSubtitleEvent() ScriptableEvent getSubtitleEvent() Returns ScriptableEvent getWaitFor() How long should subtitler pause before playing this line? (If in sequence, relative to last played subtitle) float getWaitFor() Returns float"
+  },
+  "api/Gasimo.Subtitles.ISubtitleSequence.html": {
+    "href": "api/Gasimo.Subtitles.ISubtitleSequence.html",
+    "title": "Subtitler",
+    "summary": "Interface ISubtitleSequence Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll Interface for SubtitleSequences. Implement this to define your own sequence. public interface ISubtitleSequence Methods GetSubtitleEntries() ISubtitleEntry[] GetSubtitleEntries() Returns ISubtitleEntry[]"
+  },
+  "api/Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.html": {
+    "href": "api/Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.html",
+    "title": "Subtitler",
+    "summary": "Class LocalizedSubtitleEntry Namespace Gasimo.Subtitles.Localization Assembly Gasimo.Subtitler.Localization.dll Localized Subtitle Entry variant [Serializable] public class LocalizedSubtitleEntry : ISubtitleEntry Inheritance object LocalizedSubtitleEntry Implements ISubtitleEntry Fields audio Localized AudioClip [SerializeField] public LocalizedAudioClip audio Field Value LocalizedAudioClip dialogue Localized dialogue [SerializeField] public LocalizedString dialogue Field Value LocalizedString displayFor How long will this subtitle be displayed for. public float displayFor Field Value float speaker Localized Speaker [SerializeField] public LocalizedString speaker Field Value LocalizedString subtitleEvent Programmable event which gets ivoked when this subtitle gets played. Useful to trigger mechanics exactly when player hears a certain line. public ScriptableEvent subtitleEvent Field Value ScriptableEvent waitFor Delay between last Subtitle line and this one. Leave 0 to play at same time as previous line. public float waitFor Field Value float Methods getAudio() AudioClip of the subtitle public AudioClip getAudio() Returns AudioClip AudioClip with sound for this entry getDialogue() Dialogue string of the subtitle public string getDialogue() Returns string Dialogue getDisplayFor() How long should the subtitle be visible for? public float getDisplayFor() Returns float getSpeaker() Speaker name for the subtitle, will prefix the dialogue in this format: speaker:dialogue (Optional) public string getSpeaker() Returns string Speaker Name getSubtitleEvent() public ScriptableEvent getSubtitleEvent() Returns ScriptableEvent getWaitFor() How long should subtitler pause before playing this line? (If in sequence, relative to last played subtitle) public float getWaitFor() Returns float"
+  },
+  "api/Gasimo.Subtitles.Localization.LocalizedSubtitleSequence.html": {
+    "href": "api/Gasimo.Subtitles.Localization.LocalizedSubtitleSequence.html",
+    "title": "Subtitler",
+    "summary": "Class LocalizedSubtitleSequence Namespace Gasimo.Subtitles.Localization Assembly Gasimo.Subtitler.Localization.dll Localized Subtitle Sequence [CreateAssetMenu(fileName = \"Localized Sequence\", menuName = \"Gasimo/Subtitler/Localized Sequence\")] [HelpURL(\"https://gasimo.dev/Subtitler/manual/Unity Localization/localization_intro.html\")] public class LocalizedSubtitleSequence : ScriptableObject, ISubtitleSequence Inheritance object Object ScriptableObject LocalizedSubtitleSequence Implements ISubtitleSequence Fields Sequence [SerializeField] public LocalizedSubtitleEntry[] Sequence Field Value LocalizedSubtitleEntry[] Methods GetSubtitleEntries() public ISubtitleEntry[] GetSubtitleEntries() Returns ISubtitleEntry[]"
+  },
+  "api/Gasimo.Subtitles.Localization.html": {
+    "href": "api/Gasimo.Subtitles.Localization.html",
+    "title": "Subtitler",
+    "summary": "Namespace Gasimo.Subtitles.Localization Classes LocalizedSubtitleEntry Localized Subtitle Entry variant LocalizedSubtitleSequence Localized Subtitle Sequence"
+  },
+  "api/Gasimo.Subtitles.MonoSingleton-1.html": {
+    "href": "api/Gasimo.Subtitles.MonoSingleton-1.html",
+    "title": "Subtitler",
+    "summary": "Class MonoSingleton<T> Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll Helper class to implement Singleton pattern into Subtitler public abstract class MonoSingleton<T> : MonoBehaviour where T : Component Type Parameters T Inheritance object Object Component Behaviour MonoBehaviour MonoSingleton<T> Derived Subtitler Properties Instance Gets the instance. public static T Instance { get; } Property Value T The instance. Methods Awake() Use this for initialization. protected virtual void Awake()"
+  },
+  "api/Gasimo.Subtitles.ScriptableEvent.html": {
+    "href": "api/Gasimo.Subtitles.ScriptableEvent.html",
+    "title": "Subtitler",
+    "summary": "Class ScriptableEvent Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll Object which you can bind custom events to. Use it by creating an ScriptableObject for every instance of events you want to use. To subscribe, use onEventRaised. To raise, use Raise(). Subtitles automatically calls Raise() when you attach instance of this class to a Subtitle line. [CreateAssetMenu(fileName = \"ScriptableEvent\", menuName = \"Gasimo/Subtitler/ScriptableEvent\")] [Serializable] [HelpURL(\"https://gasimo.dev/Subtitler/manual/event.html\")] public class ScriptableEvent : ScriptableObject Inheritance object Object ScriptableObject ScriptableEvent Fields onEventRaised public UnityAction onEventRaised Field Value UnityAction Methods Raise() Invokes events subscribed to onEventRaised. public void Raise()"
+  },
+  "api/Gasimo.Subtitles.SubtitleContainer.html": {
+    "href": "api/Gasimo.Subtitles.SubtitleContainer.html",
+    "title": "Subtitler",
+    "summary": "Class SubtitleContainer Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll Component representing one subtitle source in the world. [RequireComponent(typeof(AudioSource))] [HelpURL(\"https://gasimo.dev/Subtitler/manual/Components/containers.html\")] public class SubtitleContainer : MonoBehaviour Inheritance object Object Component Behaviour MonoBehaviour SubtitleContainer Fields autoPlay Play automatically on awake? public bool autoPlay Field Value bool subtitleData Subtitle Data to play public SubtitleSequenceData subtitleData Field Value SubtitleSequenceData Methods Play() Plays the attached Subtitle Data public void Play() Stop() Stops the sequence assigned to this Container public void Stop()"
+  },
+  "api/Gasimo.Subtitles.SubtitleDataEntry.html": {
+    "href": "api/Gasimo.Subtitles.SubtitleDataEntry.html",
+    "title": "Subtitler",
+    "summary": "Class SubtitleDataEntry Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll Contains data for 1 line of dialogue. [Serializable] public class SubtitleDataEntry : ISubtitleEntry Inheritance object SubtitleDataEntry Implements ISubtitleEntry Fields audio AudioClip which will play simultaneously with the subtitle line. Can be left empty to not play sound. public AudioClip audio Field Value AudioClip dialogue Written Closed-Captions public string dialogue Field Value string displayFor How long will this subtitle be displayed for. public float displayFor Field Value float speaker Display name of speaker/object which plays the dialogue. Leave empty for none (useful for sounds). [SerializeField] public string speaker Field Value string subtitleEvent Programmable event which gets ivoked when this subtitle gets played. Useful to trigger mechanics exactly when player hears a certain line. public ScriptableEvent subtitleEvent Field Value ScriptableEvent waitFor Delay between last Subtitle line and this one. Leave 0 to play at same time as previous line. public float waitFor Field Value float Methods getAudio() AudioClip of the subtitle public AudioClip getAudio() Returns AudioClip AudioClip with sound for this entry getDialogue() Dialogue string of the subtitle public string getDialogue() Returns string Dialogue getDisplayFor() How long should the subtitle be visible for? public float getDisplayFor() Returns float getSpeaker() Speaker name for the subtitle, will prefix the dialogue in this format: speaker:dialogue (Optional) public string getSpeaker() Returns string Speaker Name getSubtitleEvent() public ScriptableEvent getSubtitleEvent() Returns ScriptableEvent getWaitFor() How long should subtitler pause before playing this line? (If in sequence, relative to last played subtitle) public float getWaitFor() Returns float"
+  },
+  "api/Gasimo.Subtitles.SubtitleSequenceData.html": {
+    "href": "api/Gasimo.Subtitles.SubtitleSequenceData.html",
+    "title": "Subtitler",
+    "summary": "Class SubtitleSequenceData Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll Contains data holding a single Closed Caption sequence. For individual lines, see SubtitleDataEntry. [CreateAssetMenu(fileName = \"SubtitleFile\", menuName = \"Gasimo/Subtitler/SubtitleFile\")] [Serializable] [HelpURL(\"https://gasimo.dev/Subtitler/manual/Components/data.html#subtitler-sequence\")] public class SubtitleSequenceData : ScriptableObject, ISubtitleSequence Inheritance object Object ScriptableObject SubtitleSequenceData Implements ISubtitleSequence Fields Subtitles Sequence of Subtitles [SerializeField] public SubtitleDataEntry[] Subtitles Field Value SubtitleDataEntry[] Methods GetSubtitleEntries() public ISubtitleEntry[] GetSubtitleEntries() Returns ISubtitleEntry[]"
+  },
+  "api/Gasimo.Subtitles.Subtitler.html": {
+    "href": "api/Gasimo.Subtitles.Subtitler.html",
+    "title": "Subtitler",
+    "summary": "Class Subtitler Namespace Gasimo.Subtitles Assembly Gasimo.Subtitler.dll [RequireComponent(typeof(UIDocument))] [HelpURL(\"https://gasimo.dev/Subtitler/manual/Components/subtitler.html\")] public class Subtitler : MonoSingleton<Subtitler> Inheritance object Object Component Behaviour MonoBehaviour MonoSingleton<Subtitler> Subtitler Inherited Members MonoSingleton<Subtitler>.Instance Fields siteURL public const string siteURL = \"https://gasimo.dev/Subtitler/\" Field Value string Methods Awake() Use this for initialization. protected override void Awake() PlaySubtitleEntry(ISubtitleEntry, AudioSource) Plays a single line of subtitles on a given AudioSource public int PlaySubtitleEntry(ISubtitleEntry entry, AudioSource audioSource) Parameters entry ISubtitleEntry Entry containing the subtitle data audioSource AudioSource AudioSource to play through Returns int Id of the session instance PlaySubtitleSequence(SubtitleSequenceData, AudioSource) Plays a sequence of SubtitleEntries on a given AudioSource public int PlaySubtitleSequence(SubtitleSequenceData sequenceData, AudioSource audioSource) Parameters sequenceData SubtitleSequenceData Sequence to be played audioSource AudioSource AudioSource to play through Returns int Id of the session instance RemoveOldest() Removes and hides a active Subtitle Session with the oldest id. public void RemoveOldest() RemoveSubtitle(int) Removes and hides a Subtitle session immediately. public void RemoveSubtitle(int id) Parameters id int Id of the session to hide"
+  },
+  "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html": {
+    "href": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html",
+    "title": "Subtitler",
+    "summary": "Class SubtitlerPlayableAsset Namespace Gasimo.Subtitles.Timeline Assembly Gasimo.Subtitler.Timeline.dll a clip instance containing one SubtitleDataEntry on the Timeline public class SubtitlerPlayableAsset : PlayableAsset Inheritance object Object ScriptableObject PlayableAsset SubtitlerPlayableAsset Fields entry public SubtitleDataEntry entry Field Value SubtitleDataEntry Methods CreatePlayable(PlayableGraph, GameObject) Implement this method to have your asset inject playables into the given graph. public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) Parameters graph PlayableGraph The graph to inject playables into. owner GameObject The game object which initiated the build. Returns Playable The playable injected into the graph, or the root playable if multiple playables are injected."
+  },
+  "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html": {
+    "href": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html",
+    "title": "Subtitler",
+    "summary": "Class SubtitlerPlayableBehaviour Namespace Gasimo.Subtitles.Timeline Assembly Gasimo.Subtitler.Timeline.dll Behaviour called by clips. This plays a single SubtitleDataEntry at the beginning of the clip. public class SubtitlerPlayableBehaviour : PlayableBehaviour Inheritance object PlayableBehaviour SubtitlerPlayableBehaviour Fields entry public ISubtitleEntry entry Field Value ISubtitleEntry Methods OnBehaviourPause(Playable, FrameData) <p>This method is invoked when one of the following situations occurs: <br><br> The effective play state during traversal is changed to Playables.PlayState.Paused. This state is indicated by FrameData.effectivePlayState.<br><br> The PlayableGraph is stopped while the playable play state is Playing. This state is indicated by PlayableGraph.IsPlaying returning true. public override void OnBehaviourPause(Playable playable, FrameData info) Parameters playable Playable The Playable that owns the current PlayableBehaviour. info FrameData A FrameData structure that contains information about the current frame context. OnBehaviourPlay(Playable, FrameData) This function is called when the Playable play state is changed to Playables.PlayState.Playing. public override void OnBehaviourPlay(Playable playable, FrameData info) Parameters playable Playable The Playable that owns the current PlayableBehaviour. info FrameData A FrameData structure that contains information about the current frame context."
+  },
+  "api/Gasimo.Subtitles.Timeline.SubtitlerTrack.html": {
+    "href": "api/Gasimo.Subtitles.Timeline.SubtitlerTrack.html",
+    "title": "Subtitler",
+    "summary": "Class SubtitlerTrack Namespace Gasimo.Subtitles.Timeline Assembly Gasimo.Subtitler.Timeline.dll Controls creating a track in Timeline [TrackColor(0.945, 0.349, 0.165)] [TrackClipType(typeof(SubtitlerPlayableAsset))] [TrackBindingType(typeof(AudioSource))] public class SubtitlerTrack : TrackAsset Inheritance object Object ScriptableObject PlayableAsset TrackAsset SubtitlerTrack Methods CreateTrackMixer(PlayableGraph, GameObject, int) public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) Parameters graph PlayableGraph go GameObject inputCount int Returns Playable"
+  },
+  "api/Gasimo.Subtitles.Timeline.SubtitlerTrackMixer.html": {
+    "href": "api/Gasimo.Subtitles.Timeline.SubtitlerTrackMixer.html",
+    "title": "Subtitler",
+    "summary": "Class SubtitlerTrackMixer Namespace Gasimo.Subtitles.Timeline Assembly Gasimo.Subtitler.Timeline.dll Currently unused. Will be possibly used to manage clips on the timeline. public class SubtitlerTrackMixer : PlayableBehaviour Inheritance object PlayableBehaviour SubtitlerTrackMixer"
+  },
+  "api/Gasimo.Subtitles.Timeline.html": {
+    "href": "api/Gasimo.Subtitles.Timeline.html",
+    "title": "Subtitler",
+    "summary": "Namespace Gasimo.Subtitles.Timeline Classes SubtitlerPlayableAsset a clip instance containing one SubtitleDataEntry on the Timeline SubtitlerPlayableBehaviour Behaviour called by clips. This plays a single SubtitleDataEntry at the beginning of the clip. SubtitlerTrack Controls creating a track in Timeline SubtitlerTrackMixer Currently unused. Will be possibly used to manage clips on the timeline."
+  },
+  "api/Gasimo.Subtitles.html": {
+    "href": "api/Gasimo.Subtitles.html",
+    "title": "Subtitler",
+    "summary": "Namespace Gasimo.Subtitles Classes MonoSingleton<T> Helper class to implement Singleton pattern into Subtitler ScriptableEvent Object which you can bind custom events to. Use it by creating an ScriptableObject for every instance of events you want to use. To subscribe, use onEventRaised. To raise, use Raise(). Subtitles automatically calls Raise() when you attach instance of this class to a Subtitle line. SubtitleContainer Component representing one subtitle source in the world. SubtitleDataEntry Contains data for 1 line of dialogue. SubtitleSequenceData Contains data holding a single Closed Caption sequence. For individual lines, see SubtitleDataEntry. Subtitler Interfaces ISubtitleEntry Interface for describing subtitles usable in Subtitler ISubtitleSequence Interface for SubtitleSequences. Implement this to define your own sequence."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Home | Subtitler",
+    "summary": ""
+  },
+  "manual/Components/containers.html": {
+    "href": "manual/Components/containers.html",
+    "title": "Subtitle Containers | Subtitler",
+    "summary": "Subtitle Containers Subtitle Containers are world objects that store data about which subtitles should be played. They do not contain playback logic. An example implementation can be found in the SubtitleContainer component. SubtitleContainer Component This component either triggers the Subtitler to play its SubtitleSequence automatically on Start(), or you can manually invoke it using SubtitleContainer.Play();. Setting up Range-Limiting and Occlusion SubtitleContainer Subtitler can automatically hide subtitles if they're difficult to hear. This does not mean the subtitles are not 'played'; they are just not displayed. This process evaluates properties of the AudioSource linked to the SubtitleContainer: AudioSource Description Spatial Blend Value of 1 forces range-limiting. Max Distance If the player distance surpasses this value (and 3D Mix is set to 1), subtitles will not be visible. Volume If the current volume is low, subtitles will not display. Enabled Subtitles will not show if the AudioSource is disabled."
+  },
+  "manual/Components/data.html": {
+    "href": "manual/Components/data.html",
+    "title": "Data | Subtitler",
+    "summary": "Data Subtitler data can be represented as either a standalone entry (ISubtitleEntry) or a sequence of entries (ISubtitleSequence). Subtitler provides ready-to-use implementations of both. Subtitler Entry This structure represents a single line of Closed-Captions, including details on timing (relative to previous entries), events (such as triggering achievements or NPC actions), and the speaker (if applicable). Subtitler Sequence Sequences are ScriptableObjects and are the preferred method for creating subtitles. They contain a list of SubtitlerEntries played from top to bottom. Parameter Description Speaker The entity's name, highlighted in captions. Leave empty to omit. Dialogue The dialogue or sound to display. Start The delay before this entry appears, relative to the previous entry. End The duration the subtitle is displayed. Audio An AudioClip to be played. (Requires an AudioSource reference. See Containers or the API reference.) Event An event triggered when the subtitle displays. See Events."
+  },
+  "manual/Components/intro.html": {
+    "href": "manual/Components/intro.html",
+    "title": "Overview | Subtitler",
+    "summary": "Overview The subtitling system consists of three main components: Subtitler This is the core component responsible for all subtitling UI and logic. Use the singleton Subtitler.Instance(); for custom subtitle systems. Subtitle Containers Represents a single subtitle source in the world. Holds a reference to a Subtitle Sequence/Entry. Data A data asset containing closed-captions sequence. Unity 2023.3+ provides a custom editor for enhanced editing."
+  },
+  "manual/Components/subtitler.html": {
+    "href": "manual/Components/subtitler.html",
+    "title": "Subtitler Prefab | Subtitler",
+    "summary": "Subtitler Prefab To use Subtitler, drag the Subtitler Prefab from the package into your scene. Alternatively, copy it from the provided Samples. Changing Visuals Subtitler exposes some commonly changed properties like font, font-size, text alignment (centered/left-aligned), background color and speaker highlight color. Transition Animations Transition ScriptableObject Assets You can control text transitions by changing the Transition Data's asset field. Several built-in transitions are available such as fade-in/out or a typewriter effect. Full list of effects and their documentations are available here. Using UIToolkit Subtitler allows you to customize appearance using the UIToolkit document. You can modify transition animations by editing the Animations field of the .Label_Hide class or the Label objects."
+  },
+  "manual/Getting Started/importing.html": {
+    "href": "manual/Getting Started/importing.html",
+    "title": "Importing | Subtitler",
+    "summary": "Importing Recommended Unity version is 2023.3 due to a bug in UIToolkit. Minimum supported version is 2022, though it lacks advanced inspector tools. Asset Store Version After obtaining Subtitler through the Asset Store, it will become available in your Unity Package Manager. To see samples, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into Assets/Samples/Subtitler UPM (Obsolete): 2022.2 and above Import Subtitler https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler into Package Manager To see samples, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into Assets/Samples/Subtitler"
+  },
+  "manual/Timeline Integration/timeline_intro.html": {
+    "href": "manual/Timeline Integration/timeline_intro.html",
+    "title": "Timeline | Subtitler",
+    "summary": "Timeline Timeline is Unity's sequencing tool for complex event playback. Subtitler’s Timeline integration allows embedding subtitles in Timeline tracks. Importing Timeline If not already included, import Unity Timeline via the Unity Package Manager under Unity Registry/Timeline."
+  },
+  "manual/Timeline Integration/timeline_use.html": {
+    "href": "manual/Timeline Integration/timeline_use.html",
+    "title": "Subtitler Track | Subtitler",
+    "summary": "Subtitler Track Think of a Subtitler track like a Subtitler Sequence left to right. You can create an Subtitler under +/Gasimo.Subtitler.Timeline/Subtitler Track. Subtitler Entry (Clip) Add entries by right-clicking on the Subtitler Track and selecting 'Add Subtitler Playable Asset'. Timing In the Timeline, Subtitler Entry timing aligns with clip timings. Entries trigger precisely and display for the clip’s duration. Clip's Entry.WaitFor property is ignored in Timeline Mode."
+  },
+  "manual/Transition Assets/Custom Transitions.html": {
+    "href": "manual/Transition Assets/Custom Transitions.html",
+    "title": "Custom Transition Logic | Subtitler",
+    "summary": "Custom Transition Logic Transition assets receive signals from Subtitler which indicate which label should be animated or hidden. Assets need to inherit from the SubtitlerTransitionBase class and may override the following methods: /// <summary> /// Called when a subtitle entry is about to be displayed. /// </summary> /// <param name=\"subtitle\">Label containing this subtitle</param> /// <param name=\"cancellationToken\">Token which gets called when the entry is interrupted.</param> /// <returns>Task containing the animaion</returns> public abstract Task AnimateSubtitleEntrance(Label subtitle, ISubtitleEntry entry, CancellationToken cancellationToken); /// <summary> /// Called when a subtitle entry is about to be hidden. /// </summary> /// <param name=\"subtitle\"> Label containing this subtitle</param> /// <param name=\"cancellationToken\"> Token which gets called when the entry is interrupted.</param> /// <returns></returns> public abstract Task AnimateSubtitleExit(Label subtitle, ISubtitleEntry entry, CancellationToken cancellationToken); /// <summary> /// Called when a label is created in the Subtitler Pool. Use this to initialize the label with any custom settings required. /// Subtitler already sets any properties exposed in the Subtitler component. /// </summary> /// <param name=\"subtitle\"></param> public virtual void OnLabelCreated(Label subtitle) { subtitle.AddToClassList(\"Label_Hide\"); } All the overriding is optional. By default, the parent class contains all logic necessary for Animating the text scale to smoothly push text above and below to make space. Adding or removing the .Label_Hide tag to trigger fade-in-out transitions. By overriding the parent methods you will need to handle the transition yourself, or optionally, you may call the parent method in your methods and then hook up some custom code like the typewriter effect does which mixes fading it with letter insertion. Subtitler automatically adjusts the display time of an entry based on the time it took to perform AnimateSubtitleEntrance. That means you do not need to pad out your animations to accomodate entry displayFor lengths or track durations. For this calculation to work properly however, the whole duration of your entry transition should be awaited. Please pass the cancellationToken along to any awaits you have."
+  },
+  "manual/Transition Assets/Fade Transition.html": {
+    "href": "manual/Transition Assets/Fade Transition.html",
+    "title": "Fade Transition | Subtitler",
+    "summary": "Fade Transition Animates a in-out fade transition for every new entry displayed."
+  },
+  "manual/Transition Assets/Typewriter Transition.html": {
+    "href": "manual/Transition Assets/Typewriter Transition.html",
+    "title": "Typewriter Transition | Subtitler",
+    "summary": "Typewriter Transition Text appears letter by letter as if it were typed, then it fades out."
+  },
+  "manual/Transition Assets/index.html": {
+    "href": "manual/Transition Assets/index.html",
+    "title": "Transition Assets | Subtitler",
+    "summary": "Transition Assets You can control text transitions by changing the Transition Data's asset field. Several built-in transitions are available such as fade-in/out or a typewriter effect."
+  },
+  "manual/Unity Localization/localization_intro.html": {
+    "href": "manual/Unity Localization/localization_intro.html",
+    "title": "Localization | Subtitler",
+    "summary": "Localization Localization Package is Unity's localization tool which helps you with authoring localized assets and switching them at runtime (such as text/audio/assets/scenes...). Subtitler offers optional Localization support, activated automatically when the Localization Package is imported. Added Components Timeline Localized Clips (if Timeline integration is present) Localized Sequences Localized components coexist with non-localized ones. Ensure you are using the localized versions if you wish to take advantage of the Localization Integration."
+  },
+  "manual/event.html": {
+    "href": "manual/event.html",
+    "title": "Events | Subtitler",
+    "summary": "Events Subtitler allows subscription to simple C# events within subtitle entries. These events trigger when their corresponding entry appears. ScriptableEvent A ScriptableObject file. Can be created using the Gasimo/Subtitler/ScriptableEvent context menu. You can subscribe to the ScriptableEvent by calling onEventRaised += (your_action);"
+  },
+  "manual/srtsupport.html": {
+    "href": "manual/srtsupport.html",
+    "title": "SRT Support | Subtitler",
+    "summary": "SRT Support SRT files will be automatically associated with Subtitler upon import. This uses Unity's ScriptedImporter API. In order to convert srt assets to Subtitler's Sequences, click the srt file and in the import menu press the Create Subtitler Sequence Asser."
+  },
+  "manual/troubleshooting.html": {
+    "href": "manual/troubleshooting.html",
+    "title": "Subtitler",
+    "summary": "Common Questions Subtitler does not render on top of my UI when I dont want it to and vice-versa Change Subtitler's UIDocument Sort Order Can I use Subtitler with VR, XR, UGUI or using world-space canvases? While not officially supported by UIToolkit yet, you can set the UIToolkit's render output to render into a RenderTexture and use that with regular UGUI by assigning it to an RawImage. Advanced: I wish to change the UI in depth / integrate Subtitler into my own UIToolkit document For deep UI changes or integration into your UIToolkit document, copy the Subtitler VisualTreeAsset and USS styling sheets. Retain the same classes and overridden values for proper layout. Be aware that Subtitler VisualElement Labels are dynamically instantiated, not copied. I want to create my own transitions using C# See the documentation page on customizing transitions."
+  }
+}

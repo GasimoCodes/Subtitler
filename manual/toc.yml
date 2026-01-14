@@ -1,0 +1,47 @@
+# This is an automatically generated file
+items:
+- name: Getting Started
+  href: Getting Started/importing.md
+  items:
+  - name: Importing
+    href: Getting Started/importing.md
+- name: Components
+  href: Components/intro.md
+  items:
+  - name: Overview
+    href: Components/intro.md
+  - name: Data
+    href: Components/data.md
+  - name: Subtitle Containers
+    href: Components/containers.md
+  - name: Subtitler Prefab
+    href: Components/subtitler.md
+- name: Transition Assets
+  href: Transition Assets/index.md
+  items:
+  - name: Transition Assets
+    href: Transition Assets/index.md
+  - name: Custom Transition Logic
+    href: Transition Assets/Custom Transitions.md
+  - name: Fade Transition
+    href: Transition Assets/Fade Transition.md
+  - name: Typewriter Transition
+    href: Transition Assets/Typewriter Transition.md
+- name: Timeline Integration
+  href: Timeline Integration/timeline_use.md
+  items:
+  - name: Subtitler Track
+    href: Timeline Integration/timeline_use.md
+  - name: Timeline
+    href: Timeline Integration/timeline_intro.md
+- name: Unity Localization
+  href: Unity Localization/localization_intro.md
+  items:
+  - name: Localization
+    href: Unity Localization/localization_intro.md
+- name: Events
+  href: event.md
+- name: SRT Support
+  href: srtsupport.md
+- name: Troubleshooting
+  href: troubleshooting.md

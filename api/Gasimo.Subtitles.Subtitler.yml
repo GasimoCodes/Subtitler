@@ -1,0 +1,518 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Subtitler
+  commentId: T:Gasimo.Subtitles.Subtitler
+  id: Subtitler
+  parent: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.Subtitler.Awake
+  - Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry,UnityEngine.AudioSource)
+  - Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)
+  - Gasimo.Subtitles.Subtitler.RemoveOldest
+  - Gasimo.Subtitles.Subtitler.RemoveSubtitle(System.Int32)
+  - Gasimo.Subtitles.Subtitler.siteURL
+  langs:
+  - csharp
+  - vb
+  name: Subtitler
+  nameWithType: Subtitler
+  fullName: Gasimo.Subtitles.Subtitler
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: Subtitler
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 13
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  syntax:
+    content: >-
+      [RequireComponent(typeof(UIDocument))]
+
+      [HelpURL("https://gasimo.dev/Subtitler/manual/Components/subtitler.html")]
+
+      public class Subtitler : MonoSingleton<Subtitler>
+    content.vb: >-
+      <RequireComponent(GetType(UIDocument))>
+
+      <HelpURL("https://gasimo.dev/Subtitler/manual/Components/subtitler.html")>
+
+      Public Class Subtitler Inherits MonoSingleton(Of Subtitler)
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}
+  inheritedMembers:
+  - Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Instance
+  attributes:
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://gasimo.dev/Subtitler/manual/Components/subtitler.html
+- uid: Gasimo.Subtitles.Subtitler.siteURL
+  commentId: F:Gasimo.Subtitles.Subtitler.siteURL
+  id: siteURL
+  parent: Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: siteURL
+  nameWithType: Subtitler.siteURL
+  fullName: Gasimo.Subtitles.Subtitler.siteURL
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: siteURL
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 17
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  syntax:
+    content: public const string siteURL = "https://gasimo.dev/Subtitler/"
+    return:
+      type: System.String
+    content.vb: Public Const siteURL As String = "https://gasimo.dev/Subtitler/"
+- uid: Gasimo.Subtitles.Subtitler.Awake
+  commentId: M:Gasimo.Subtitles.Subtitler.Awake
+  id: Awake
+  parent: Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: Subtitler.Awake()
+  fullName: Gasimo.Subtitles.Subtitler.Awake()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: Awake
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 40
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Use this for initialization.
+  example: []
+  syntax:
+    content: protected override void Awake()
+    content.vb: Protected Overrides Sub Awake()
+  overridden: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Awake
+  overload: Gasimo.Subtitles.Subtitler.Awake*
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)
+  commentId: M:Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)
+  id: PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)
+  parent: Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: PlaySubtitleSequence(SubtitleSequenceData, AudioSource)
+  nameWithType: Subtitler.PlaySubtitleSequence(SubtitleSequenceData, AudioSource)
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData, UnityEngine.AudioSource)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: PlaySubtitleSequence
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 145
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Plays a sequence of SubtitleEntries on a given AudioSource
+  example: []
+  syntax:
+    content: public int PlaySubtitleSequence(SubtitleSequenceData sequenceData, AudioSource audioSource)
+    parameters:
+    - id: sequenceData
+      type: Gasimo.Subtitles.SubtitleSequenceData
+      description: Sequence to be played
+    - id: audioSource
+      type: UnityEngine.AudioSource
+      description: AudioSource to play through
+    return:
+      type: System.Int32
+      description: Id of the session instance
+    content.vb: Public Function PlaySubtitleSequence(sequenceData As SubtitleSequenceData, audioSource As AudioSource) As Integer
+  overload: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence*
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry,UnityEngine.AudioSource)
+  commentId: M:Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry,UnityEngine.AudioSource)
+  id: PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry,UnityEngine.AudioSource)
+  parent: Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: PlaySubtitleEntry(ISubtitleEntry, AudioSource)
+  nameWithType: Subtitler.PlaySubtitleEntry(ISubtitleEntry, AudioSource)
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry, UnityEngine.AudioSource)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: PlaySubtitleEntry
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 161
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Plays a single line of subtitles on a given AudioSource
+  example: []
+  syntax:
+    content: public int PlaySubtitleEntry(ISubtitleEntry entry, AudioSource audioSource)
+    parameters:
+    - id: entry
+      type: Gasimo.Subtitles.ISubtitleEntry
+      description: Entry containing the subtitle data
+    - id: audioSource
+      type: UnityEngine.AudioSource
+      description: AudioSource to play through
+    return:
+      type: System.Int32
+      description: Id of the session instance
+    content.vb: Public Function PlaySubtitleEntry(entry As ISubtitleEntry, audioSource As AudioSource) As Integer
+  overload: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry*
+- uid: Gasimo.Subtitles.Subtitler.RemoveSubtitle(System.Int32)
+  commentId: M:Gasimo.Subtitles.Subtitler.RemoveSubtitle(System.Int32)
+  id: RemoveSubtitle(System.Int32)
+  parent: Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: RemoveSubtitle(int)
+  nameWithType: Subtitler.RemoveSubtitle(int)
+  fullName: Gasimo.Subtitles.Subtitler.RemoveSubtitle(int)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: RemoveSubtitle
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 175
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Removes and hides a Subtitle session immediately.
+  example: []
+  syntax:
+    content: public void RemoveSubtitle(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id of the session to hide
+    content.vb: Public Sub RemoveSubtitle(id As Integer)
+  overload: Gasimo.Subtitles.Subtitler.RemoveSubtitle*
+  nameWithType.vb: Subtitler.RemoveSubtitle(Integer)
+  fullName.vb: Gasimo.Subtitles.Subtitler.RemoveSubtitle(Integer)
+  name.vb: RemoveSubtitle(Integer)
+- uid: Gasimo.Subtitles.Subtitler.RemoveOldest
+  commentId: M:Gasimo.Subtitles.Subtitler.RemoveOldest
+  id: RemoveOldest
+  parent: Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: RemoveOldest()
+  nameWithType: Subtitler.RemoveOldest()
+  fullName: Gasimo.Subtitles.Subtitler.RemoveOldest()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: RemoveOldest
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
+    startLine: 188
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Removes and hides a active Subtitle Session with the oldest id.
+  example: []
+  syntax:
+    content: public void RemoveOldest()
+    content.vb: Public Sub RemoveOldest()
+  overload: Gasimo.Subtitles.Subtitler.RemoveOldest*
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}
+  commentId: T:Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}
+  parent: Gasimo.Subtitles
+  definition: Gasimo.Subtitles.MonoSingleton`1
+  href: Gasimo.Subtitles.MonoSingleton-1.html
+  name: MonoSingleton<Subtitler>
+  nameWithType: MonoSingleton<Subtitler>
+  fullName: Gasimo.Subtitles.MonoSingleton<Gasimo.Subtitles.Subtitler>
+  nameWithType.vb: MonoSingleton(Of Subtitler)
+  fullName.vb: Gasimo.Subtitles.MonoSingleton(Of Gasimo.Subtitles.Subtitler)
+  name.vb: MonoSingleton(Of Subtitler)
+  spec.csharp:
+  - uid: Gasimo.Subtitles.MonoSingleton`1
+    name: MonoSingleton
+    href: Gasimo.Subtitles.MonoSingleton-1.html
+  - name: <
+  - uid: Gasimo.Subtitles.Subtitler
+    name: Subtitler
+    href: Gasimo.Subtitles.Subtitler.html
+  - name: '>'
+  spec.vb:
+  - uid: Gasimo.Subtitles.MonoSingleton`1
+    name: MonoSingleton
+    href: Gasimo.Subtitles.MonoSingleton-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Gasimo.Subtitles.Subtitler
+    name: Subtitler
+    href: Gasimo.Subtitles.Subtitler.html
+  - name: )
+- uid: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Instance
+  commentId: P:Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Instance
+  parent: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}
+  definition: Gasimo.Subtitles.MonoSingleton`1.Instance
+  href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Instance
+  name: Instance
+  nameWithType: MonoSingleton<Subtitler>.Instance
+  fullName: Gasimo.Subtitles.MonoSingleton<Gasimo.Subtitles.Subtitler>.Instance
+  nameWithType.vb: MonoSingleton(Of Subtitler).Instance
+  fullName.vb: Gasimo.Subtitles.MonoSingleton(Of Gasimo.Subtitles.Subtitler).Instance
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Gasimo.Subtitles.MonoSingleton`1
+  commentId: T:Gasimo.Subtitles.MonoSingleton`1
+  href: Gasimo.Subtitles.MonoSingleton-1.html
+  name: MonoSingleton<T>
+  nameWithType: MonoSingleton<T>
+  fullName: Gasimo.Subtitles.MonoSingleton<T>
+  nameWithType.vb: MonoSingleton(Of T)
+  fullName.vb: Gasimo.Subtitles.MonoSingleton(Of T)
+  name.vb: MonoSingleton(Of T)
+  spec.csharp:
+  - uid: Gasimo.Subtitles.MonoSingleton`1
+    name: MonoSingleton
+    href: Gasimo.Subtitles.MonoSingleton-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Gasimo.Subtitles.MonoSingleton`1
+    name: MonoSingleton
+    href: Gasimo.Subtitles.MonoSingleton-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Gasimo.Subtitles.MonoSingleton`1.Instance
+  commentId: P:Gasimo.Subtitles.MonoSingleton`1.Instance
+  href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Instance
+  name: Instance
+  nameWithType: MonoSingleton<T>.Instance
+  fullName: Gasimo.Subtitles.MonoSingleton<T>.Instance
+  nameWithType.vb: MonoSingleton(Of T).Instance
+  fullName.vb: Gasimo.Subtitles.MonoSingleton(Of T).Instance
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Awake
+  commentId: M:Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Awake
+  parent: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}
+  definition: Gasimo.Subtitles.MonoSingleton`1.Awake
+  href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
+  name: Awake()
+  nameWithType: MonoSingleton<Subtitler>.Awake()
+  fullName: Gasimo.Subtitles.MonoSingleton<Gasimo.Subtitles.Subtitler>.Awake()
+  nameWithType.vb: MonoSingleton(Of Subtitler).Awake()
+  fullName.vb: Gasimo.Subtitles.MonoSingleton(Of Gasimo.Subtitles.Subtitler).Awake()
+  spec.csharp:
+  - uid: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Awake
+    name: Awake
+    href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gasimo.Subtitles.MonoSingleton{Gasimo.Subtitles.Subtitler}.Awake
+    name: Awake
+    href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
+  - name: (
+  - name: )
+- uid: Gasimo.Subtitles.Subtitler.Awake*
+  commentId: Overload:Gasimo.Subtitles.Subtitler.Awake
+  href: Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_Awake
+  name: Awake
+  nameWithType: Subtitler.Awake
+  fullName: Gasimo.Subtitles.Subtitler.Awake
+- uid: Gasimo.Subtitles.MonoSingleton`1.Awake
+  commentId: M:Gasimo.Subtitles.MonoSingleton`1.Awake
+  href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
+  name: Awake()
+  nameWithType: MonoSingleton<T>.Awake()
+  fullName: Gasimo.Subtitles.MonoSingleton<T>.Awake()
+  nameWithType.vb: MonoSingleton(Of T).Awake()
+  fullName.vb: Gasimo.Subtitles.MonoSingleton(Of T).Awake()
+  spec.csharp:
+  - uid: Gasimo.Subtitles.MonoSingleton`1.Awake
+    name: Awake
+    href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gasimo.Subtitles.MonoSingleton`1.Awake
+    name: Awake
+    href: Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
+  - name: (
+  - name: )
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence*
+  commentId: Overload:Gasimo.Subtitles.Subtitler.PlaySubtitleSequence
+  href: Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_Gasimo_Subtitles_SubtitleSequenceData_UnityEngine_AudioSource_
+  name: PlaySubtitleSequence
+  nameWithType: Subtitler.PlaySubtitleSequence
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleSequenceData.html
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry*
+  commentId: Overload:Gasimo.Subtitles.Subtitler.PlaySubtitleEntry
+  href: Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_Gasimo_Subtitles_ISubtitleEntry_UnityEngine_AudioSource_
+  name: PlaySubtitleEntry
+  nameWithType: Subtitler.PlaySubtitleEntry
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry
+- uid: Gasimo.Subtitles.ISubtitleEntry
+  commentId: T:Gasimo.Subtitles.ISubtitleEntry
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitleEntry.html
+  name: ISubtitleEntry
+  nameWithType: ISubtitleEntry
+  fullName: Gasimo.Subtitles.ISubtitleEntry
+- uid: Gasimo.Subtitles.Subtitler.RemoveSubtitle*
+  commentId: Overload:Gasimo.Subtitles.Subtitler.RemoveSubtitle
+  href: Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_RemoveSubtitle_System_Int32_
+  name: RemoveSubtitle
+  nameWithType: Subtitler.RemoveSubtitle
+  fullName: Gasimo.Subtitles.Subtitler.RemoveSubtitle
+- uid: Gasimo.Subtitles.Subtitler.RemoveOldest*
+  commentId: Overload:Gasimo.Subtitles.Subtitler.RemoveOldest
+  href: Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_RemoveOldest
+  name: RemoveOldest
+  nameWithType: Subtitler.RemoveOldest
+  fullName: Gasimo.Subtitles.Subtitler.RemoveOldest

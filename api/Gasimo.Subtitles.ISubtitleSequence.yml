@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.ISubtitleSequence
+  commentId: T:Gasimo.Subtitles.ISubtitleSequence
+  id: ISubtitleSequence
+  parent: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries
+  langs:
+  - csharp
+  - vb
+  name: ISubtitleSequence
+  nameWithType: ISubtitleSequence
+  fullName: Gasimo.Subtitles.ISubtitleSequence
+  type: Interface
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleSequence.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: ISubtitleSequence
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleSequence.cs
+    startLine: 7
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Interface for SubtitleSequences. Implement this to define your own sequence.
+  example: []
+  syntax:
+    content: public interface ISubtitleSequence
+    content.vb: Public Interface ISubtitleSequence
+- uid: Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries
+  commentId: M:Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries
+  id: GetSubtitleEntries
+  parent: Gasimo.Subtitles.ISubtitleSequence
+  langs:
+  - csharp
+  - vb
+  name: GetSubtitleEntries()
+  nameWithType: ISubtitleSequence.GetSubtitleEntries()
+  fullName: Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleSequence.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: GetSubtitleEntries
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleSequence.cs
+    startLine: 9
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  syntax:
+    content: ISubtitleEntry[] GetSubtitleEntries()
+    return:
+      type: Gasimo.Subtitles.ISubtitleEntry[]
+    content.vb: Function GetSubtitleEntries() As ISubtitleEntry()
+  overload: Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries*
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries*
+  commentId: Overload:Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries
+  href: Gasimo.Subtitles.ISubtitleSequence.html#Gasimo_Subtitles_ISubtitleSequence_GetSubtitleEntries
+  name: GetSubtitleEntries
+  nameWithType: ISubtitleSequence.GetSubtitleEntries
+  fullName: Gasimo.Subtitles.ISubtitleSequence.GetSubtitleEntries
+- uid: Gasimo.Subtitles.ISubtitleEntry[]
+  isExternal: true
+  href: Gasimo.Subtitles.ISubtitleEntry.html
+  name: ISubtitleEntry[]
+  nameWithType: ISubtitleEntry[]
+  fullName: Gasimo.Subtitles.ISubtitleEntry[]
+  nameWithType.vb: ISubtitleEntry()
+  fullName.vb: Gasimo.Subtitles.ISubtitleEntry()
+  name.vb: ISubtitleEntry()
+  spec.csharp:
+  - uid: Gasimo.Subtitles.ISubtitleEntry
+    name: ISubtitleEntry
+    href: Gasimo.Subtitles.ISubtitleEntry.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Gasimo.Subtitles.ISubtitleEntry
+    name: ISubtitleEntry
+    href: Gasimo.Subtitles.ISubtitleEntry.html
+  - name: (
+  - name: )

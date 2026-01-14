@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Changelog | Subtitler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Changelog | Subtitler">
+      
+      
+      
+      <link rel="icon" href="images/logo.svg">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/docs/CHANGELOG.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+        
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/logo.png" alt="">
+            
+          </a>
+
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          
+
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+                <form class="search" role="search" id="search">
+                  <i class="bi bi-search"></i>
+                  <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+                </form>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </nav>
+    </header>
+
+
+
+        <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="changelog">Changelog</h1>
+
+<p>All notable changes to this package will be documented in this file.</p>
+<h2 id="091---10092025">[0.9.1] - 10/09/2025</h2>
+<p><strong>Fixed</strong></p>
+<ul>
+<li>Subtitler DisplaySubtitleAsync now uses TimeSpan.TotalSeconds (double) instead of TimeSpan.Seconds (int) when waiting for game time.</li>
+</ul>
+<h2 id="090---10062025">[0.9.0] - 10/06/2025</h2>
+<p><strong>Added</strong></p>
+<ul>
+<li>Timeline 'Sequence Clip' which allows you to use Subtitler Sequences on the Timeline</li>
+<li>Subtitler Track now has an Icon</li>
+</ul>
+<p><strong>Changed</strong></p>
+<ul>
+<li>Timeline clips have been refactored and now use a shared base class</li>
+</ul>
+<p><strong>Fixed</strong></p>
+<ul>
+<li>Cancelling subtitle's thread token (SubtitleContainer.Stop and similar calls) no-longer writes an error to the console.</li>
+<li>Subtitler .Stop() no longer prints an error</li>
+</ul>
+<p><strong>Breaking Changes</strong></p>
+<ul>
+<li>API: Refactored ISubtitleEntry to use C# get/set properties instead of functions. (.getDialogue(); becomes .Dialogue; and so on)</li>
+</ul>
+<h2 id="081----20042025">[0.8.1]  - 20/04/2025</h2>
+<p><strong>Fixed</strong></p>
+<ul>
+<li>WebGL Builds now have subtitler appear properly. Issues were caused by a lack of System.Threading.Timers support by the platform.</li>
+<li>Changed Task.Delay calls to Awaitables where needed, which mildly improves allocation (Applies to Unity 6 only)</li>
+<li>Fixed a bug which caused Subtitler to prevent clicks on UI behind Subtitler. (Changed UITK PickingMode)</li>
+</ul>
+<h2 id="080---7042025">[0.8.0] - 7/04/2025</h2>
+<p><strong>Added</strong></p>
+<ul>
+<li>Audio operations are now abstracted through IAudioPlayer to allow for custom audio backends (such as FMOD). <em>(Current Subtitler AudioSource API remains intact and no changes are needed)</em></li>
+<li>Subtitler now dynamically respects Unity TimeScale. Pausing game pauses Subtitler, running half speed makes subtitles appear for twice as long etc.</li>
+<li>Added TimeScale to Typewriter effect</li>
+<li>TimeScale now affects audio player through Subtitler too</li>
+<li>Sample pause button feature</li>
+</ul>
+<p><strong>Fixed</strong></p>
+<ul>
+<li>Subtitler can now play Audio Clips through the Subtitler Timeline Clips.</li>
+</ul>
+<p><strong>Breaking Changes</strong></p>
+<ul>
+<li>API: ISubtitleEntry.getAudio() now returns 'object' instead of an AudioClip.</li>
+</ul>
+<h2 id="070---26032025">[0.7.0] - 26/03/2025</h2>
+<ul>
+<li>Added new system for handling and customizing label transitions using <strong>Subtitler Transition Assets</strong> to eliminate the need to touch UITK.</li>
+<li>Added a Typewriter effect which types subtitle entries letter by letter while respecting rich text and layouts.</li>
+<li>Improved transition timing accuracy by recording entry animation times and subtracting them from the display times. This will play the exit transitions more accurately.</li>
+<li>Updated offline documentation files</li>
+</ul>
+<h2 id="061---04122024">[0.6.1] - 04/12/2024</h2>
+<p><strong>Bugfixes</strong></p>
+<ul>
+<li>Fixed an issue which prevented specific 3D or recently unmuted audioSources from playing sound when occlussion criteria begins true but changes mid-line (such as player teleporting mid-subtitle). AudioSources now play sound before the occlussion criteria for showing UI are checked.</li>
+</ul>
+<h2 id="060---13112024">[0.6.0] - 13/11/2024</h2>
+<ul>
+<li>Subtitler font and background color can now be changed from the inspector menu.</li>
+</ul>
+<h2 id="050---26092024">[0.5.0] - 26/09/2024</h2>
+<ul>
+<li>Asset Store Release Version</li>
+<li>Improved Localization support. Localized Assets can now coexist with regular ones.</li>
+</ul>
+<h2 id="040---23092024">[0.4.0] - 23/09/2024</h2>
+<ul>
+<li>SRT File Support (Unity ScriptedImporter)</li>
+<li>Remove CySharp UniTask Dependency (All code moved to Native Async)</li>
+<li>SubtitleEntry() now supports CancellationTokens</li>
+<li>KillSubtitleById has been replaced with RemoveSubtitle(Id)</li>
+<li>RemoveSubtitle(Id) hides even ongoing subtitles immediately instead of just cancelling new ones in sequence.</li>
+<li>Improved Exit timings accuracy</li>
+<li>Added icon for Subtitler</li>
+<li>Improved text anchor customization</li>
+</ul>
+<h2 id="030---19022024">[0.3.0] - 19/02/2024</h2>
+<ul>
+<li>Unity Localization experimental support</li>
+<li>Subtitler now accepts ISubtitleEntry instead of a specific class</li>
+<li>SubtitleEntryData now implements ISubtitleEntry</li>
+</ul>
+<h2 id="021---04022024">[0.2.1] - 04/02/2024</h2>
+<ul>
+<li>Layouting performance improvement by marking VisualElements usageHints. (Pending benchmark)</li>
+</ul>
+<h2 id="020---31012024">[0.2.0] - 31/01/2024</h2>
+<ul>
+<li>UI Rework, Subtitler is now using UIToolkit instead of Unity.UI for runtime rendering and layouting.</li>
+<li>Removed dependency on DOTWeen</li>
+<li>Removed dependency on Addressables</li>
+<li>Removed dependency on TextMeshPro</li>
+<li>Fixed invalid layouting issues caused by previous GameObjects based solution.</li>
+</ul>
+<h2 id="014---26012024">[0.1.4] - 26/01/2024</h2>
+<ul>
+<li>Added Icon for ScriptableEvent</li>
+<li>Migrated ScriptableEvent to UnityAction instead of C# Delegates</li>
+<li>Added null check to ScriptableEvent to prevent exceptions</li>
+<li>Fixed build errors with Timeline due to Editor scripts not getting excluded</li>
+</ul>
+<h2 id="013---25122023">[0.1.3] - 25/12/2023</h2>
+<h3 id="timeline-support">Timeline Support</h3>
+<ul>
+<li>Added optional Timeline support (using #if TIMELINE_PRESENT)</li>
+<li>Separated subtitle sequences from entries</li>
+</ul>
+<h2 id="012---23122023">[0.1.2] - 23/12/2023</h2>
+<h3 id="general-polish-and-bugfixes">General Polish and Bugfixes</h3>
+<ul>
+<li>Polished exit animations for the subtitles, which now smoothly push the background panel even on exit</li>
+<li>Minor cleanup in the code</li>
+<li>Added gizmos</li>
+<li>Added custom editor for the subtitle datas</li>
+</ul>
+<h2 id="011---12122023">[0.1.1] - 12/12/2023</h2>
+<ul>
+<li>Begin of changelog</li>
+</ul>
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+        </main>
+    
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>&copy; 2025 <a href="https://gasimo.dev/">Gasimo</a> <i>- Made in Czech Republic</i>
+        </span></div>
+      </div>
+    </footer>
+  </body>
+</html>

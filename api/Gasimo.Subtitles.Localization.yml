@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Localization
+  commentId: N:Gasimo.Subtitles.Localization
+  id: Gasimo.Subtitles.Localization
+  children:
+  - Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
+  - Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
+  langs:
+  - csharp
+  - vb
+  name: Gasimo.Subtitles.Localization
+  nameWithType: Gasimo.Subtitles.Localization
+  fullName: Gasimo.Subtitles.Localization
+  type: Namespace
+  assemblies:
+  - Gasimo.Subtitler.Localization
+references:
+- uid: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
+  commentId: T:Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
+  href: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence.html
+  name: LocalizedSubtitleSequence
+  nameWithType: LocalizedSubtitleSequence
+  fullName: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
+- uid: Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
+  commentId: T:Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
+  href: Gasimo.Subtitles.Localization.LocalizedSubtitleEntry.html
+  name: LocalizedSubtitleEntry
+  nameWithType: LocalizedSubtitleEntry
+  fullName: Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
