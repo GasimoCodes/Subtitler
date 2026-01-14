@@ -30,7 +30,7 @@ items:
     content: >-
       [TrackColor(0.945, 0.349, 0.165)]
 
-      [TrackClipType(typeof(SubtitlerPlayableAsset))]
+      [TrackClipType(typeof(SubtitlerPlayableAssetBase))]
 
       [TrackBindingType(typeof(AudioSource))]
 
@@ -38,7 +38,7 @@ items:
     content.vb: >-
       <TrackColor(0.945, 0.349, 0.165)>
 
-      <TrackClipType(GetType(SubtitlerPlayableAsset))>
+      <TrackClipType(GetType(SubtitlerPlayableAssetBase))>
 
       <TrackBindingType(GetType(AudioSource))>
 
@@ -63,7 +63,7 @@ items:
     ctor: UnityEngine.Timeline.TrackClipTypeAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+      value: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
 - uid: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
   commentId: M:Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
   id: CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
@@ -82,7 +82,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: CreateTrackMixer
     path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerTrack.cs
-    startLine: 21
+    startLine: 18
   assemblies:
   - Gasimo.Subtitler.Timeline
   namespace: Gasimo.Subtitles.Timeline
@@ -139,7 +139,6 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
   name: object
   nameWithType: object
   fullName: object
@@ -177,7 +176,6 @@ references:
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
@@ -235,7 +233,6 @@ references:
   commentId: M:UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
   parent: UnityEngine.Timeline.TrackAsset
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
   name: CreateTrackMixer(PlayableGraph, GameObject, int)
   nameWithType: TrackAsset.CreateTrackMixer(PlayableGraph, GameObject, int)
   fullName: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject, int)
@@ -260,7 +257,6 @@ references:
   - uid: System.Int32
     name: int
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
   - uid: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
@@ -280,7 +276,6 @@ references:
   - uid: System.Int32
     name: Integer
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
 - uid: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer*
   commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer
@@ -306,7 +301,6 @@ references:
   commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
   name: int
   nameWithType: int
   fullName: int

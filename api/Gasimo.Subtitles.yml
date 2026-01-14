@@ -4,14 +4,20 @@ items:
   commentId: N:Gasimo.Subtitles
   id: Gasimo.Subtitles
   children:
+  - Gasimo.Subtitles.IAudioPlayer
   - Gasimo.Subtitles.ISubtitleEntry
   - Gasimo.Subtitles.ISubtitleSequence
+  - Gasimo.Subtitles.ISubtitlerTransition
   - Gasimo.Subtitles.MonoSingleton`1
   - Gasimo.Subtitles.ScriptableEvent
   - Gasimo.Subtitles.SubtitleContainer
   - Gasimo.Subtitles.SubtitleDataEntry
   - Gasimo.Subtitles.SubtitleSequenceData
   - Gasimo.Subtitles.Subtitler
+  - Gasimo.Subtitles.SubtitlerFadeTransition
+  - Gasimo.Subtitles.SubtitlerTransitionBase
+  - Gasimo.Subtitles.SubtitlerTypewriter
+  - Gasimo.Subtitles.UnityAudioAdapter
   langs:
   - csharp
   - vb
@@ -22,13 +28,6 @@ items:
   assemblies:
   - Gasimo.Subtitler
 references:
-- uid: Gasimo.Subtitles.SubtitleDataEntry
-  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
-  parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.SubtitleDataEntry.html
-  name: SubtitleDataEntry
-  nameWithType: SubtitleDataEntry
-  fullName: Gasimo.Subtitles.SubtitleDataEntry
 - uid: Gasimo.Subtitles.ScriptableEvent
   commentId: T:Gasimo.Subtitles.ScriptableEvent
   parent: Gasimo.Subtitles
@@ -36,26 +35,26 @@ references:
   name: ScriptableEvent
   nameWithType: ScriptableEvent
   fullName: Gasimo.Subtitles.ScriptableEvent
-- uid: Gasimo.Subtitles.ISubtitleSequence
-  commentId: T:Gasimo.Subtitles.ISubtitleSequence
+- uid: Gasimo.Subtitles.SubtitlerTransitionBase
+  commentId: T:Gasimo.Subtitles.SubtitlerTransitionBase
   parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.ISubtitleSequence.html
-  name: ISubtitleSequence
-  nameWithType: ISubtitleSequence
-  fullName: Gasimo.Subtitles.ISubtitleSequence
+  href: Gasimo.Subtitles.SubtitlerTransitionBase.html
+  name: SubtitlerTransitionBase
+  nameWithType: SubtitlerTransitionBase
+  fullName: Gasimo.Subtitles.SubtitlerTransitionBase
+- uid: Gasimo.Subtitles.IAudioPlayer
+  commentId: T:Gasimo.Subtitles.IAudioPlayer
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.IAudioPlayer.html
+  name: IAudioPlayer
+  nameWithType: IAudioPlayer
+  fullName: Gasimo.Subtitles.IAudioPlayer
 - uid: Gasimo.Subtitles.Subtitler
   commentId: T:Gasimo.Subtitles.Subtitler
   href: Gasimo.Subtitles.Subtitler.html
   name: Subtitler
   nameWithType: Subtitler
   fullName: Gasimo.Subtitles.Subtitler
-- uid: Gasimo.Subtitles.SubtitleSequenceData
-  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
-  parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.SubtitleSequenceData.html
-  name: SubtitleSequenceData
-  nameWithType: SubtitleSequenceData
-  fullName: Gasimo.Subtitles.SubtitleSequenceData
 - uid: Gasimo.Subtitles.SubtitleContainer
   commentId: T:Gasimo.Subtitles.SubtitleContainer
   href: Gasimo.Subtitles.SubtitleContainer.html
@@ -69,6 +68,52 @@ references:
   name: ISubtitleEntry
   nameWithType: ISubtitleEntry
   fullName: Gasimo.Subtitles.ISubtitleEntry
+- uid: Gasimo.Subtitles.UnityAudioAdapter
+  commentId: T:Gasimo.Subtitles.UnityAudioAdapter
+  href: Gasimo.Subtitles.UnityAudioAdapter.html
+  name: UnityAudioAdapter
+  nameWithType: UnityAudioAdapter
+  fullName: Gasimo.Subtitles.UnityAudioAdapter
+- uid: Gasimo.Subtitles.SubtitleDataEntry
+  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleDataEntry.html
+  name: SubtitleDataEntry
+  nameWithType: SubtitleDataEntry
+  fullName: Gasimo.Subtitles.SubtitleDataEntry
+- uid: Gasimo.Subtitles.SubtitlerTypewriter
+  commentId: T:Gasimo.Subtitles.SubtitlerTypewriter
+  href: Gasimo.Subtitles.SubtitlerTypewriter.html
+  name: SubtitlerTypewriter
+  nameWithType: SubtitlerTypewriter
+  fullName: Gasimo.Subtitles.SubtitlerTypewriter
+- uid: Gasimo.Subtitles.ISubtitlerTransition
+  commentId: T:Gasimo.Subtitles.ISubtitlerTransition
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitlerTransition.html
+  name: ISubtitlerTransition
+  nameWithType: ISubtitlerTransition
+  fullName: Gasimo.Subtitles.ISubtitlerTransition
+- uid: Gasimo.Subtitles.SubtitlerFadeTransition
+  commentId: T:Gasimo.Subtitles.SubtitlerFadeTransition
+  href: Gasimo.Subtitles.SubtitlerFadeTransition.html
+  name: SubtitlerFadeTransition
+  nameWithType: SubtitlerFadeTransition
+  fullName: Gasimo.Subtitles.SubtitlerFadeTransition
+- uid: Gasimo.Subtitles.ISubtitleSequence
+  commentId: T:Gasimo.Subtitles.ISubtitleSequence
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitleSequence.html
+  name: ISubtitleSequence
+  nameWithType: ISubtitleSequence
+  fullName: Gasimo.Subtitles.ISubtitleSequence
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleSequenceData.html
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
 - uid: Gasimo.Subtitles.MonoSingleton`1
   commentId: T:Gasimo.Subtitles.MonoSingleton`1
   href: Gasimo.Subtitles.MonoSingleton-1.html

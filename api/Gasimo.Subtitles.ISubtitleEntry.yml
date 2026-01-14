@@ -5,12 +5,12 @@ items:
   id: ISubtitleEntry
   parent: Gasimo.Subtitles
   children:
-  - Gasimo.Subtitles.ISubtitleEntry.getAudio
-  - Gasimo.Subtitles.ISubtitleEntry.getDialogue
-  - Gasimo.Subtitles.ISubtitleEntry.getDisplayFor
-  - Gasimo.Subtitles.ISubtitleEntry.getSpeaker
-  - Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent
-  - Gasimo.Subtitles.ISubtitleEntry.getWaitFor
+  - Gasimo.Subtitles.ISubtitleEntry.Audio
+  - Gasimo.Subtitles.ISubtitleEntry.Dialogue
+  - Gasimo.Subtitles.ISubtitleEntry.DisplayFor
+  - Gasimo.Subtitles.ISubtitleEntry.Speaker
+  - Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent
+  - Gasimo.Subtitles.ISubtitleEntry.WaitFor
   langs:
   - csharp
   - vb
@@ -34,23 +34,23 @@ items:
   syntax:
     content: public interface ISubtitleEntry
     content.vb: Public Interface ISubtitleEntry
-- uid: Gasimo.Subtitles.ISubtitleEntry.getAudio
-  commentId: M:Gasimo.Subtitles.ISubtitleEntry.getAudio
-  id: getAudio
+- uid: Gasimo.Subtitles.ISubtitleEntry.Audio
+  commentId: P:Gasimo.Subtitles.ISubtitleEntry.Audio
+  id: Audio
   parent: Gasimo.Subtitles.ISubtitleEntry
   langs:
   - csharp
   - vb
-  name: getAudio()
-  nameWithType: ISubtitleEntry.getAudio()
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getAudio()
-  type: Method
+  name: Audio
+  nameWithType: ISubtitleEntry.Audio
+  fullName: Gasimo.Subtitles.ISubtitleEntry.Audio
+  type: Property
   source:
     remote:
       path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
       branch: main
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
-    id: getAudio
+    id: Audio
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
     startLine: 15
   assemblies:
@@ -59,29 +59,30 @@ items:
   summary: AudioClip of the subtitle
   example: []
   syntax:
-    content: AudioClip getAudio()
+    content: object Audio { get; set; }
+    parameters: []
     return:
-      type: UnityEngine.AudioClip
-      description: AudioClip with sound for this entry
-    content.vb: Function getAudio() As AudioClip
-  overload: Gasimo.Subtitles.ISubtitleEntry.getAudio*
-- uid: Gasimo.Subtitles.ISubtitleEntry.getDialogue
-  commentId: M:Gasimo.Subtitles.ISubtitleEntry.getDialogue
-  id: getDialogue
+      type: System.Object
+      description: Object containing the sound for this entry to be played with an IAudioSource
+    content.vb: Property Audio As Object
+  overload: Gasimo.Subtitles.ISubtitleEntry.Audio*
+- uid: Gasimo.Subtitles.ISubtitleEntry.Dialogue
+  commentId: P:Gasimo.Subtitles.ISubtitleEntry.Dialogue
+  id: Dialogue
   parent: Gasimo.Subtitles.ISubtitleEntry
   langs:
   - csharp
   - vb
-  name: getDialogue()
-  nameWithType: ISubtitleEntry.getDialogue()
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getDialogue()
-  type: Method
+  name: Dialogue
+  nameWithType: ISubtitleEntry.Dialogue
+  fullName: Gasimo.Subtitles.ISubtitleEntry.Dialogue
+  type: Property
   source:
     remote:
       path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
       branch: main
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
-    id: getDialogue
+    id: Dialogue
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
     startLine: 21
   assemblies:
@@ -90,29 +91,30 @@ items:
   summary: Dialogue string of the subtitle
   example: []
   syntax:
-    content: string getDialogue()
+    content: string Dialogue { get; set; }
+    parameters: []
     return:
       type: System.String
       description: Dialogue
-    content.vb: Function getDialogue() As String
-  overload: Gasimo.Subtitles.ISubtitleEntry.getDialogue*
-- uid: Gasimo.Subtitles.ISubtitleEntry.getSpeaker
-  commentId: M:Gasimo.Subtitles.ISubtitleEntry.getSpeaker
-  id: getSpeaker
+    content.vb: Property Dialogue As String
+  overload: Gasimo.Subtitles.ISubtitleEntry.Dialogue*
+- uid: Gasimo.Subtitles.ISubtitleEntry.Speaker
+  commentId: P:Gasimo.Subtitles.ISubtitleEntry.Speaker
+  id: Speaker
   parent: Gasimo.Subtitles.ISubtitleEntry
   langs:
   - csharp
   - vb
-  name: getSpeaker()
-  nameWithType: ISubtitleEntry.getSpeaker()
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getSpeaker()
-  type: Method
+  name: Speaker
+  nameWithType: ISubtitleEntry.Speaker
+  fullName: Gasimo.Subtitles.ISubtitleEntry.Speaker
+  type: Property
   source:
     remote:
       path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
       branch: main
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
-    id: getSpeaker
+    id: Speaker
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
     startLine: 26
   assemblies:
@@ -121,29 +123,30 @@ items:
   summary: 'Speaker name for the subtitle, will prefix the dialogue in this format: speaker:dialogue (Optional)'
   example: []
   syntax:
-    content: string getSpeaker()
+    content: string Speaker { get; set; }
+    parameters: []
     return:
       type: System.String
       description: Speaker Name
-    content.vb: Function getSpeaker() As String
-  overload: Gasimo.Subtitles.ISubtitleEntry.getSpeaker*
-- uid: Gasimo.Subtitles.ISubtitleEntry.getWaitFor
-  commentId: M:Gasimo.Subtitles.ISubtitleEntry.getWaitFor
-  id: getWaitFor
+    content.vb: Property Speaker As String
+  overload: Gasimo.Subtitles.ISubtitleEntry.Speaker*
+- uid: Gasimo.Subtitles.ISubtitleEntry.WaitFor
+  commentId: P:Gasimo.Subtitles.ISubtitleEntry.WaitFor
+  id: WaitFor
   parent: Gasimo.Subtitles.ISubtitleEntry
   langs:
   - csharp
   - vb
-  name: getWaitFor()
-  nameWithType: ISubtitleEntry.getWaitFor()
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getWaitFor()
-  type: Method
+  name: WaitFor
+  nameWithType: ISubtitleEntry.WaitFor
+  fullName: Gasimo.Subtitles.ISubtitleEntry.WaitFor
+  type: Property
   source:
     remote:
       path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
       branch: main
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
-    id: getWaitFor
+    id: WaitFor
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
     startLine: 32
   assemblies:
@@ -152,29 +155,30 @@ items:
   summary: How long should subtitler pause before playing this line? (If in sequence, relative to last played subtitle)
   example: []
   syntax:
-    content: float getWaitFor()
+    content: float WaitFor { get; set; }
+    parameters: []
     return:
       type: System.Single
       description: ''
-    content.vb: Function getWaitFor() As Single
-  overload: Gasimo.Subtitles.ISubtitleEntry.getWaitFor*
-- uid: Gasimo.Subtitles.ISubtitleEntry.getDisplayFor
-  commentId: M:Gasimo.Subtitles.ISubtitleEntry.getDisplayFor
-  id: getDisplayFor
+    content.vb: Property WaitFor As Single
+  overload: Gasimo.Subtitles.ISubtitleEntry.WaitFor*
+- uid: Gasimo.Subtitles.ISubtitleEntry.DisplayFor
+  commentId: P:Gasimo.Subtitles.ISubtitleEntry.DisplayFor
+  id: DisplayFor
   parent: Gasimo.Subtitles.ISubtitleEntry
   langs:
   - csharp
   - vb
-  name: getDisplayFor()
-  nameWithType: ISubtitleEntry.getDisplayFor()
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getDisplayFor()
-  type: Method
+  name: DisplayFor
+  nameWithType: ISubtitleEntry.DisplayFor
+  fullName: Gasimo.Subtitles.ISubtitleEntry.DisplayFor
+  type: Property
   source:
     remote:
       path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
       branch: main
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
-    id: getDisplayFor
+    id: DisplayFor
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
     startLine: 38
   assemblies:
@@ -183,40 +187,44 @@ items:
   summary: How long should the subtitle be visible for?
   example: []
   syntax:
-    content: float getDisplayFor()
+    content: float DisplayFor { get; set; }
+    parameters: []
     return:
       type: System.Single
       description: ''
-    content.vb: Function getDisplayFor() As Single
-  overload: Gasimo.Subtitles.ISubtitleEntry.getDisplayFor*
-- uid: Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent
-  commentId: M:Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent
-  id: getSubtitleEvent
+    content.vb: Property DisplayFor As Single
+  overload: Gasimo.Subtitles.ISubtitleEntry.DisplayFor*
+- uid: Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent
+  commentId: P:Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent
+  id: SubtitleEvent
   parent: Gasimo.Subtitles.ISubtitleEntry
   langs:
   - csharp
   - vb
-  name: getSubtitleEvent()
-  nameWithType: ISubtitleEntry.getSubtitleEvent()
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent()
-  type: Method
+  name: SubtitleEvent
+  nameWithType: ISubtitleEntry.SubtitleEvent
+  fullName: Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent
+  type: Property
   source:
     remote:
       path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
       branch: main
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
-    id: getSubtitleEvent
+    id: SubtitleEvent
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
+  summary: Programmable event which gets invoked when this subtitle gets played.
+  example: []
   syntax:
-    content: ScriptableEvent getSubtitleEvent()
+    content: ScriptableEvent SubtitleEvent { get; set; }
+    parameters: []
     return:
       type: Gasimo.Subtitles.ScriptableEvent
-    content.vb: Function getSubtitleEvent() As ScriptableEvent
-  overload: Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent*
+    content.vb: Property SubtitleEvent As ScriptableEvent
+  overload: Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent*
 references:
 - uid: Gasimo.Subtitles
   commentId: N:Gasimo.Subtitles
@@ -240,84 +248,78 @@ references:
   - uid: Gasimo.Subtitles
     name: Subtitles
     href: Gasimo.Subtitles.html
-- uid: Gasimo.Subtitles.ISubtitleEntry.getAudio*
-  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.getAudio
-  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_getAudio
-  name: getAudio
-  nameWithType: ISubtitleEntry.getAudio
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getAudio
-- uid: UnityEngine.AudioClip
-  commentId: T:UnityEngine.AudioClip
-  parent: UnityEngine
+- uid: Gasimo.Subtitles.ISubtitleEntry.Audio*
+  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.Audio
+  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_Audio
+  name: Audio
+  nameWithType: ISubtitleEntry.Audio
+  fullName: Gasimo.Subtitles.ISubtitleEntry.Audio
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
   isExternal: true
-  name: AudioClip
-  nameWithType: AudioClip
-  fullName: UnityEngine.AudioClip
-- uid: UnityEngine
-  commentId: N:UnityEngine
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
   isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
-- uid: Gasimo.Subtitles.ISubtitleEntry.getDialogue*
-  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.getDialogue
-  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_getDialogue
-  name: getDialogue
-  nameWithType: ISubtitleEntry.getDialogue
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getDialogue
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Gasimo.Subtitles.ISubtitleEntry.Dialogue*
+  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.Dialogue
+  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_Dialogue
+  name: Dialogue
+  nameWithType: ISubtitleEntry.Dialogue
+  fullName: Gasimo.Subtitles.ISubtitleEntry.Dialogue
 - uid: System.String
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
   name: string
   nameWithType: string
   fullName: string
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: Gasimo.Subtitles.ISubtitleEntry.getSpeaker*
-  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.getSpeaker
-  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_getSpeaker
-  name: getSpeaker
-  nameWithType: ISubtitleEntry.getSpeaker
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getSpeaker
-- uid: Gasimo.Subtitles.ISubtitleEntry.getWaitFor*
-  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.getWaitFor
-  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_getWaitFor
-  name: getWaitFor
-  nameWithType: ISubtitleEntry.getWaitFor
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getWaitFor
+- uid: Gasimo.Subtitles.ISubtitleEntry.Speaker*
+  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.Speaker
+  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_Speaker
+  name: Speaker
+  nameWithType: ISubtitleEntry.Speaker
+  fullName: Gasimo.Subtitles.ISubtitleEntry.Speaker
+- uid: Gasimo.Subtitles.ISubtitleEntry.WaitFor*
+  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.WaitFor
+  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_WaitFor
+  name: WaitFor
+  nameWithType: ISubtitleEntry.WaitFor
+  fullName: Gasimo.Subtitles.ISubtitleEntry.WaitFor
 - uid: System.Single
   commentId: T:System.Single
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
   name: float
   nameWithType: float
   fullName: float
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
-- uid: Gasimo.Subtitles.ISubtitleEntry.getDisplayFor*
-  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.getDisplayFor
-  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_getDisplayFor
-  name: getDisplayFor
-  nameWithType: ISubtitleEntry.getDisplayFor
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getDisplayFor
-- uid: Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent*
-  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent
-  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_getSubtitleEvent
-  name: getSubtitleEvent
-  nameWithType: ISubtitleEntry.getSubtitleEvent
-  fullName: Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent
+- uid: Gasimo.Subtitles.ISubtitleEntry.DisplayFor*
+  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.DisplayFor
+  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_DisplayFor
+  name: DisplayFor
+  nameWithType: ISubtitleEntry.DisplayFor
+  fullName: Gasimo.Subtitles.ISubtitleEntry.DisplayFor
+- uid: Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent*
+  commentId: Overload:Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent
+  href: Gasimo.Subtitles.ISubtitleEntry.html#Gasimo_Subtitles_ISubtitleEntry_SubtitleEvent
+  name: SubtitleEvent
+  nameWithType: ISubtitleEntry.SubtitleEvent
+  fullName: Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent
 - uid: Gasimo.Subtitles.ScriptableEvent
   commentId: T:Gasimo.Subtitles.ScriptableEvent
   parent: Gasimo.Subtitles

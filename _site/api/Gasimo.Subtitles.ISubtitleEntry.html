@@ -130,14 +130,14 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Gasimo_Subtitles_ISubtitleEntry_getAudio_" data-uid="Gasimo.Subtitles.ISubtitleEntry.getAudio*"></a>
+  <a id="Gasimo_Subtitles_ISubtitleEntry_Audio_" data-uid="Gasimo.Subtitles.ISubtitleEntry.Audio*"></a>
 
-  <h3 id="Gasimo_Subtitles_ISubtitleEntry_getAudio" data-uid="Gasimo.Subtitles.ISubtitleEntry.getAudio">
-  getAudio()
+  <h3 id="Gasimo_Subtitles_ISubtitleEntry_Audio" data-uid="Gasimo.Subtitles.ISubtitleEntry.Audio">
+  Audio
   <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -146,14 +146,17 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">AudioClip getAudio()</code></pre>
+    <pre><code class="lang-csharp hljs">object Audio { get; set; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">AudioClip</span></dt>
-    <dd><p>AudioClip with sound for this entry</p>
+    <dt><span class="xref">object</span></dt>
+    <dd><p>Object containing the sound for this entry to be played with an IAudioSource</p>
 </dd>
   </dl>
 
@@ -164,13 +167,10 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
 
 
 
+  <a id="Gasimo_Subtitles_ISubtitleEntry_Dialogue_" data-uid="Gasimo.Subtitles.ISubtitleEntry.Dialogue*"></a>
 
-
-
-  <a id="Gasimo_Subtitles_ISubtitleEntry_getDialogue_" data-uid="Gasimo.Subtitles.ISubtitleEntry.getDialogue*"></a>
-
-  <h3 id="Gasimo_Subtitles_ISubtitleEntry_getDialogue" data-uid="Gasimo.Subtitles.ISubtitleEntry.getDialogue">
-  getDialogue()
+  <h3 id="Gasimo_Subtitles_ISubtitleEntry_Dialogue" data-uid="Gasimo.Subtitles.ISubtitleEntry.Dialogue">
+  Dialogue
   <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -179,13 +179,16 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string getDialogue()</code></pre>
+    <pre><code class="lang-csharp hljs">string Dialogue { get; set; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><span class="xref">string</span></dt>
     <dd><p>Dialogue</p>
 </dd>
   </dl>
@@ -197,13 +200,10 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
 
 
 
+  <a id="Gasimo_Subtitles_ISubtitleEntry_DisplayFor_" data-uid="Gasimo.Subtitles.ISubtitleEntry.DisplayFor*"></a>
 
-
-
-  <a id="Gasimo_Subtitles_ISubtitleEntry_getDisplayFor_" data-uid="Gasimo.Subtitles.ISubtitleEntry.getDisplayFor*"></a>
-
-  <h3 id="Gasimo_Subtitles_ISubtitleEntry_getDisplayFor" data-uid="Gasimo.Subtitles.ISubtitleEntry.getDisplayFor">
-  getDisplayFor()
+  <h3 id="Gasimo_Subtitles_ISubtitleEntry_DisplayFor" data-uid="Gasimo.Subtitles.ISubtitleEntry.DisplayFor">
+  DisplayFor
   <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -212,13 +212,16 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">float getDisplayFor()</code></pre>
+    <pre><code class="lang-csharp hljs">float DisplayFor { get; set; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><span class="xref">float</span></dt>
     <dd></dd>
   </dl>
 
@@ -229,13 +232,10 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
 
 
 
+  <a id="Gasimo_Subtitles_ISubtitleEntry_Speaker_" data-uid="Gasimo.Subtitles.ISubtitleEntry.Speaker*"></a>
 
-
-
-  <a id="Gasimo_Subtitles_ISubtitleEntry_getSpeaker_" data-uid="Gasimo.Subtitles.ISubtitleEntry.getSpeaker*"></a>
-
-  <h3 id="Gasimo_Subtitles_ISubtitleEntry_getSpeaker" data-uid="Gasimo.Subtitles.ISubtitleEntry.getSpeaker">
-  getSpeaker()
+  <h3 id="Gasimo_Subtitles_ISubtitleEntry_Speaker" data-uid="Gasimo.Subtitles.ISubtitleEntry.Speaker">
+  Speaker
   <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -244,13 +244,16 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string getSpeaker()</code></pre>
+    <pre><code class="lang-csharp hljs">string Speaker { get; set; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><span class="xref">string</span></dt>
     <dd><p>Speaker Name</p>
 </dd>
   </dl>
@@ -262,25 +265,26 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
 
 
 
+  <a id="Gasimo_Subtitles_ISubtitleEntry_SubtitleEvent_" data-uid="Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent*"></a>
 
-
-
-  <a id="Gasimo_Subtitles_ISubtitleEntry_getSubtitleEvent_" data-uid="Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent*"></a>
-
-  <h3 id="Gasimo_Subtitles_ISubtitleEntry_getSubtitleEvent" data-uid="Gasimo.Subtitles.ISubtitleEntry.getSubtitleEvent">
-  getSubtitleEvent()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Gasimo_Subtitles_ISubtitleEntry_SubtitleEvent" data-uid="Gasimo.Subtitles.ISubtitleEntry.SubtitleEvent">
+  SubtitleEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Programmable event which gets invoked when this subtitle gets played.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ScriptableEvent getSubtitleEvent()</code></pre>
+    <pre><code class="lang-csharp hljs">ScriptableEvent SubtitleEvent { get; set; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Gasimo.Subtitles.ScriptableEvent.html">ScriptableEvent</a></dt>
     <dd></dd>
@@ -293,13 +297,10 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
 
 
 
+  <a id="Gasimo_Subtitles_ISubtitleEntry_WaitFor_" data-uid="Gasimo.Subtitles.ISubtitleEntry.WaitFor*"></a>
 
-
-
-  <a id="Gasimo_Subtitles_ISubtitleEntry_getWaitFor_" data-uid="Gasimo.Subtitles.ISubtitleEntry.getWaitFor*"></a>
-
-  <h3 id="Gasimo_Subtitles_ISubtitleEntry_getWaitFor" data-uid="Gasimo.Subtitles.ISubtitleEntry.getWaitFor">
-  getWaitFor()
+  <h3 id="Gasimo_Subtitles_ISubtitleEntry_WaitFor" data-uid="Gasimo.Subtitles.ISubtitleEntry.WaitFor">
+  WaitFor
   <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ISubtitleEntry.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -308,18 +309,18 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">float getWaitFor()</code></pre>
+    <pre><code class="lang-csharp hljs">float WaitFor { get; set; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><span class="xref">float</span></dt>
     <dd></dd>
   </dl>
-
-
-
 
 
 
@@ -348,7 +349,7 @@ Interface ISubtitleEntry  <a class="header-action link-secondary" title="View so
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>&copy; 2025 <a href="https://gasimo.dev/">Gasimo</a> <i>- Made in Czech Republic</i>
+          <span>&copy; 2026 <a href="https://gasimo.dev/">Gasimo</a> <i>- Made in Czech Republic</i>
         </span></div>
       </div>
     </footer>

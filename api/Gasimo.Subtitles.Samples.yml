@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Samples
+  commentId: N:Gasimo.Subtitles.Samples
+  id: Gasimo.Subtitles.Samples
+  children:
+  - Gasimo.Subtitles.Samples.Pauser
+  langs:
+  - csharp
+  - vb
+  name: Gasimo.Subtitles.Samples
+  nameWithType: Gasimo.Subtitles.Samples
+  fullName: Gasimo.Subtitles.Samples
+  type: Namespace
+  assemblies:
+  - Gasimo.Subtitler.Samples
+references:
+- uid: Gasimo.Subtitles.Samples.Pauser
+  commentId: T:Gasimo.Subtitles.Samples.Pauser
+  href: Gasimo.Subtitles.Samples.Pauser.html
+  name: Pauser
+  nameWithType: Pauser
+  fullName: Gasimo.Subtitles.Samples.Pauser

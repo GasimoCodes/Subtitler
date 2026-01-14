@@ -22,7 +22,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: SubtitlerPlayableBehaviour
     path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
-    startLine: 12
+    startLine: 10
   assemblies:
   - Gasimo.Subtitler.Timeline
   namespace: Gasimo.Subtitles.Timeline
@@ -52,7 +52,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: entry
     path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
-    startLine: 15
+    startLine: 13
   assemblies:
   - Gasimo.Subtitler.Timeline
   namespace: Gasimo.Subtitles.Timeline
@@ -79,7 +79,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: OnBehaviourPlay
     path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - Gasimo.Subtitler.Timeline
   namespace: Gasimo.Subtitles.Timeline
@@ -119,7 +119,7 @@ items:
   assemblies:
   - Gasimo.Subtitler.Timeline
   namespace: Gasimo.Subtitles.Timeline
-  summary: "    <p>This method is invoked when one of the following situations occurs:\r\n&lt;br&gt;&lt;br&gt;\r\n     The effective play state during traversal is changed to Playables.PlayState.Paused. This state is indicated by FrameData.effectivePlayState.&lt;br&gt;&lt;br&gt;\r\n     The PlayableGraph is stopped while the playable play state is Playing. This state is indicated by PlayableGraph.IsPlaying returning true.</p>"
+  summary: "        <p>This method is invoked when one of the following situations occurs:\r\n&lt;br&gt;&lt;br&gt;\r\n     The effective play state during traversal is changed to Playables.PlayState.Paused. This state is indicated by FrameData.effectivePlayState.&lt;br&gt;&lt;br&gt;\r\n     The PlayableGraph is stopped while the playable play state is Playing. This state is indicated by PlayableGraph.IsPlaying returning true.</p>"
   example: []
   syntax:
     content: public override void OnBehaviourPause(Playable playable, FrameData info)
@@ -168,7 +168,6 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
   name: object
   nameWithType: object
   fullName: object
@@ -185,7 +184,6 @@ references:
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System

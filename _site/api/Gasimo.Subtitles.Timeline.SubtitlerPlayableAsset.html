@@ -115,7 +115,7 @@ Class SubtitlerPlayableAsset  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SubtitlerPlayableAsset : PlayableAsset</code></pre>
+    <pre><code class="lang-csharp hljs">public class SubtitlerPlayableAsset : SubtitlerPlayableAssetBase</code></pre>
   </div>
 
 
@@ -124,16 +124,27 @@ Class SubtitlerPlayableAsset  <a class="header-action link-secondary" title="Vie
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">object</span></div>
       <div><span class="xref">Object</span></div>
       <div><span class="xref">ScriptableObject</span></div>
       <div><span class="xref">PlayableAsset</span></div>
+      <div><a class="xref" href="Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html">SubtitlerPlayableAssetBase</a></div>
       <div><span class="xref">SubtitlerPlayableAsset</span></div>
     </dd>
   </dl>
 
 
 
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAssetBase_ClipName">SubtitlerPlayableAssetBase.ClipName</a>
+    </div>
+    <div>
+      <a class="xref" href="Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAssetBase_CreatePlayable_UnityEngine_Playables_PlayableGraph_UnityEngine_GameObject_">SubtitlerPlayableAssetBase.CreatePlayable(PlayableGraph, GameObject)</a>
+    </div>
+  </dd></dl>
 
 
 
@@ -147,7 +158,7 @@ Class SubtitlerPlayableAsset  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_entry" data-uid="Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.entry">
   entry
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAsset.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAsset.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -174,44 +185,33 @@ Class SubtitlerPlayableAsset  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_CreatePlayable_" data-uid="Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable*"></a>
+  <a id="Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_subtitleEntry_" data-uid="Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.subtitleEntry*"></a>
 
-  <h3 id="Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_CreatePlayable_UnityEngine_Playables_PlayableGraph_UnityEngine_GameObject_" data-uid="Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)">
-  CreatePlayable(PlayableGraph, GameObject)
+  <h3 id="Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_subtitleEntry" data-uid="Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.subtitleEntry">
+  subtitleEntry
   <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAsset.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Implement this method to have your asset inject playables into the given graph.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)</code></pre>
+    <pre><code class="lang-csharp hljs">public override ISubtitleEntry subtitleEntry { get; }</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><code>graph</code> <span class="xref">PlayableGraph</span></dt>
-    <dd><p>The graph to inject playables into.</p>
-</dd>
-    <dt><code>owner</code> <span class="xref">GameObject</span></dt>
-    <dd><p>The game object which initiated the build.</p>
-</dd>
+    <dt><a class="xref" href="Gasimo.Subtitles.ISubtitleEntry.html">ISubtitleEntry</a></dt>
+    <dd></dd>
   </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Playable</span></dt>
-    <dd><p>The playable injected into the graph, or the root playable if multiple playables are injected.</p>
-</dd>
-  </dl>
-
-
-
 
 
 
@@ -240,7 +240,7 @@ Class SubtitlerPlayableAsset  <a class="header-action link-secondary" title="Vie
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>&copy; 2025 <a href="https://gasimo.dev/">Gasimo</a> <i>- Made in Czech Republic</i>
+          <span>&copy; 2026 <a href="https://gasimo.dev/">Gasimo</a> <i>- Made in Czech Republic</i>
         </span></div>
       </div>
     </footer>

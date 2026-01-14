@@ -1,0 +1,291 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.ISubtitlerTransition
+  commentId: T:Gasimo.Subtitles.ISubtitlerTransition
+  id: ISubtitlerTransition
+  parent: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  - Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  - Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated(UnityEngine.UIElements.Label)
+  langs:
+  - csharp
+  - vb
+  name: ISubtitlerTransition
+  nameWithType: ISubtitlerTransition
+  fullName: Gasimo.Subtitles.ISubtitlerTransition
+  type: Interface
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: ISubtitlerTransition
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+    startLine: 11
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Interface to define transition animations for subtitle lines.
+  example: []
+  syntax:
+    content: public interface ISubtitlerTransition
+    content.vb: Public Interface ISubtitlerTransition
+- uid: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  commentId: M:Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  id: AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  parent: Gasimo.Subtitles.ISubtitlerTransition
+  langs:
+  - csharp
+  - vb
+  name: AnimateSubtitleEntrance(Label, ISubtitleEntry, CancellationToken)
+  nameWithType: ISubtitlerTransition.AnimateSubtitleEntrance(Label, ISubtitleEntry, CancellationToken)
+  fullName: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance(UnityEngine.UIElements.Label, Gasimo.Subtitles.ISubtitleEntry, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: AnimateSubtitleEntrance
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+    startLine: 19
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Called when a subtitle entry is about to be displayed.
+  example: []
+  syntax:
+    content: Task AnimateSubtitleEntrance(Label subtitle, ISubtitleEntry entry, CancellationToken cancellationToken)
+    parameters:
+    - id: subtitle
+      type: UnityEngine.UIElements.Label
+      description: Label containing this subtitle
+    - id: entry
+      type: Gasimo.Subtitles.ISubtitleEntry
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token which gets called when the entry is interrupted.
+    return:
+      type: System.Threading.Tasks.Task
+      description: Task containing the animaion
+    content.vb: Function AnimateSubtitleEntrance(subtitle As Label, entry As ISubtitleEntry, cancellationToken As CancellationToken) As Task
+  overload: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance*
+- uid: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  commentId: M:Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  id: AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  parent: Gasimo.Subtitles.ISubtitlerTransition
+  langs:
+  - csharp
+  - vb
+  name: AnimateSubtitleExit(Label, ISubtitleEntry, CancellationToken)
+  nameWithType: ISubtitlerTransition.AnimateSubtitleExit(Label, ISubtitleEntry, CancellationToken)
+  fullName: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit(UnityEngine.UIElements.Label, Gasimo.Subtitles.ISubtitleEntry, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: AnimateSubtitleExit
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+    startLine: 27
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Called when a subtitle entry is about to be hidden.
+  example: []
+  syntax:
+    content: Task AnimateSubtitleExit(Label subtitle, ISubtitleEntry entry, CancellationToken cancellationToken)
+    parameters:
+    - id: subtitle
+      type: UnityEngine.UIElements.Label
+      description: Label containing this subtitle
+    - id: entry
+      type: Gasimo.Subtitles.ISubtitleEntry
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Token which gets called when the entry is interrupted.
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Function AnimateSubtitleExit(subtitle As Label, entry As ISubtitleEntry, cancellationToken As CancellationToken) As Task
+  overload: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit*
+- uid: Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated(UnityEngine.UIElements.Label)
+  commentId: M:Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated(UnityEngine.UIElements.Label)
+  id: OnLabelCreated(UnityEngine.UIElements.Label)
+  parent: Gasimo.Subtitles.ISubtitlerTransition
+  langs:
+  - csharp
+  - vb
+  name: OnLabelCreated(Label)
+  nameWithType: ISubtitlerTransition.OnLabelCreated(Label)
+  fullName: Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated(UnityEngine.UIElements.Label)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: OnLabelCreated
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Transitions/ISubtitlerTransition.cs
+    startLine: 34
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: >-
+    Called when a label is created in the Subtitler Pool. Use this to initialize the label with any custom settings required.
+
+    Subtitler already sets any properties exposed in the Subtitler component.
+  example: []
+  syntax:
+    content: void OnLabelCreated(Label subtitle)
+    parameters:
+    - id: subtitle
+      type: UnityEngine.UIElements.Label
+      description: ''
+    content.vb: Sub OnLabelCreated(subtitle As Label)
+  overload: Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated*
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance*
+  commentId: Overload:Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance
+  href: Gasimo.Subtitles.ISubtitlerTransition.html#Gasimo_Subtitles_ISubtitlerTransition_AnimateSubtitleEntrance_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  name: AnimateSubtitleEntrance
+  nameWithType: ISubtitlerTransition.AnimateSubtitleEntrance
+  fullName: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleEntrance
+- uid: UnityEngine.UIElements.Label
+  commentId: T:UnityEngine.UIElements.Label
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: Label
+  nameWithType: Label
+  fullName: UnityEngine.UIElements.Label
+- uid: Gasimo.Subtitles.ISubtitleEntry
+  commentId: T:Gasimo.Subtitles.ISubtitleEntry
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitleEntry.html
+  name: ISubtitleEntry
+  nameWithType: ISubtitleEntry
+  fullName: Gasimo.Subtitles.ISubtitleEntry
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+- uid: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit*
+  commentId: Overload:Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit
+  href: Gasimo.Subtitles.ISubtitlerTransition.html#Gasimo_Subtitles_ISubtitlerTransition_AnimateSubtitleExit_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  name: AnimateSubtitleExit
+  nameWithType: ISubtitlerTransition.AnimateSubtitleExit
+  fullName: Gasimo.Subtitles.ISubtitlerTransition.AnimateSubtitleExit
+- uid: Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated*
+  commentId: Overload:Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated
+  href: Gasimo.Subtitles.ISubtitlerTransition.html#Gasimo_Subtitles_ISubtitlerTransition_OnLabelCreated_UnityEngine_UIElements_Label_
+  name: OnLabelCreated
+  nameWithType: ISubtitlerTransition.OnLabelCreated
+  fullName: Gasimo.Subtitles.ISubtitlerTransition.OnLabelCreated

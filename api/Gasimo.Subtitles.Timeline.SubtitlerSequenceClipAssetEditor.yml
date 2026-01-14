@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
+  id: SubtitlerSequenceClipAssetEditor
+  parent: Gasimo.Subtitles.Timeline
+  children:
+  - Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerSequenceClipAssetEditor
+  nameWithType: SubtitlerSequenceClipAssetEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerSequenceClipEditor.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: SubtitlerSequenceClipAssetEditor
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerSequenceClipEditor.cs
+    startLine: 15
+  assemblies:
+  - Gasimo.Subtitler.Timeline.Editor
+  namespace: Gasimo.Subtitles.Timeline
+  syntax:
+    content: >-
+      [CustomEditor(typeof(SubtitlerSequenceClip))]
+
+      public class SubtitlerSequenceClipAssetEditor : Editor
+    content.vb: >-
+      <CustomEditor(GetType(SubtitlerSequenceClip))>
+
+      Public Class SubtitlerSequenceClipAssetEditor Inherits Editor
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.Editor
+  attributes:
+  - type: UnityEditor.CustomEditor
+    ctor: UnityEditor.CustomEditor.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Gasimo.Subtitles.Timeline.SubtitlerSequenceClip
+- uid: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI
+  id: CreateInspectorGUI
+  parent: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
+  langs:
+  - csharp
+  - vb
+  name: CreateInspectorGUI()
+  nameWithType: SubtitlerSequenceClipAssetEditor.CreateInspectorGUI()
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerSequenceClipEditor.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: CreateInspectorGUI
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerSequenceClipEditor.cs
+    startLine: 22
+  assemblies:
+  - Gasimo.Subtitler.Timeline.Editor
+  namespace: Gasimo.Subtitles.Timeline
+  summary: <p>Implement this method to make a custom UIElements inspector.</p>
+  example: []
+  syntax:
+    content: public override VisualElement CreateInspectorGUI()
+    return:
+      type: UnityEngine.UIElements.VisualElement
+    content.vb: Public Overrides Function CreateInspectorGUI() As VisualElement
+  overridden: UnityEditor.Editor.CreateInspectorGUI
+  overload: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI*
+references:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.Editor
+  commentId: T:UnityEditor.Editor
+  parent: UnityEditor
+  isExternal: true
+  name: Editor
+  nameWithType: Editor
+  fullName: UnityEditor.Editor
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: UnityEditor.Editor.CreateInspectorGUI
+  commentId: M:UnityEditor.Editor.CreateInspectorGUI
+  parent: UnityEditor.Editor
+  isExternal: true
+  name: CreateInspectorGUI()
+  nameWithType: Editor.CreateInspectorGUI()
+  fullName: UnityEditor.Editor.CreateInspectorGUI()
+  spec.csharp:
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Editor.CreateInspectorGUI
+    name: CreateInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI
+  href: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.html#Gasimo_Subtitles_Timeline_SubtitlerSequenceClipAssetEditor_CreateInspectorGUI
+  name: CreateInspectorGUI
+  nameWithType: SubtitlerSequenceClipAssetEditor.CreateInspectorGUI
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.CreateInspectorGUI
+- uid: UnityEngine.UIElements.VisualElement
+  commentId: T:UnityEngine.UIElements.VisualElement
+  parent: UnityEngine.UIElements
+  isExternal: true
+  name: VisualElement
+  nameWithType: VisualElement
+  fullName: UnityEngine.UIElements.VisualElement
+- uid: UnityEngine.UIElements
+  commentId: N:UnityEngine.UIElements
+  isExternal: true
+  name: UnityEngine.UIElements
+  nameWithType: UnityEngine.UIElements
+  fullName: UnityEngine.UIElements
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.UIElements
+    name: UIElements
+    isExternal: true

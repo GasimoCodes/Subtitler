@@ -102,7 +102,7 @@
 
 
   <h1 id="Gasimo_Subtitles_Subtitler" data-uid="Gasimo.Subtitles.Subtitler" class="text-break">
-Class Subtitler  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class Subtitler  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -125,7 +125,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
   <dl class="typelist inheritance">
     <dt>Inheritance</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">object</span></div>
       <div><span class="xref">Object</span></div>
       <div><span class="xref">Component</span></div>
       <div><span class="xref">Behaviour</span></div>
@@ -157,7 +157,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_siteURL" data-uid="Gasimo.Subtitles.Subtitler.siteURL">
   siteURL
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -172,7 +172,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><span class="xref">string</span></dt>
     <dd></dd>
   </dl>
 
@@ -192,7 +192,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_Awake" data-uid="Gasimo.Subtitles.Subtitler.Awake">
   Awake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Use this for initialization.</p>
@@ -217,9 +217,90 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <a id="Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleEntry*"></a>
 
+  <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_Gasimo_Subtitles_ISubtitleEntry_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry)">
+  PlaySubtitleEntry(ISubtitleEntry)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays a single line of subtitles</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PlaySubtitleEntry(ISubtitleEntry entry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="Gasimo.Subtitles.ISubtitleEntry.html">ISubtitleEntry</a></dt>
+    <dd><p>Entry containing the subtitle data</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd><p>Id of the session instance</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleEntry*"></a>
+
+  <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_Gasimo_Subtitles_ISubtitleEntry_Gasimo_Subtitles_IAudioPlayer_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry,Gasimo.Subtitles.IAudioPlayer)">
+  PlaySubtitleEntry(ISubtitleEntry, IAudioPlayer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays a single line of subtitles on a given AudioPlayer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PlaySubtitleEntry(ISubtitleEntry entry, IAudioPlayer audioPlayer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="Gasimo.Subtitles.ISubtitleEntry.html">ISubtitleEntry</a></dt>
+    <dd><p>Entry containing the subtitle data</p>
+</dd>
+    <dt><code>audioPlayer</code> <a class="xref" href="Gasimo.Subtitles.IAudioPlayer.html">IAudioPlayer</a></dt>
+    <dd><p>AudioPlayer to play through</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd><p>Id of the session instance</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleEntry*"></a>
+
   <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_Gasimo_Subtitles_ISubtitleEntry_UnityEngine_AudioSource_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.ISubtitleEntry,UnityEngine.AudioSource)">
   PlaySubtitleEntry(ISubtitleEntry, AudioSource)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plays a single line of subtitles on a given AudioSource</p>
@@ -242,7 +323,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><span class="xref">int</span></dt>
     <dd><p>Id of the session instance</p>
 </dd>
   </dl>
@@ -259,9 +340,51 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <a id="Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleSequence*"></a>
 
-  <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_Gasimo_Subtitles_SubtitleSequenceData_UnityEngine_AudioSource_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)">
-  PlaySubtitleSequence(SubtitleSequenceData, AudioSource)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_Gasimo_Subtitles_ISubtitleSequence_Gasimo_Subtitles_IAudioPlayer_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.ISubtitleSequence,Gasimo.Subtitles.IAudioPlayer)">
+  PlaySubtitleSequence(ISubtitleSequence, IAudioPlayer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays a sequence of SubtitleEntries on a given IAudioPlayer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PlaySubtitleSequence(ISubtitleSequence sequenceData, IAudioPlayer audioPlayer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sequenceData</code> <a class="xref" href="Gasimo.Subtitles.ISubtitleSequence.html">ISubtitleSequence</a></dt>
+    <dd><p>Sequence to be played</p>
+</dd>
+    <dt><code>audioPlayer</code> <a class="xref" href="Gasimo.Subtitles.IAudioPlayer.html">IAudioPlayer</a></dt>
+    <dd><p>IAudioPlayer to play through</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd><p>Id of the session instance</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleSequence*"></a>
+
+  <h3 id="Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_Gasimo_Subtitles_ISubtitleSequence_UnityEngine_AudioSource_" data-uid="Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.ISubtitleSequence,UnityEngine.AudioSource)">
+  PlaySubtitleSequence(ISubtitleSequence, AudioSource)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plays a sequence of SubtitleEntries on a given AudioSource</p>
@@ -269,12 +392,12 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PlaySubtitleSequence(SubtitleSequenceData sequenceData, AudioSource audioSource)</code></pre>
+    <pre><code class="lang-csharp hljs">public int PlaySubtitleSequence(ISubtitleSequence sequenceData, AudioSource audioSource)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sequenceData</code> <a class="xref" href="Gasimo.Subtitles.SubtitleSequenceData.html">SubtitleSequenceData</a></dt>
+    <dt><code>sequenceData</code> <a class="xref" href="Gasimo.Subtitles.ISubtitleSequence.html">ISubtitleSequence</a></dt>
     <dd><p>Sequence to be played</p>
 </dd>
     <dt><code>audioSource</code> <span class="xref">AudioSource</span></dt>
@@ -284,7 +407,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><span class="xref">int</span></dt>
     <dd><p>Id of the session instance</p>
 </dd>
   </dl>
@@ -303,7 +426,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_RemoveOldest" data-uid="Gasimo.Subtitles.Subtitler.RemoveOldest">
   RemoveOldest()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes and hides a active Subtitle Session with the oldest id.</p>
@@ -330,7 +453,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h3 id="Gasimo_Subtitles_Subtitler_RemoveSubtitle_System_Int32_" data-uid="Gasimo.Subtitles.Subtitler.RemoveSubtitle(System.Int32)">
   RemoveSubtitle(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes and hides a Subtitle session immediately.</p>
@@ -343,7 +466,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>id</code> <span class="xref">int</span></dt>
     <dd><p>Id of the session to hide</p>
 </dd>
   </dl>
@@ -356,6 +479,76 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
 
 
 
+
+
+
+  <a id="Gasimo_Subtitles_Subtitler_Update_" data-uid="Gasimo.Subtitles.Subtitler.Update*"></a>
+
+  <h3 id="Gasimo_Subtitles_Subtitler_Update" data-uid="Gasimo.Subtitles.Subtitler.Update">
+  Update()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gasimo_Subtitles_Subtitler_WaitForGameTime_" data-uid="Gasimo.Subtitles.Subtitler.WaitForGameTime*"></a>
+
+  <h3 id="Gasimo_Subtitles_Subtitler_WaitForGameTime_System_Double_System_Threading_CancellationToken_" data-uid="Gasimo.Subtitles.Subtitler.WaitForGameTime(System.Double,System.Threading.CancellationToken)">
+  WaitForGameTime(double, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler-Dev/blob/main/com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits for a specified amount of game time. Used by Subtitler (and optionally transition modules) to wait for a specific amount of time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task WaitForGameTime(double seconds, CancellationToken cancellationToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>seconds</code> <span class="xref">double</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">OperationCanceledException</span></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -379,7 +572,7 @@ public class Subtitler : MonoSingleton&lt;Subtitler&gt;</code></pre>
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>&copy; 2025 <a href="https://gasimo.dev/">Gasimo</a> <i>- Made in Czech Republic</i>
+          <span>&copy; 2026 <a href="https://gasimo.dev/">Gasimo</a> <i>- Made in Czech Republic</i>
         </span></div>
       </div>
     </footer>

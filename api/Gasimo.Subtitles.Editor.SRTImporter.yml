@@ -69,7 +69,7 @@ items:
   assemblies:
   - Gasimo.Subtitler.Editor
   namespace: Gasimo.Subtitles.Editor
-  summary: <p>This method must by overriden by the derived class and is called by the Asset pipeline to import files.</p>
+  summary: <p>This method must be overriden by the derived class and is called by the Asset pipeline to import files.</p>
   example: []
   syntax:
     content: public override void OnImportAsset(AssetImportContext ctx)
@@ -149,7 +149,6 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
   name: object
   nameWithType: object
   fullName: object
@@ -180,7 +179,6 @@ references:
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System
@@ -266,7 +264,6 @@ references:
   commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
   name: string
   nameWithType: string
   fullName: string

@@ -2,46 +2,100 @@
 items:
 - uid: Gasimo.Subtitles
   name: Gasimo.Subtitles
+  type: Namespace
   items:
+  - uid: Gasimo.Subtitles.IAudioPlayer
+    name: IAudioPlayer
+    type: Interface
   - uid: Gasimo.Subtitles.ISubtitleEntry
     name: ISubtitleEntry
+    type: Interface
   - uid: Gasimo.Subtitles.ISubtitleSequence
     name: ISubtitleSequence
+    type: Interface
+  - uid: Gasimo.Subtitles.ISubtitlerTransition
+    name: ISubtitlerTransition
+    type: Interface
   - uid: Gasimo.Subtitles.MonoSingleton`1
     name: MonoSingleton<T>
+    type: Class
   - uid: Gasimo.Subtitles.ScriptableEvent
     name: ScriptableEvent
+    type: Class
   - uid: Gasimo.Subtitles.SubtitleContainer
     name: SubtitleContainer
+    type: Class
   - uid: Gasimo.Subtitles.SubtitleDataEntry
     name: SubtitleDataEntry
+    type: Class
   - uid: Gasimo.Subtitles.SubtitleSequenceData
     name: SubtitleSequenceData
+    type: Class
   - uid: Gasimo.Subtitles.Subtitler
     name: Subtitler
+    type: Class
+  - uid: Gasimo.Subtitles.SubtitlerFadeTransition
+    name: SubtitlerFadeTransition
+    type: Class
+  - uid: Gasimo.Subtitles.SubtitlerTransitionBase
+    name: SubtitlerTransitionBase
+    type: Class
+  - uid: Gasimo.Subtitles.SubtitlerTypewriter
+    name: SubtitlerTypewriter
+    type: Class
+  - uid: Gasimo.Subtitles.UnityAudioAdapter
+    name: UnityAudioAdapter
+    type: Class
 - uid: Gasimo.Subtitles.Editor
   name: Gasimo.Subtitles.Editor
+  type: Namespace
   items:
   - uid: Gasimo.Subtitles.Editor.SRTImporter
     name: SRTImporter
+    type: Class
   - uid: Gasimo.Subtitles.Editor.SRTImporterEditor
     name: SRTImporterEditor
+    type: Class
 - uid: Gasimo.Subtitles.Localization
   name: Gasimo.Subtitles.Localization
+  type: Namespace
   items:
   - uid: Gasimo.Subtitles.Localization.LocalizedSubtitleEntry
     name: LocalizedSubtitleEntry
+    type: Class
   - uid: Gasimo.Subtitles.Localization.LocalizedSubtitleSequence
     name: LocalizedSubtitleSequence
+    type: Class
+- uid: Gasimo.Subtitles.Samples
+  name: Gasimo.Subtitles.Samples
+  type: Namespace
+  items:
+  - uid: Gasimo.Subtitles.Samples.Pauser
+    name: Pauser
+    type: Class
 - uid: Gasimo.Subtitles.Timeline
   name: Gasimo.Subtitles.Timeline
+  type: Namespace
   items:
   - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
     name: SubtitlerPlayableAsset
+    type: Class
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+    name: SubtitlerPlayableAssetBase
+    type: Class
   - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
     name: SubtitlerPlayableBehaviour
+    type: Class
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerSequenceClip
+    name: SubtitlerSequenceClip
+    type: Class
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
+    name: SubtitlerSequenceClipAssetEditor
+    type: Class
   - uid: Gasimo.Subtitles.Timeline.SubtitlerTrack
     name: SubtitlerTrack
+    type: Class
   - uid: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
     name: SubtitlerTrackMixer
+    type: Class
 memberLayout: SamePage

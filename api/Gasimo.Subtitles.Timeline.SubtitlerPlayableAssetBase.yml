@@ -1,0 +1,347 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  id: SubtitlerPlayableAssetBase
+  parent: Gasimo.Subtitles.Timeline
+  children:
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerPlayableAssetBase
+  nameWithType: SubtitlerPlayableAssetBase
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: SubtitlerPlayableAssetBase
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+    startLine: 12
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: Base class for a clip instance containing one SubtitleEntry on the Timeline.
+  example: []
+  syntax:
+    content: 'public abstract class SubtitlerPlayableAssetBase : PlayableAsset'
+    content.vb: Public MustInherit Class SubtitlerPlayableAssetBase Inherits PlayableAsset
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEngine.Playables.PlayableAsset
+  derivedClasses:
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  - Gasimo.Subtitles.Timeline.SubtitlerSequenceClip
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry
+  commentId: P:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry
+  id: subtitleEntry
+  parent: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  langs:
+  - csharp
+  - vb
+  name: subtitleEntry
+  nameWithType: SubtitlerPlayableAssetBase.subtitleEntry
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry
+  type: Property
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: subtitleEntry
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+    startLine: 14
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  syntax:
+    content: public abstract ISubtitleEntry subtitleEntry { get; }
+    parameters: []
+    return:
+      type: Gasimo.Subtitles.ISubtitleEntry
+    content.vb: Public MustOverride ReadOnly Property subtitleEntry As ISubtitleEntry
+  overload: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry*
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName
+  commentId: P:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName
+  id: ClipName
+  parent: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  langs:
+  - csharp
+  - vb
+  name: ClipName
+  nameWithType: SubtitlerPlayableAssetBase.ClipName
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName
+  type: Property
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: ClipName
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+    startLine: 15
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  syntax:
+    content: public virtual string ClipName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property ClipName As String
+  overload: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName*
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  id: CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  parent: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  langs:
+  - csharp
+  - vb
+  name: CreatePlayable(PlayableGraph, GameObject)
+  nameWithType: SubtitlerPlayableAssetBase.CreatePlayable(PlayableGraph, GameObject)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: CreatePlayable
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Clips/SubtitlerPlayableAssetBase.cs
+    startLine: 29
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: <p>Implement this method to have your asset inject playables into the given graph.</p>
+  example: []
+  syntax:
+    content: public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
+    parameters:
+    - id: graph
+      type: UnityEngine.Playables.PlayableGraph
+      description: The graph to inject playables into.
+    - id: owner
+      type: UnityEngine.GameObject
+      description: The game object which initiated the build.
+    return:
+      type: UnityEngine.Playables.Playable
+      description: <p>The playable injected into the graph, or the root playable if multiple playables are injected.</p>
+    content.vb: Public Overrides Function CreatePlayable(graph As PlayableGraph, owner As GameObject) As Playable
+  overridden: UnityEngine.Playables.PlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  overload: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable*
+references:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEngine.Playables.PlayableAsset
+  commentId: T:UnityEngine.Playables.PlayableAsset
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: PlayableAsset
+  nameWithType: PlayableAsset
+  fullName: UnityEngine.Playables.PlayableAsset
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Playables
+  commentId: N:UnityEngine.Playables
+  isExternal: true
+  name: UnityEngine.Playables
+  nameWithType: UnityEngine.Playables
+  fullName: UnityEngine.Playables
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAssetBase_subtitleEntry
+  name: subtitleEntry
+  nameWithType: SubtitlerPlayableAssetBase.subtitleEntry
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.subtitleEntry
+- uid: Gasimo.Subtitles.ISubtitleEntry
+  commentId: T:Gasimo.Subtitles.ISubtitleEntry
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitleEntry.html
+  name: ISubtitleEntry
+  nameWithType: ISubtitleEntry
+  fullName: Gasimo.Subtitles.ISubtitleEntry
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAssetBase_ClipName
+  name: ClipName
+  nameWithType: SubtitlerPlayableAssetBase.ClipName
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.ClipName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.Playables.PlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  commentId: M:UnityEngine.Playables.PlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  parent: UnityEngine.Playables.PlayableAsset
+  isExternal: true
+  name: CreatePlayable(PlayableGraph, GameObject)
+  nameWithType: PlayableAsset.CreatePlayable(PlayableGraph, GameObject)
+  fullName: UnityEngine.Playables.PlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject)
+  spec.csharp:
+  - uid: UnityEngine.Playables.PlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+    name: CreatePlayable
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.PlayableGraph
+    name: PlayableGraph
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.Playables.PlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+    name: CreatePlayable
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.PlayableGraph
+    name: PlayableGraph
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAssetBase_CreatePlayable_UnityEngine_Playables_PlayableGraph_UnityEngine_GameObject_
+  name: CreatePlayable
+  nameWithType: SubtitlerPlayableAssetBase.CreatePlayable
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.CreatePlayable
+- uid: UnityEngine.Playables.PlayableGraph
+  commentId: T:UnityEngine.Playables.PlayableGraph
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: PlayableGraph
+  nameWithType: PlayableGraph
+  fullName: UnityEngine.Playables.PlayableGraph
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Playables.Playable
+  commentId: T:UnityEngine.Playables.Playable
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: Playable
+  nameWithType: Playable
+  fullName: UnityEngine.Playables.Playable

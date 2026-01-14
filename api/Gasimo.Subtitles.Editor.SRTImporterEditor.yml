@@ -20,7 +20,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: SRTImporterEditor
     path: ../com.gasimo.subtitler/Editor/Importer/SRTImporter.cs
-    startLine: 100
+    startLine: 96
   assemblies:
   - Gasimo.Subtitler.Editor
   namespace: Gasimo.Subtitles.Editor
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler-Dev.git
     id: OnInspectorGUI
     path: ../com.gasimo.subtitler/Editor/Importer/SRTImporter.cs
-    startLine: 103
+    startLine: 99
   assemblies:
   - Gasimo.Subtitler.Editor
   namespace: Gasimo.Subtitles.Editor
@@ -110,7 +110,6 @@ references:
   commentId: T:System.Object
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
   name: object
   nameWithType: object
   fullName: object
@@ -155,7 +154,6 @@ references:
 - uid: System
   commentId: N:System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
   name: System
   nameWithType: System
   fullName: System

@@ -1,0 +1,181 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Samples.Pauser
+  commentId: T:Gasimo.Subtitles.Samples.Pauser
+  id: Pauser
+  parent: Gasimo.Subtitles.Samples
+  children:
+  - Gasimo.Subtitles.Samples.Pauser.DoStop
+  - Gasimo.Subtitles.Samples.Pauser.TogglePause
+  langs:
+  - csharp
+  - vb
+  name: Pauser
+  nameWithType: Pauser
+  fullName: Gasimo.Subtitles.Samples.Pauser
+  type: Class
+  source:
+    remote:
+      path: Assets/Samples/Subtitler/0.8.1/Sample Subtitle Scenes/Pauser.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: Pauser
+    path: ../Assets/Samples/Subtitler/0.8.1/Sample Subtitle Scenes/Pauser.cs
+    startLine: 7
+  assemblies:
+  - Gasimo.Subtitler.Samples
+  namespace: Gasimo.Subtitles.Samples
+  syntax:
+    content: 'public class Pauser : MonoBehaviour'
+    content.vb: Public Class Pauser Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: Gasimo.Subtitles.Samples.Pauser.TogglePause
+  commentId: M:Gasimo.Subtitles.Samples.Pauser.TogglePause
+  id: TogglePause
+  parent: Gasimo.Subtitles.Samples.Pauser
+  langs:
+  - csharp
+  - vb
+  name: TogglePause()
+  nameWithType: Pauser.TogglePause()
+  fullName: Gasimo.Subtitles.Samples.Pauser.TogglePause()
+  type: Method
+  source:
+    remote:
+      path: Assets/Samples/Subtitler/0.8.1/Sample Subtitle Scenes/Pauser.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: TogglePause
+    path: ../Assets/Samples/Subtitler/0.8.1/Sample Subtitle Scenes/Pauser.cs
+    startLine: 24
+  assemblies:
+  - Gasimo.Subtitler.Samples
+  namespace: Gasimo.Subtitles.Samples
+  syntax:
+    content: public void TogglePause()
+    content.vb: Public Sub TogglePause()
+  overload: Gasimo.Subtitles.Samples.Pauser.TogglePause*
+- uid: Gasimo.Subtitles.Samples.Pauser.DoStop
+  commentId: M:Gasimo.Subtitles.Samples.Pauser.DoStop
+  id: DoStop
+  parent: Gasimo.Subtitles.Samples.Pauser
+  langs:
+  - csharp
+  - vb
+  name: DoStop()
+  nameWithType: Pauser.DoStop()
+  fullName: Gasimo.Subtitles.Samples.Pauser.DoStop()
+  type: Method
+  source:
+    remote:
+      path: Assets/Samples/Subtitler/0.8.1/Sample Subtitle Scenes/Pauser.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: DoStop
+    path: ../Assets/Samples/Subtitler/0.8.1/Sample Subtitle Scenes/Pauser.cs
+    startLine: 38
+  assemblies:
+  - Gasimo.Subtitler.Samples
+  namespace: Gasimo.Subtitles.Samples
+  syntax:
+    content: public void DoStop()
+    content.vb: Public Sub DoStop()
+  overload: Gasimo.Subtitles.Samples.Pauser.DoStop*
+references:
+- uid: Gasimo.Subtitles.Samples
+  commentId: N:Gasimo.Subtitles.Samples
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Samples
+  nameWithType: Gasimo.Subtitles.Samples
+  fullName: Gasimo.Subtitles.Samples
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Samples
+    name: Samples
+    href: Gasimo.Subtitles.Samples.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Samples
+    name: Samples
+    href: Gasimo.Subtitles.Samples.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Gasimo.Subtitles.Samples.Pauser.TogglePause*
+  commentId: Overload:Gasimo.Subtitles.Samples.Pauser.TogglePause
+  href: Gasimo.Subtitles.Samples.Pauser.html#Gasimo_Subtitles_Samples_Pauser_TogglePause
+  name: TogglePause
+  nameWithType: Pauser.TogglePause
+  fullName: Gasimo.Subtitles.Samples.Pauser.TogglePause
+- uid: Gasimo.Subtitles.Samples.Pauser.DoStop*
+  commentId: Overload:Gasimo.Subtitles.Samples.Pauser.DoStop
+  href: Gasimo.Subtitles.Samples.Pauser.html#Gasimo_Subtitles_Samples_Pauser_DoStop
+  name: DoStop
+  nameWithType: Pauser.DoStop
+  fullName: Gasimo.Subtitles.Samples.Pauser.DoStop

@@ -1,5 +1,5 @@
 {
-  "source_base_path": "E:/Projects/Subtitler/docs",
+  "source_base_path": "E:/Projects/Subtitler-Dev/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -16,6 +16,16 @@
       "output": {
         ".html": {
           "relative_path": "CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
         }
       },
       "version": ""
@@ -64,6 +74,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.IAudioPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.IAudioPlayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.IAudioPlayer",
+      "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.IAudioPlayer.yml\" sourcestartlinenumber=\"1\">Interface for Subtitler AudioPlayer, allowing you to use your own audio backend.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gasimo.Subtitles.ISubtitleEntry.yml",
       "output": {
         ".html": {
@@ -89,6 +113,20 @@
       "IsMRef": true,
       "Title": "Gasimo.Subtitles.ISubtitleSequence",
       "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.ISubtitleSequence.yml\" sourcestartlinenumber=\"1\">Interface for SubtitleSequences. Implement this to define your own sequence.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.ISubtitlerTransition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.ISubtitlerTransition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.ISubtitlerTransition",
+      "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.ISubtitlerTransition.yml\" sourcestartlinenumber=\"1\">Interface to define transition animations for subtitle lines.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -145,6 +183,34 @@
       "IsMRef": true,
       "Title": "Gasimo.Subtitles.MonoSingleton<T>",
       "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.MonoSingleton-1.yml\" sourcestartlinenumber=\"1\">Helper class to implement Singleton pattern into Subtitler</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Samples.Pauser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Samples.Pauser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.Samples.Pauser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Samples.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Samples.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.Samples",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -218,6 +284,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.SubtitlerFadeTransition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.SubtitlerFadeTransition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.SubtitlerFadeTransition",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.SubtitlerTransitionBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.SubtitlerTransitionBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.SubtitlerTransitionBase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.SubtitlerTypewriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.SubtitlerTypewriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.SubtitlerTypewriter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.yml",
       "output": {
         ".html": {
@@ -232,6 +340,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase",
+      "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.yml\" sourcestartlinenumber=\"1\">Base class for a clip instance containing one SubtitleEntry on the Timeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.yml",
       "output": {
         ".html": {
@@ -243,6 +365,34 @@
       "IsMRef": true,
       "Title": "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour",
       "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.yml\" sourcestartlinenumber=\"1\">Behaviour called by clips. This plays a single SubtitleDataEntry at the beginning of the clip.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerSequenceClip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerSequenceClip.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.Timeline.SubtitlerSequenceClip",
+      "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.Timeline.SubtitlerSequenceClip.yml\" sourcestartlinenumber=\"1\">a clip instance containing one SubtitleDataEntry on the Timeline</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -285,6 +435,20 @@
       "IsMRef": true,
       "Title": "Gasimo.Subtitles.Timeline",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.UnityAudioAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.UnityAudioAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Gasimo.Subtitles.UnityAudioAdapter",
+      "Summary": "<p sourcefile=\"api/Gasimo.Subtitles.UnityAudioAdapter.yml\" sourcestartlinenumber=\"1\">Unity implementation of the IAudioPlayer interface allowing you to play AudioClips through the AudioSource component using Subtitler.</p>\n"
     },
     {
       "type": "ManagedReference",

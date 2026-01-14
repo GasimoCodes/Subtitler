@@ -1,0 +1,358 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.IAudioPlayer
+  commentId: T:Gasimo.Subtitles.IAudioPlayer
+  id: IAudioPlayer
+  parent: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.IAudioPlayer.IsHearable
+  - Gasimo.Subtitles.IAudioPlayer.Pause
+  - Gasimo.Subtitles.IAudioPlayer.PlayOneShot(System.Object)
+  - Gasimo.Subtitles.IAudioPlayer.Resume
+  - Gasimo.Subtitles.IAudioPlayer.SetListener(System.Object)
+  - Gasimo.Subtitles.IAudioPlayer.SetTimeScale(System.Single)
+  - Gasimo.Subtitles.IAudioPlayer.Stop
+  langs:
+  - csharp
+  - vb
+  name: IAudioPlayer
+  nameWithType: IAudioPlayer
+  fullName: Gasimo.Subtitles.IAudioPlayer
+  type: Interface
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: IAudioPlayer
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 9
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Interface for Subtitler AudioPlayer, allowing you to use your own audio backend.
+  example: []
+  syntax:
+    content: public interface IAudioPlayer
+    content.vb: Public Interface IAudioPlayer
+- uid: Gasimo.Subtitles.IAudioPlayer.PlayOneShot(System.Object)
+  commentId: M:Gasimo.Subtitles.IAudioPlayer.PlayOneShot(System.Object)
+  id: PlayOneShot(System.Object)
+  parent: Gasimo.Subtitles.IAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: PlayOneShot(object)
+  nameWithType: IAudioPlayer.PlayOneShot(object)
+  fullName: Gasimo.Subtitles.IAudioPlayer.PlayOneShot(object)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: PlayOneShot
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 16
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Play a single audio clip.
+  example: []
+  syntax:
+    content: void PlayOneShot(object audio)
+    parameters:
+    - id: audio
+      type: System.Object
+      description: ''
+    content.vb: Sub PlayOneShot(audio As Object)
+  overload: Gasimo.Subtitles.IAudioPlayer.PlayOneShot*
+  nameWithType.vb: IAudioPlayer.PlayOneShot(Object)
+  fullName.vb: Gasimo.Subtitles.IAudioPlayer.PlayOneShot(Object)
+  name.vb: PlayOneShot(Object)
+- uid: Gasimo.Subtitles.IAudioPlayer.SetListener(System.Object)
+  commentId: M:Gasimo.Subtitles.IAudioPlayer.SetListener(System.Object)
+  id: SetListener(System.Object)
+  parent: Gasimo.Subtitles.IAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetListener(object)
+  nameWithType: IAudioPlayer.SetListener(object)
+  fullName: Gasimo.Subtitles.IAudioPlayer.SetListener(object)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: SetListener
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 22
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Set the listener used for calculating audio occlusion and spatialization.
+  example: []
+  syntax:
+    content: void SetListener(object listener)
+    parameters:
+    - id: listener
+      type: System.Object
+      description: ''
+    content.vb: Sub SetListener(listener As Object)
+  overload: Gasimo.Subtitles.IAudioPlayer.SetListener*
+  nameWithType.vb: IAudioPlayer.SetListener(Object)
+  fullName.vb: Gasimo.Subtitles.IAudioPlayer.SetListener(Object)
+  name.vb: SetListener(Object)
+- uid: Gasimo.Subtitles.IAudioPlayer.IsHearable
+  commentId: M:Gasimo.Subtitles.IAudioPlayer.IsHearable
+  id: IsHearable
+  parent: Gasimo.Subtitles.IAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: IsHearable()
+  nameWithType: IAudioPlayer.IsHearable()
+  fullName: Gasimo.Subtitles.IAudioPlayer.IsHearable()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: IsHearable
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 29
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Check whether this audio source is hearable right now.
+  example: []
+  syntax:
+    content: bool IsHearable()
+    return:
+      type: System.Boolean
+      description: True if the audio source is hearable depending on volume, enabled, spatial mix and distance from listener, false otherwise.
+    content.vb: Function IsHearable() As Boolean
+  overload: Gasimo.Subtitles.IAudioPlayer.IsHearable*
+- uid: Gasimo.Subtitles.IAudioPlayer.SetTimeScale(System.Single)
+  commentId: M:Gasimo.Subtitles.IAudioPlayer.SetTimeScale(System.Single)
+  id: SetTimeScale(System.Single)
+  parent: Gasimo.Subtitles.IAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetTimeScale(float)
+  nameWithType: IAudioPlayer.SetTimeScale(float)
+  fullName: Gasimo.Subtitles.IAudioPlayer.SetTimeScale(float)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: SetTimeScale
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 35
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Set the TimeScale of this audio source. This is used to pause the audio source when the game is paused.
+  example: []
+  syntax:
+    content: void SetTimeScale(float timeScale)
+    parameters:
+    - id: timeScale
+      type: System.Single
+      description: ''
+    content.vb: Sub SetTimeScale(timeScale As Single)
+  overload: Gasimo.Subtitles.IAudioPlayer.SetTimeScale*
+  nameWithType.vb: IAudioPlayer.SetTimeScale(Single)
+  fullName.vb: Gasimo.Subtitles.IAudioPlayer.SetTimeScale(Single)
+  name.vb: SetTimeScale(Single)
+- uid: Gasimo.Subtitles.IAudioPlayer.Pause
+  commentId: M:Gasimo.Subtitles.IAudioPlayer.Pause
+  id: Pause
+  parent: Gasimo.Subtitles.IAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: Pause()
+  nameWithType: IAudioPlayer.Pause()
+  fullName: Gasimo.Subtitles.IAudioPlayer.Pause()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: Pause
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 40
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Pause this audio source.
+  example: []
+  syntax:
+    content: void Pause()
+    content.vb: Sub Pause()
+  overload: Gasimo.Subtitles.IAudioPlayer.Pause*
+- uid: Gasimo.Subtitles.IAudioPlayer.Resume
+  commentId: M:Gasimo.Subtitles.IAudioPlayer.Resume
+  id: Resume
+  parent: Gasimo.Subtitles.IAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: Resume()
+  nameWithType: IAudioPlayer.Resume()
+  fullName: Gasimo.Subtitles.IAudioPlayer.Resume()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: Resume
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 45
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Resume this audio source.
+  example: []
+  syntax:
+    content: void Resume()
+    content.vb: Sub [Resume]()
+  overload: Gasimo.Subtitles.IAudioPlayer.Resume*
+- uid: Gasimo.Subtitles.IAudioPlayer.Stop
+  commentId: M:Gasimo.Subtitles.IAudioPlayer.Stop
+  id: Stop
+  parent: Gasimo.Subtitles.IAudioPlayer
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: IAudioPlayer.Stop()
+  fullName: Gasimo.Subtitles.IAudioPlayer.Stop()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: Stop
+    path: ../com.gasimo.subtitler/Runtime/Scripts/AudioService/IAudioPlayer.cs
+    startLine: 50
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Stop this audio source.
+  example: []
+  syntax:
+    content: void Stop()
+    content.vb: Sub [Stop]()
+  overload: Gasimo.Subtitles.IAudioPlayer.Stop*
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: Gasimo.Subtitles.IAudioPlayer.PlayOneShot*
+  commentId: Overload:Gasimo.Subtitles.IAudioPlayer.PlayOneShot
+  href: Gasimo.Subtitles.IAudioPlayer.html#Gasimo_Subtitles_IAudioPlayer_PlayOneShot_System_Object_
+  name: PlayOneShot
+  nameWithType: IAudioPlayer.PlayOneShot
+  fullName: Gasimo.Subtitles.IAudioPlayer.PlayOneShot
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Gasimo.Subtitles.IAudioPlayer.SetListener*
+  commentId: Overload:Gasimo.Subtitles.IAudioPlayer.SetListener
+  href: Gasimo.Subtitles.IAudioPlayer.html#Gasimo_Subtitles_IAudioPlayer_SetListener_System_Object_
+  name: SetListener
+  nameWithType: IAudioPlayer.SetListener
+  fullName: Gasimo.Subtitles.IAudioPlayer.SetListener
+- uid: Gasimo.Subtitles.IAudioPlayer.IsHearable*
+  commentId: Overload:Gasimo.Subtitles.IAudioPlayer.IsHearable
+  href: Gasimo.Subtitles.IAudioPlayer.html#Gasimo_Subtitles_IAudioPlayer_IsHearable
+  name: IsHearable
+  nameWithType: IAudioPlayer.IsHearable
+  fullName: Gasimo.Subtitles.IAudioPlayer.IsHearable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Gasimo.Subtitles.IAudioPlayer.SetTimeScale*
+  commentId: Overload:Gasimo.Subtitles.IAudioPlayer.SetTimeScale
+  href: Gasimo.Subtitles.IAudioPlayer.html#Gasimo_Subtitles_IAudioPlayer_SetTimeScale_System_Single_
+  name: SetTimeScale
+  nameWithType: IAudioPlayer.SetTimeScale
+  fullName: Gasimo.Subtitles.IAudioPlayer.SetTimeScale
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Gasimo.Subtitles.IAudioPlayer.Pause*
+  commentId: Overload:Gasimo.Subtitles.IAudioPlayer.Pause
+  href: Gasimo.Subtitles.IAudioPlayer.html#Gasimo_Subtitles_IAudioPlayer_Pause
+  name: Pause
+  nameWithType: IAudioPlayer.Pause
+  fullName: Gasimo.Subtitles.IAudioPlayer.Pause
+- uid: Gasimo.Subtitles.IAudioPlayer.Resume*
+  commentId: Overload:Gasimo.Subtitles.IAudioPlayer.Resume
+  href: Gasimo.Subtitles.IAudioPlayer.html#Gasimo_Subtitles_IAudioPlayer_Resume
+  name: Resume
+  nameWithType: IAudioPlayer.Resume
+  fullName: Gasimo.Subtitles.IAudioPlayer.Resume
+- uid: Gasimo.Subtitles.IAudioPlayer.Stop*
+  commentId: Overload:Gasimo.Subtitles.IAudioPlayer.Stop
+  href: Gasimo.Subtitles.IAudioPlayer.html#Gasimo_Subtitles_IAudioPlayer_Stop
+  name: Stop
+  nameWithType: IAudioPlayer.Stop
+  fullName: Gasimo.Subtitles.IAudioPlayer.Stop

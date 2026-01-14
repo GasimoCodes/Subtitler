@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.9.2] - 28/09/2025
+**Changed**
+- Subtitler PlaySubtitleSequence API now accepts ISubtitleSequence instead of SubtitleSequenceData to allow for more customized sequences.
+
 ## [0.9.1] - 10/09/2025
 **Fixed**
 - Subtitler DisplaySubtitleAsync now uses TimeSpan.TotalSeconds (double) instead of TimeSpan.Seconds (int) when waiting for game time.

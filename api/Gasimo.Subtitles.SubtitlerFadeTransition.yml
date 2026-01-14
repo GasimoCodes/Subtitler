@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.SubtitlerFadeTransition
+  commentId: T:Gasimo.Subtitles.SubtitlerFadeTransition
+  id: SubtitlerFadeTransition
+  parent: Gasimo.Subtitles
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerFadeTransition
+  nameWithType: SubtitlerFadeTransition
+  fullName: Gasimo.Subtitles.SubtitlerFadeTransition
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/Transitions/SubtitlerFadeTransition.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler-Dev.git
+    id: SubtitlerFadeTransition
+    path: ../com.gasimo.subtitler/Runtime/Scripts/Transitions/SubtitlerFadeTransition.cs
+    startLine: 9
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  syntax:
+    content: >-
+      [CreateAssetMenu(fileName = "Fade Transition", menuName = "Gasimo/Subtitler/Transitions/Fade In Out Transition")]
+
+      public class SubtitlerFadeTransition : SubtitlerTransitionBase, ISubtitlerTransition
+    content.vb: >-
+      <CreateAssetMenu(fileName:="Fade Transition", menuName:="Gasimo/Subtitler/Transitions/Fade In Out Transition")>
+
+      Public Class SubtitlerFadeTransition Inherits SubtitlerTransitionBase Implements ISubtitlerTransition
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - Gasimo.Subtitles.SubtitlerTransitionBase
+  implements:
+  - Gasimo.Subtitles.ISubtitlerTransition
+  inheritedMembers:
+  - Gasimo.Subtitles.SubtitlerTransitionBase.ScriptableObjectMenuPath
+  - Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  - Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: fileName
+      type: System.String
+      value: Fade Transition
+    - name: menuName
+      type: System.String
+      value: Gasimo/Subtitler/Transitions/Fade In Out Transition
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: Gasimo.Subtitles.SubtitlerTransitionBase
+  commentId: T:Gasimo.Subtitles.SubtitlerTransitionBase
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitlerTransitionBase.html
+  name: SubtitlerTransitionBase
+  nameWithType: SubtitlerTransitionBase
+  fullName: Gasimo.Subtitles.SubtitlerTransitionBase
+- uid: Gasimo.Subtitles.ISubtitlerTransition
+  commentId: T:Gasimo.Subtitles.ISubtitlerTransition
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitlerTransition.html
+  name: ISubtitlerTransition
+  nameWithType: ISubtitlerTransition
+  fullName: Gasimo.Subtitles.ISubtitlerTransition
+- uid: Gasimo.Subtitles.SubtitlerTransitionBase.ScriptableObjectMenuPath
+  commentId: F:Gasimo.Subtitles.SubtitlerTransitionBase.ScriptableObjectMenuPath
+  parent: Gasimo.Subtitles.SubtitlerTransitionBase
+  href: Gasimo.Subtitles.SubtitlerTransitionBase.html#Gasimo_Subtitles_SubtitlerTransitionBase_ScriptableObjectMenuPath
+  name: ScriptableObjectMenuPath
+  nameWithType: SubtitlerTransitionBase.ScriptableObjectMenuPath
+  fullName: Gasimo.Subtitles.SubtitlerTransitionBase.ScriptableObjectMenuPath
+- uid: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  commentId: M:Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  parent: Gasimo.Subtitles.SubtitlerTransitionBase
+  isExternal: true
+  href: Gasimo.Subtitles.SubtitlerTransitionBase.html#Gasimo_Subtitles_SubtitlerTransitionBase_AnimateSubtitleEntrance_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  name: AnimateSubtitleEntrance(Label, ISubtitleEntry, CancellationToken)
+  nameWithType: SubtitlerTransitionBase.AnimateSubtitleEntrance(Label, ISubtitleEntry, CancellationToken)
+  fullName: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleEntrance(UnityEngine.UIElements.Label, Gasimo.Subtitles.ISubtitleEntry, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+    name: AnimateSubtitleEntrance
+    href: Gasimo.Subtitles.SubtitlerTransitionBase.html#Gasimo_Subtitles_SubtitlerTransitionBase_AnimateSubtitleEntrance_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  - name: (
+  - uid: UnityEngine.UIElements.Label
+    name: Label
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Gasimo.Subtitles.ISubtitleEntry
+    name: ISubtitleEntry
+    href: Gasimo.Subtitles.ISubtitleEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleEntrance(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+    name: AnimateSubtitleEntrance
+    href: Gasimo.Subtitles.SubtitlerTransitionBase.html#Gasimo_Subtitles_SubtitlerTransitionBase_AnimateSubtitleEntrance_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  - name: (
+  - uid: UnityEngine.UIElements.Label
+    name: Label
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Gasimo.Subtitles.ISubtitleEntry
+    name: ISubtitleEntry
+    href: Gasimo.Subtitles.ISubtitleEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+  - name: )
+- uid: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  commentId: M:Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+  parent: Gasimo.Subtitles.SubtitlerTransitionBase
+  isExternal: true
+  href: Gasimo.Subtitles.SubtitlerTransitionBase.html#Gasimo_Subtitles_SubtitlerTransitionBase_AnimateSubtitleExit_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  name: AnimateSubtitleExit(Label, ISubtitleEntry, CancellationToken)
+  nameWithType: SubtitlerTransitionBase.AnimateSubtitleExit(Label, ISubtitleEntry, CancellationToken)
+  fullName: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleExit(UnityEngine.UIElements.Label, Gasimo.Subtitles.ISubtitleEntry, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+    name: AnimateSubtitleExit
+    href: Gasimo.Subtitles.SubtitlerTransitionBase.html#Gasimo_Subtitles_SubtitlerTransitionBase_AnimateSubtitleExit_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  - name: (
+  - uid: UnityEngine.UIElements.Label
+    name: Label
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Gasimo.Subtitles.ISubtitleEntry
+    name: ISubtitleEntry
+    href: Gasimo.Subtitles.ISubtitleEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Gasimo.Subtitles.SubtitlerTransitionBase.AnimateSubtitleExit(UnityEngine.UIElements.Label,Gasimo.Subtitles.ISubtitleEntry,System.Threading.CancellationToken)
+    name: AnimateSubtitleExit
+    href: Gasimo.Subtitles.SubtitlerTransitionBase.html#Gasimo_Subtitles_SubtitlerTransitionBase_AnimateSubtitleExit_UnityEngine_UIElements_Label_Gasimo_Subtitles_ISubtitleEntry_System_Threading_CancellationToken_
+  - name: (
+  - uid: UnityEngine.UIElements.Label
+    name: Label
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Gasimo.Subtitles.ISubtitleEntry
+    name: ISubtitleEntry
+    href: Gasimo.Subtitles.ISubtitleEntry.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

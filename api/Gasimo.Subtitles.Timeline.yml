@@ -5,7 +5,10 @@ items:
   id: Gasimo.Subtitles.Timeline
   children:
   - Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
   - Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  - Gasimo.Subtitles.Timeline.SubtitlerSequenceClip
+  - Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
   - Gasimo.Subtitles.Timeline.SubtitlerTrack
   - Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
   langs:
@@ -18,12 +21,26 @@ items:
   assemblies:
   - Gasimo.Subtitler.Timeline
 references:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
+  parent: Gasimo.Subtitles.Timeline
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase.html
+  name: SubtitlerPlayableAssetBase
+  nameWithType: SubtitlerPlayableAssetBase
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAssetBase
 - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
   commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
   href: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html
   name: SubtitlerPlayableBehaviour
   nameWithType: SubtitlerPlayableBehaviour
   fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+- uid: Gasimo.Subtitles.Timeline.SubtitlerSequenceClip
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerSequenceClip
+  parent: Gasimo.Subtitles.Timeline
+  href: Gasimo.Subtitles.Timeline.SubtitlerSequenceClip.html
+  name: SubtitlerSequenceClip
+  nameWithType: SubtitlerSequenceClip
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerSequenceClip
 - uid: Gasimo.Subtitles.Timeline.SubtitlerTrack
   commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrack
   href: Gasimo.Subtitles.Timeline.SubtitlerTrack.html
@@ -32,7 +49,6 @@ references:
   fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack
 - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
   commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
-  parent: Gasimo.Subtitles.Timeline
   href: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html
   name: SubtitlerPlayableAsset
   nameWithType: SubtitlerPlayableAsset
@@ -43,6 +59,12 @@ references:
   name: SubtitlerTrackMixer
   nameWithType: SubtitlerTrackMixer
   fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+- uid: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
+  href: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor.html
+  name: SubtitlerSequenceClipAssetEditor
+  nameWithType: SubtitlerSequenceClipAssetEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerSequenceClipAssetEditor
 - uid: Gasimo.Subtitles.Timeline
   commentId: N:Gasimo.Subtitles.Timeline
   href: Gasimo.html
